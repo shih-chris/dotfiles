@@ -25,7 +25,7 @@ prompt_directory() {
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 setopt PROMPT_SUBST
-source ~/libraries/zsh-git-prompt/zshrc.sh
+source ~/.zsh-git-prompt/zshrc.sh
 PROMPT='%F{magenta}%n@%m%f%F{green} $(prompt_directory) %f'$'\n''%F{yellow}❯❯❯%f '
 RPROMPT='%F{cyan}$(venv_display)%f$(venv_bar)$(git_super_status)'
 

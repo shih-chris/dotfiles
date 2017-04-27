@@ -14,3 +14,5 @@ for file in $linkables ; do
         ln -s $file $target
     fi
 done
+
+git clone https://github.com/olivierverdier/zsh-git-prompt.git $HOME/.zsh-git-prompt
