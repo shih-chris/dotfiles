@@ -72,8 +72,8 @@ au BufNewFile,BufRead *.py
     \ set expandtab |
     \ set fileformat=unix |
     \ nmap <silent> <leader>vp :VimuxRunCommand("ipython")<CR>|
-    \ xmap <leader>p <Plug>SlimeRegionSend|
-    \ nmap <leader>p <Plug>SlimeParagraphSend|
+    \ xmap <leader><Enter> <Plug>SlimeRegionSend|
+    \ nmap <leader><Enter> <Plug>SlimeParagraphSend|
     \ let g:slime_dont_ask_default = 1 |
     \ let g:slime_target="tmux" |
     \ let g:slime_python_ipython = 1 |
