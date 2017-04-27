@@ -27,7 +27,7 @@ Plugin 'junegunn/limelight.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'benmills/vimux'
 Plugin 'jpalardy/vim-slime'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim'}
+Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -169,6 +169,9 @@ autocmd! User GoyoLeave call <SID>goyo_leave()
 " Color name (:help cterm-colors) or ANSI code
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
+
+"to avoid redundancy with powerline
+set noshowmode
 
 " make it so swap files don't muck up my dropbox history
 set directory^=$HOME/.vim/tmp//
