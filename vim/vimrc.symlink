@@ -187,3 +187,5 @@ nnoremap <C-i> <C-i>zz
 nnoremap } }zz
 nnoremap { {zz
 set scrolloff=20
+
+set term=screen-256color
