@@ -45,7 +45,7 @@ nnoremap <silent> <Leader>h :vertical resize -5<cr>
 nnoremap <silent> <Leader>j :resize +5<cr>
 nnoremap <silent> <Leader>k :resize -5<cr>
 nnoremap <silent> <Leader>l :vertical resize +5<cr>
-nnoremap <leader>vt :VimuxRunCommand("clear; pytest test")<CR>
+nnoremap <leader>vt :wall<CR>:VimuxRunCommand("clear; pytest test")<CR>
 nmap <leader>vz :call VimuxZoomRunner()<CR>
 nmap <leader>vv :VimuxPromptCommand<CR>
 
@@ -144,6 +144,9 @@ set nu
 let g:ycm_path_to_python_interpreter="/usr/bin/python"
 let g:ycm_python_binary_path=$VIRTUAL_ENV . "/bin/python"
 
+" auto close preview window
+let g:ycm_autoclose_preview_window_after_insertion = 1
+
 "Quit Goyo normally
 function! s:goyo_enter()
   let b:quitting = 0
@@ -173,6 +176,9 @@ let g:limelight_conceal_ctermfg = 240
 "to avoid redundancy with powerline
 set noshowmode
 
+" always show statusline
+set laststatus=2
+
 " make it so swap files don't muck up my dropbox history
 set directory^=$HOME/.vim/tmp//
 
@@ -186,6 +192,9 @@ nnoremap { {zz
 set scrolloff=20
 
 set term=screen-256color
+
+" use system clipboard
+set clipboard=unnamed
 
 " cursor shape
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
