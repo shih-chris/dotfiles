@@ -37,6 +37,23 @@ alias ls='ls -FG'
 alias vi='vim'
 alias tmux="tmux -2"
 
+# git aliases
+alias gs='git status'
+alias gl='git pull'
+alias gp='git push'
+
+gc () {
+	git commit -am $1
+}
+
+gk () {
+	git checkout $1
+}
+
+gb () {
+git checkout -b $1
+}
+
 #Vi mode
 bindkey -v
 
