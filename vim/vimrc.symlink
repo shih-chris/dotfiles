@@ -45,9 +45,10 @@ nnoremap <silent> <Leader>h :vertical resize -5<cr>
 nnoremap <silent> <Leader>j :resize +5<cr>
 nnoremap <silent> <Leader>k :resize -5<cr>
 nnoremap <silent> <Leader>l :vertical resize +5<cr>
-nnoremap <leader>vt :VimuxRunCommand("clear; pytest test")<CR>
+nnoremap <leader>vt :wall<CR>:VimuxRunCommand("clear; pytest test")<CR>
 nmap <leader>vz :call VimuxZoomRunner()<CR>
 nmap <leader>vv :VimuxPromptCommand<CR>
+nmap <leader>v<Enter> :VimuxRunLastCommand<CR>
 
  " If text is selected, save it in the v buffer and send that buffer it to tmux
 vmap <LocalLeader>vs "vy :call VimuxSlime()<CR>
@@ -78,7 +79,6 @@ au BufNewFile,BufRead *.py
     \ let g:slime_target="tmux" |
     \ let g:slime_python_ipython = 1 |
     \ let g:slime_paste_file = "$HOME/.slime_paste" |
-    \ let g:slime_default_config = {"socket_name": split($TMUX, ",")[0], "target_pane": ":0.1"}
 
 " Plaintext
 au BufNewFile,BufRead *.txt
@@ -138,11 +138,15 @@ set foldlevel=99
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
 "line numbering
-set nu
+set number
+nnoremap <silent> <C-n> :set relativenumber!<cr>
 
 "fix YCM errors
 let g:ycm_path_to_python_interpreter="/usr/bin/python"
 let g:ycm_python_binary_path=$VIRTUAL_ENV . "/bin/python"
+
+" auto close preview window
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 "Quit Goyo normally
 function! s:goyo_enter()
@@ -173,6 +177,9 @@ let g:limelight_conceal_ctermfg = 240
 "to avoid redundancy with powerline
 set noshowmode
 
+" always show statusline
+set laststatus=2
+
 " make it so swap files don't muck up my dropbox history
 set directory^=$HOME/.vim/tmp//
 
@@ -183,9 +190,16 @@ nnoremap <C-o> <C-o>zz
 nnoremap <C-i> <C-i>zz
 nnoremap } }zz
 nnoremap { {zz
+nnoremap G Gzz
 set scrolloff=20
 
 set term=screen-256color
+
+" use system clipboard
+set clipboard=unnamed
+
+" highlight as you search
+set incsearch
 
 " cursor shape
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"

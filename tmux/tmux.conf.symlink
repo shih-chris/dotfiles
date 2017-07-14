@@ -1,9 +1,15 @@
+set-option -g default-command "reattach-to-user-namespace -l zsh"
+
 unbind C-b
 set -g prefix C-a
 bind C-a send-prefix
 
 bind | split-window -h
 bind - split-window -v
+
+set -g window-active-style 'bg=colour236'
+set -g pane-border-style 'fg=colour236'
+set -g pane-active-border-style 'fg=colour236'
 
 set -g mouse on
 
