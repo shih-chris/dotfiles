@@ -16,7 +16,6 @@ Plugin 'tmhedberg/SimpylFold'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'jnurmine/Zenburn'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -27,7 +26,8 @@ Plugin 'junegunn/limelight.vim'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'benmills/vimux'
 Plugin 'jpalardy/vim-slime'
-Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'itchyny/lightline.vim'
+Plugin 'AndrewRadev/splitjoin.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -75,13 +75,15 @@ au BufNewFile,BufRead *.py
     \ nmap <silent> <leader>vp :VimuxRunCommand("ipython")<CR>|
     \ xmap <leader><Enter> <Plug>SlimeRegionSend|
     \ nmap <leader><Enter> <Plug>SlimeParagraphSend|
+    \ nmap <leader>a ggVG<leader><Enter>`.|
     \ let g:slime_dont_ask_default = 1 |
     \ let g:slime_target="tmux" |
     \ let g:slime_python_ipython = 1 |
     \ let g:slime_paste_file = "$HOME/.slime_paste" |
+    \ let g:slime_default_config = {"socket_name": split($TMUX, ",")[0], "target_pane": ":0.1"}
 
 " Plaintext
-au BufNewFile,BufRead *.txt
+au BufNewFile,BufRead *.txt,*.md
     \ Goyo |
     \ set linebreak |
     \ set display=lastline |
@@ -93,7 +95,7 @@ au BufNewFile,BufRead *.txt
 
 " catch extraneous whitespace
 highlight BadWhitespace ctermbg=red guibg=darkred
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h,*.hs match BadWhitespace /\s\+$/
 
 scriptencoding=utf-8
 set encoding=utf-8
@@ -106,14 +108,14 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 "python with virtualenv support
-py << EOF
+py3 << EOF
 import os
 import sys
 if 'VIRTUAL_ENV' in os.environ:
     project_base_dir = os.environ['VIRTUAL_ENV']
     sys.path.insert(0, project_base_dir)
     activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
+    exec(compile(open(activate_this, 'rb').read(), activate_this, 'exec'), dict(__file__=activate_this))
 EOF
 
 "python highlighting
@@ -179,6 +181,11 @@ set noshowmode
 
 " always show statusline
 set laststatus=2
+
+
+let g:lightline = {
+     \ 'colorscheme': 'one',
+     \ }
 
 " make it so swap files don't muck up my dropbox history
 set directory^=$HOME/.vim/tmp//

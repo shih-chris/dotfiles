@@ -1,11 +1,11 @@
+export PATH=$PATH:/usr/local/git/bin:/usr/local/bin
 export PIP_REQUIRE_VIRTUALENV=true
 
 if [[ -a ~/.local.zshrc ]]; then
 	source ~/.local.zshrc
 fi
 
-# TODO something else with this
-alias venv-rebuild="rm -rf venv && python3 -m venv venv && source venv/bin/activate && cp ~/.activate_this.py venv/bin/activate_this.py && pip install -U pip && pip install -r requirements.txt --process-dependency-links && pip install ipython pytest jupyter"
+alias venv-rebuild="rm -rf venv && python3.6 -m venv venv && source venv/bin/activate && cp ~/.activate_this.py venv/bin/activate_this.py && pip install -U pip && pip install -r requirements.txt --process-dependency-links && pip install ipython pytest && export PYTHONPATH=$(pwd)"
 alias venv-activate="source venv/bin/activate"
 alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
 
@@ -17,6 +17,18 @@ venv_bar() {
 	if [[ -n $(env | grep VIRTUAL_ENV=) ]]; then
 	echo '|'
     fi
+}
+
+autovenv() {
+	if [[ -n $(ls | grep venv) ]]; then
+		venv-activate
+		export PYTHONPATH=$(pwd)
+	fi
+}
+
+cd1() {
+	builtin cd $1
+	autovenv
 }
 
 prompt_directory() {
@@ -33,14 +45,17 @@ if [ -n "$VIRTUAL_ENV" ]; then
   . "$VIRTUAL_ENV/bin/activate"
 fi
 
+alias cd='cd1'
 alias ls='ls -FG'
-alias vi='vim'
+alias vi='/usr/local/bin/vim'
 alias tmux="tmux -2"
 
 # git aliases
 alias gs='git status'
 alias gl='git pull'
 alias gp='git push'
+alias gd='git diff'
+alias oops='git reset --soft HEAD^'
 
 gc () {
 	git commit -am $1
@@ -54,8 +69,11 @@ gb () {
 git checkout -b $1
 }
 
+alias python='python3'
+
 #Vi mode
 bindkey -v
+bindkey -M vicmd '?' history-incremental-search-backward
 
 #Tab completion:
 # 0 -- vanilla completion (abc => abc)
@@ -66,3 +84,5 @@ zstyle ':completion:*' matcher-list '' \
   'm:{a-z\-}={A-Z\_}' \
   'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
   'r:|?=** m:{a-z\-}={A-Z\_}'
+
+cd . # Cooperate with tmux.conf to activate venv upon split-window
