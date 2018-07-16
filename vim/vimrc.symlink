@@ -49,6 +49,7 @@ nnoremap <leader>vt :wall<CR>:VimuxRunCommand("clear; pytest test")<CR>
 nmap <leader>vz :call VimuxZoomRunner()<CR>
 nmap <leader>vv :VimuxPromptCommand<CR>
 nmap <leader>v<Enter> :VimuxRunLastCommand<CR>
+nmap <leader>p :set paste<CR>p:set paste!<CR>
 
  " If text is selected, save it in the v buffer and send that buffer it to tmux
 vmap <LocalLeader>vs "vy :call VimuxSlime()<CR>
