@@ -13,53 +13,19 @@ call plug#begin()
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
+Plug 'scrooloose/nerdtree'
+Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
+Plug 'junegunn/fzf.vim'
 
 " Load colorschemes
 Plug 'chriskempson/base16-vim'
 Plug 'joshdick/onedark.vim'
 
-" LightLine {{{
+" Load lightline
     Plug 'itchyny/lightline.vim'
-    Plug 'nicknisi/vim-base16-lightline'
     let g:lightline = {
-        \   'colorscheme': 'base16',
-        \   'active': {
-        \       'left': [ [ 'mode', 'paste' ],
-        \               [ 'gitbranch' ],
-        \               [ 'readonly', 'filetype', 'filename' ]],
-        \       'right': [ [ 'percent' ], [ 'lineinfo' ],
-        \               [ 'fileformat', 'fileencoding' ],
-        \               [ 'gitblame', 'currentfunction',  'cocstatus', 'linter_errors', 'linter_warnings' ]]
-        \   },
-        \   'component_expand': {
-        \   },
-        \   'component_type': {
-        \       'readonly': 'error',
-        \       'linter_warnings': 'warning',
-        \       'linter_errors': 'error'
-        \   },
-        \   'component_function': {
-        \       'fileencoding': 'helpers#lightline#fileEncoding',
-        \       'filename': 'helpers#lightline#fileName',
-        \       'fileformat': 'helpers#lightline#fileFormat',
-        \       'filetype': 'helpers#lightline#fileType',
-        \       'gitbranch': 'helpers#lightline#gitBranch',
-        \       'cocstatus': 'coc#status',
-        \       'currentfunction': 'helpers#lightline#currentFunction',
-        \       'gitblame': 'helpers#lightline#gitBlame'
-        \   },
-        \   'tabline': {
-        \       'left': [ [ 'tabs' ] ],
-        \       'right': [ [ 'close' ] ]
-        \   },
-        \   'tab': {
-        \       'active': [ 'filename', 'modified' ],
-        \       'inactive': [ 'filename', 'modified' ],
-        \   },
-        \   'separator': { 'left': '', 'right': '' },
-        \   'subseparator': { 'left': '', 'right': '' }
+        \   'colorscheme': 'wombat',
     \ }
-" }}}
 
 " End loading plugins
 call plug#end()
@@ -99,12 +65,11 @@ set tabstop=4 " Indent using spaces
 set ruler " Show file stats
 set visualbell " Blink cursor on error
 set hidden " Allow hidden buffers
-set laststatus=2 " Status bar
 set wildmenu " Display command line's tab complete options as a menu
 set cursorline " Highlight the line currently under cursor
 set number " Show line numbers on the sidebard
 set relativenumber " Show line number on the current line and relative numbers on all other lines
-set clipboard=unnamedplus " Copy/Paste to clipboard
+" set clipboard=unnamedplus " Copy/Paste to clipboard
 set noshowmode " INSERT is no longer necessary with lightline-vim
 
 
@@ -133,12 +98,6 @@ set wrap " Enable line wrapping
 " Color scheme (terminal)
 set t_Co=256
 set background=dark
-" let g:solarized_termcolors=256
-
-let g:lightline = {
-    \ 'colorscheme': 'solarized',
-    \ }
 
 colorscheme onedark
 " colorscheme solarized
-
