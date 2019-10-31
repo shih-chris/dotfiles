@@ -5,50 +5,10 @@ if [[ -a ~/.local.zshrc ]]; then
 	source ~/.local.zshrc
 fi
 
-alias venv-rebuild="rm -rf venv && python3.6 -m venv venv && source venv/bin/activate && cp ~/.activate_this.py venv/bin/activate_this.py && pip install -U pip && pip install -r requirements.txt --process-dependency-links && pip install ipython pytest && export PYTHONPATH=$(pwd)"
-alias venv-activate="source venv/bin/activate"
-alias ipython="ipython --TerminalInteractiveShell.editing_mode=vi"
-
-venv_display() {
-    echo $VIRTUAL_ENV | rev | cut -f 1,2 -d/ | rev
-}
-
-venv_bar() {
-	if [[ -n $(env | grep VIRTUAL_ENV=) ]]; then
-	echo '|'
-    fi
-}
-
-autovenv() {
-	if [[ -n $(ls | grep venv) ]]; then
-		venv-activate
-		export PYTHONPATH=$(pwd)
-	fi
-}
-
-cd1() {
-	builtin cd $1
-	autovenv
-}
-
-prompt_directory() {
-	pwd | rev | cut -f -1 -d/ | rev
-}
-
-export VIRTUAL_ENV_DISABLE_PROMPT=1
-setopt PROMPT_SUBST
-source ~/.zsh-git-prompt/zshrc.sh
-PROMPT='%F{magenta}%n@%m%f%F{green} $(prompt_directory) %f'$'\n''%F{yellow}❯❯❯%f '
-RPROMPT='%F{cyan}$(venv_display)%f$(venv_bar)$(git_super_status)'
-
-if [ -n "$VIRTUAL_ENV" ]; then
-  . "$VIRTUAL_ENV/bin/activate"
-fi
-
-alias cd='cd1'
+# basic aliases
 alias ls='ls -FG'
-alias vi='/usr/local/bin/vim'
-alias tmux="tmux -2"
+alias vi='nvim'
+alias vim='nvim'
 
 # git aliases
 alias gs='git status'
@@ -71,18 +31,17 @@ git checkout -b $1
 
 alias python='python3'
 
-#Vi mode
-bindkey -v
-bindkey -M vicmd '?' history-incremental-search-backward
-
-#Tab completion:
-# 0 -- vanilla completion (abc => abc)
-# 1 -- smart case completion (abc => Abc)
-# 2 -- word flex completion (abc => A-big-Car)
-# 3 -- full flex completion (abc => ABraCadabra)
-zstyle ':completion:*' matcher-list '' \
-  'm:{a-z\-}={A-Z\_}' \
-  'r:[^[:alpha:]]||[[:alpha:]]=** r:|=* m:{a-z\-}={A-Z\_}' \
-  'r:|?=** m:{a-z\-}={A-Z\_}'
-
-cd . # Cooperate with tmux.conf to activate venv upon split-window
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/chris/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/chris/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/chris/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/chris/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<

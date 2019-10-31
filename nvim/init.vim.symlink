@@ -1,0 +1,87 @@
+" Don't try to be vi compatible
+set nocompatible
+
+" ----- Plugin Handling -----
+
+" Helps force plugins to load correctly when it is turned back on below
+filetype off
+
+" Load plugins
+" execute pathogen#infect()
+
+" Turn on syntax highlighting
+syntax enable
+
+" For plugins to load correctly
+filetype plugin indent on
+
+
+" ----- Custom Keymapping -----
+
+inoremap jk <ESC>
+nnoremap j gj
+nnoremap k gk
+let mapleader = " "
+
+map <leader><space> :let @/=''<CR> " clear search
+
+set backspace=indent,eol,start " Allow backspacing over indentation, line breaks, and insertion start
+map <C-n> :NERDTreeToggle<CR>
+
+
+" ----- Indentation Options -----
+
+set autoindent " new lines inherit the indentation of previous lines
+set expandtab " convert tabs to spaces
+set shiftround " When shifting lines, round to the nearest multiple of 'shiftwidth'
+set shiftwidth=4 " When shifting, use 4 spaces
+set smarttab " Insert 'tabstop' number of spaces when the 'tab' key is pressed
+set tabstop=4 " Indent using spaces
+
+
+" ----- User Interface Options -----
+
+set ruler " Show file stats
+set visualbell " Blink cursor on error
+set hidden " Allow hidden buffers
+set laststatus=2 " Status bar
+set wildmenu " Display command line's tab complete options as a menu
+set cursorline " Highlight the line currently under cursor
+set number " Show line numbers on the sidebard
+set relativenumber " Show line number on the current line and relative numbers on all other lines
+set clipboard=unnamedplus " Copy/Paste to clipboard
+set noshowmode " INSERT is no longer necessary with lightline-vim
+
+
+" ----- Search Options -----
+
+set hlsearch " Enable search highlight
+set ignorecase " Ignore case when searching
+set incsearch " Incremental search
+set smartcase " Automatically switch cases when searching
+
+
+" ----- Text Rendering/Performance Options -----
+
+set lazyredraw " Don't update screen during macro and script execution
+set ttyfast " Rendering
+set display+=lastline " Always try to show a paragraph's last line
+set encoding=utf-8 " Encoding
+set linebreak " Avoid wrapping a line in the middle of a word
+set scrolloff=1 " The number of screen lines to keep above and below the cursor
+set sidescrolloff=5 " The number of screen columns to keep to the left and right of the cursor
+set wrap " Enable line wrapping
+
+
+" ----- Custom Color Scheme -----
+
+" Color scheme (terminal)
+set t_Co=256
+set background=dark
+" let g:solarized_termcolors=256
+
+let g:lightline = {
+    \ 'colorscheme': 'solarized',
+    \ }
+
+" colorscheme solarized
