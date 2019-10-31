@@ -6,8 +6,63 @@ set nocompatible
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
 
-" Load plugins
-" execute pathogen#infect()
+" Begin loading plugins
+call plug#begin()
+
+" List of plugins
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-commentary'
+
+" Load colorschemes
+Plug 'chriskempson/base16-vim'
+Plug 'joshdick/onedark.vim'
+
+" LightLine {{{
+    Plug 'itchyny/lightline.vim'
+    Plug 'nicknisi/vim-base16-lightline'
+    let g:lightline = {
+        \   'colorscheme': 'base16',
+        \   'active': {
+        \       'left': [ [ 'mode', 'paste' ],
+        \               [ 'gitbranch' ],
+        \               [ 'readonly', 'filetype', 'filename' ]],
+        \       'right': [ [ 'percent' ], [ 'lineinfo' ],
+        \               [ 'fileformat', 'fileencoding' ],
+        \               [ 'gitblame', 'currentfunction',  'cocstatus', 'linter_errors', 'linter_warnings' ]]
+        \   },
+        \   'component_expand': {
+        \   },
+        \   'component_type': {
+        \       'readonly': 'error',
+        \       'linter_warnings': 'warning',
+        \       'linter_errors': 'error'
+        \   },
+        \   'component_function': {
+        \       'fileencoding': 'helpers#lightline#fileEncoding',
+        \       'filename': 'helpers#lightline#fileName',
+        \       'fileformat': 'helpers#lightline#fileFormat',
+        \       'filetype': 'helpers#lightline#fileType',
+        \       'gitbranch': 'helpers#lightline#gitBranch',
+        \       'cocstatus': 'coc#status',
+        \       'currentfunction': 'helpers#lightline#currentFunction',
+        \       'gitblame': 'helpers#lightline#gitBlame'
+        \   },
+        \   'tabline': {
+        \       'left': [ [ 'tabs' ] ],
+        \       'right': [ [ 'close' ] ]
+        \   },
+        \   'tab': {
+        \       'active': [ 'filename', 'modified' ],
+        \       'inactive': [ 'filename', 'modified' ],
+        \   },
+        \   'separator': { 'left': '', 'right': '' },
+        \   'subseparator': { 'left': '', 'right': '' }
+    \ }
+" }}}
+
+" End loading plugins
+call plug#end()
 
 " Turn on syntax highlighting
 syntax enable
@@ -84,4 +139,6 @@ let g:lightline = {
     \ 'colorscheme': 'solarized',
     \ }
 
+colorscheme onedark
 " colorscheme solarized
+
