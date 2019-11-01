@@ -18,7 +18,6 @@ Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'junegunn/fzf.vim'
 
 " Load colorschemes
-Plug 'chriskempson/base16-vim'
 Plug 'joshdick/onedark.vim'
 
 " Load lightline
@@ -97,7 +96,6 @@ set wrap " Enable line wrapping
 
 " Color scheme (terminal)
 set t_Co=256
-set background=dark
 
 colorscheme onedark
 " colorscheme solarized
