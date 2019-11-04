@@ -17,3 +17,7 @@ bind -n M-k select-pane -D
 
 # Reload tmux conf
 bind r source-file ~/.tmux.conf
+
+# 24-bit color
+set -g default-terminal "tmux-256color"
+set -ga terminal-overrides ",*256col*:Tc"
