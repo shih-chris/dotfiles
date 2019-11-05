@@ -29,3 +29,4 @@ git checkout -b $1
 }
 
 alias python='python3'
+alias cclip='xclip -selection clipboard'
