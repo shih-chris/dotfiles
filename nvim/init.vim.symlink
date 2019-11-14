@@ -22,9 +22,43 @@ Plug 'joshdick/onedark.vim'
 
 " Load lightline
 Plug 'itchyny/lightline.vim'
+Plug 'mgee/lightline-bufferline' " For tabs on top
+
+" Be sure to install fugitive for the below config to work and provide git status information
+Plug 'tpope/vim-fugitive'
+
 let g:lightline = {
-    \   'colorscheme': 'wombat',
-\ }
+      \ 'colorscheme': 'wombat',
+      \ 'tabline': {
+      \   'left': [['buffers']],
+      \   'right': [[ 'exit' ]],
+      \ },
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified'] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'fugitive#head'
+      \ },
+      \ 'component_expand': {
+      \   'buffers': 'lightline#bufferline#buffers',
+      \ },
+      \ 'component_type': {
+      \   'buffers': 'tabsel'
+      \ },
+      \ }
+let g:lightline#bufferline#shorten_path = 1
+
+" let g:lightline = {
+"     \   'colorscheme': 'wombat',
+" \ }
+
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
+" let g:airline_powerline_fonts = 1
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline_theme='zenburn'
+
 
 " End loading plugins
 call plug#end()
