@@ -13,10 +13,13 @@ call plug#begin()
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
-Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --bin'}
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Load NERDTree
+Plug 'scrooloose/nerdtree'
+let g:NERDTreeShowHidden = 1 " Show hidden files/directories by default
 
 " Load colorschemes
 Plug 'joshdick/onedark.vim'
@@ -39,7 +42,8 @@ let g:lightline = {
       \             [ 'gitbranch', 'readonly', 'filename', 'modified'] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'fugitive#head'
+      \   'gitbranch': 'fugitive#head',
+      \   'cocstatus': 'coc#status'
       \ },
       \ 'component_expand': {
       \   'buffers': 'lightline#bufferline#buffers',
@@ -82,7 +86,24 @@ nnoremap Y y$
 map <leader><space> :let @/=''<CR> " clear search
 
 set backspace=indent,eol,start " Allow backspacing over indentation, line breaks, and insertion start
-map <C-n> :NERDTreeToggle<CR>
+nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>f :NERDTreeFind<CR>
+
+
+" ----- coc.nvim ----- (taken from github.com/neoclide/coc.nvim)
+
+" if hidden is not set, TextEdit might fail
+set hidden
+
+" Some servers have issues with backup files
+set nobackup
+set nowritebackup
+
+" Better display for messages
+set cmdheight=2
+
+" Improve experience for diagnostic messages vs. default 4000
+set updatetime=300
 
 
 " ----- Indentation Options -----
