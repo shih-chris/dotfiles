@@ -1,0 +1,25 @@
+[global_config]
+  suppress_multiple_term_dialog = True
+[keybindings]
+  layout_launcher = <Primary><Alt>l
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#282c34"
+    background_darkness = 0.98
+    copy_on_selection = True
+    cursor_color = "#bbbbbb"
+    font = Menlo 11
+    foreground_color = "#abb2bf"
+    icon_bell = False
+    palette = "#000000:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#b2b2b2:#50536b:#eb6e67:#95ee8f:#f8c456:#6eaafb:#d886f3:#6cdcf7:#dfdfdf"
+    scrollbar_position = hidden
+    show_titlebar = False
