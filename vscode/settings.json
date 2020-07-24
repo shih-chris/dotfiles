@@ -1,0 +1,28 @@
+{
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\bin\\bash.exe",
+    "terminal.integrated.automationShell.windows": "D:\\Program Files\\Git\\bin\\bash.exe",
+    "liveServer.settings.donotShowInfoMsg": true,
+
+    // vim settings
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>", "w"],
+            "commands": ["workbench.action.splitEditor"]
+        }
+    ]
+}
