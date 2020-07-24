@@ -1,5 +1,7 @@
 // Place your key bindings in this file to override the defaults
 [
+    // vim keybinds
+    // movement
     {
         "key":"alt+h",
         "command": "workbench.action.focusLeftGroup",
@@ -19,5 +21,44 @@
         "key":"alt+j",
         "command": "workbench.action.focusBelowGroup",
         "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
-    }
+    },
+    
+    // file explorer
+    {
+        "key": "cmd+enter",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+        "key": "enter",
+        "command": "list.select",
+        "when": "listFocus && !inputFocus"
+    },
+
+    // Autosuggest Navigation
+    {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
 ]

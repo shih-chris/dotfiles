@@ -23,6 +23,18 @@
         {
             "before": ["<leader>", "w"],
             "commands": ["workbench.action.splitEditor"]
+        },
+        {
+            "before": ["<leader>", "t"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+            "before": ["<leader>", "f"],
+            "commands": ["revealInExplorer"]
+        },
+        {
+            "before": ["<leader>", "r", "f"],
+            "commands": ["fileutils.renameFile"]
         }
-    ]
+    ],
 }
