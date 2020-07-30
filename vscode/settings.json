@@ -36,5 +36,5 @@
             "before": ["<leader>", "r", "f"],
             "commands": ["fileutils.renameFile"]
         }
-    ],
+    ]
 }
