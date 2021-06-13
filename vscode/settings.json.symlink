@@ -3,9 +3,10 @@
     "telemetry.enableTelemetry": false,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "terminal.integrated.shell.windows": "D:\\Program Files\\Git\\bin\\bash.exe",
-    "terminal.integrated.automationShell.windows": "D:\\Program Files\\Git\\bin\\bash.exe",
     "liveServer.settings.donotShowInfoMsg": true,
+
+    // color settings
+    "workbench.colorTheme": "Visual Studio Dark",
 
     // vim settings
     "vim.insertModeKeyBindings": [
@@ -14,12 +15,27 @@
             "after": ["<Esc>"]
         }
     ],
-    "vim.leader": "<space>",
+    // "vim.leader": "<space>",
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-f>": false
     },
+
     "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<space>"],
+            "commands": ["vspacecode.space"]
+        },
+        {
+            "before": [","],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "command": "whichkey.triggerKey",
+                    "args": "m"
+                }
+            ]
+        },
         {
             "before": ["<leader>", "w"],
             "commands": ["workbench.action.splitEditor"]
@@ -35,6 +51,26 @@
         {
             "before": ["<leader>", "r", "f"],
             "commands": ["fileutils.renameFile"]
+        },
+        {
+            "before": ["<leader>", "n"],
+            "commands": [":nohl"]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<space>"],
+            "commands": ["vspacecode.space"]
+        },
+        {
+            "before": [","],
+            "commands": [
+                "vspacecode.space",
+                {
+                    "command": "whichkey.triggerKey",
+                    "args": "m"
+                }
+            ]
         }
     ]
 }
