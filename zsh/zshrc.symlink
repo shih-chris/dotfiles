@@ -79,3 +79,6 @@ alias oops='git reset --soft HEAD^'
 
 alias python='python3'
 alias cclip='xclip -selection clipboard'
+
+# data aliases
+alias run_docker_gpu='docker run -it --gpus all --rm -p 8888:8888 -v /home/chris/project:/home -w /home -u $(id -u):$(id -g) tensorflow bash'

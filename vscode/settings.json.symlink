@@ -1,12 +1,14 @@
 {
+    // editor settings
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "editor.suggestSelection": "first",
+    "editor.occurrencesHighlight": false
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "liveServer.settings.donotShowInfoMsg": true,
 
     // color settings
-    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.colorTheme": "One Dark Pro",
 
     // vim settings
     "vim.insertModeKeyBindings": [
@@ -72,5 +74,5 @@
                 }
             ]
         }
-    ]
+    ],
 }
