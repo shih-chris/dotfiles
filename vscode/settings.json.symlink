@@ -88,5 +88,7 @@
         "jupyter-notebook": "left"
     },
     "notebook.lineNumbers": "on",
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "One Dark Pro",
+    "git.confirmSync": false,
+    "git.autofetch": true,
 }
