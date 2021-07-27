@@ -1,21 +1,29 @@
 {
     // editor settings
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
+    "workbench.colorTheme": "One Dark Pro",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+
     "editor.suggestSelection": "first",
     "editor.occurrencesHighlight": false,
     "editor.lineNumbers": "relative",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "liveServer.settings.donotShowInfoMsg": true,
 
+    // explorer settings
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.autoReveal": "focusNoScroll",
+
     // vim settings
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+
     "vim.insertModeKeyBindings": [
         {
             "before": ["j", "k"],
             "after": ["<Esc>"]
         }
     ],
-    // "vim.leader": "<space>",
     "vim.handleKeys": {
         "<C-a>": false,
         "<C-f>": false
@@ -23,11 +31,17 @@
 
     "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "before": ["<space>"],
-            "commands": ["vspacecode.space"]
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
         },
         {
-            "before": [","],
+            "before": [
+                ","
+            ],
             "commands": [
                 "vspacecode.space",
                 {
@@ -35,35 +49,21 @@
                     "args": "m"
                 }
             ]
-        },
-        {
-            "before": ["<leader>", "w"],
-            "commands": ["workbench.action.splitEditor"]
-        },
-        {
-            "before": ["<leader>", "t"],
-            "commands": ["workbench.action.toggleSidebarVisibility"]
-        },
-        {
-            "before": ["<leader>", "f"],
-            "commands": ["revealInExplorer"]
-        },
-        {
-            "before": ["<leader>", "r", "f"],
-            "commands": ["fileutils.renameFile"]
-        },
-        {
-            "before": ["<leader>", "n"],
-            "commands": [":nohl"]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
         {
-            "before": ["<space>"],
-            "commands": ["vspacecode.space"]
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
         },
         {
-            "before": [","],
+            "before": [
+                ","
+            ],
             "commands": [
                 "vspacecode.space",
                 {
@@ -73,9 +73,13 @@
             ]
         }
     ],
-    "explorer.confirmDragAndDrop": false,
-    "terminal.integrated.defaultProfile.linux": "zsh",
+
+    // git settings
     "git.ignoreMissingGitWarning": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+
+    // data stuff
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
@@ -88,7 +92,8 @@
         "jupyter-notebook": "left"
     },
     "notebook.lineNumbers": "on",
-    "workbench.colorTheme": "One Dark Pro",
-    "git.confirmSync": false,
-    "git.autofetch": true,
+
+    // telemetry
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
 }
