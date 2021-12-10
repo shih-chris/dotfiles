@@ -96,4 +96,6 @@
     // telemetry
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
+    "liveServer.settings.donotVerifyTags": true,
+    "julia.symbolCacheDownload": true,
 }
