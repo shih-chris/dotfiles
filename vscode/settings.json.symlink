@@ -98,4 +98,10 @@
     "telemetry.enableTelemetry": false,
     "liveServer.settings.donotVerifyTags": true,
     "julia.symbolCacheDownload": true,
+    "files.associations": {
+        "*.sql": "sql"
+    },
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "jupyter.askForKernelRestart": false,
+    "jupyter.interactiveWindowMode": "perFile",
 }
