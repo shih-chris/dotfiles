@@ -104,4 +104,5 @@
     "bracket-pair-colorizer-2.depreciation-notice": false,
     "jupyter.askForKernelRestart": false,
     "jupyter.interactiveWindowMode": "perFile",
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
 }
