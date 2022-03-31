@@ -37,18 +37,6 @@
             "commands": [
                 "vspacecode.space"
             ]
-        },
-        {
-            "before": [
-                ","
-            ],
-            "commands": [
-                "vspacecode.space",
-                {
-                    "command": "whichkey.triggerKey",
-                    "args": "m"
-                }
-            ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -59,18 +47,6 @@
             "commands": [
                 "vspacecode.space"
             ]
-        },
-        {
-            "before": [
-                ","
-            ],
-            "commands": [
-                "vspacecode.space",
-                {
-                    "command": "whichkey.triggerKey",
-                    "args": "m"
-                }
-            ]
         }
     ],
 
@@ -79,11 +55,29 @@
     "git.confirmSync": false,
     "git.autofetch": true,
 
-    // data stuff
+    // telemetry
+    "telemetry.telemetryLevel": "off",
+
+    // other settings
+    "liveServer.settings.donotVerifyTags": true,
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+
+    ////////////////
+    // data stuff //
+    ////////////////
+
+    "files.associations": {
+        "*.sql": "sql"
+    },
+
+    // jupter settings
     "terminal.integrated.commandsToSkipShell": [
         "language-julia.interrupt"
     ],
+
     "julia.enableTelemetry": false,
+    "julia.symbolCacheDownload": true,
+
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter-notebook"
     },
@@ -93,16 +87,11 @@
     },
     "notebook.lineNumbers": "on",
 
-    // telemetry
-    "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
-    "liveServer.settings.donotVerifyTags": true,
-    "julia.symbolCacheDownload": true,
-    "files.associations": {
-        "*.sql": "sql"
-    },
-    "bracket-pair-colorizer-2.depreciation-notice": false,
     "jupyter.askForKernelRestart": false,
     "jupyter.interactiveWindowMode": "perFile",
-    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "jupyter.alwaysScrollOnNewCell": true,
+    "jupyter.generateSVGPlots": true,
+    "jupyter.themeMatplotlibPlots": true,
+    "jupyter.sendSelectionToInteractiveWindow": true,
+
 }
