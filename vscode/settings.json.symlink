@@ -93,5 +93,7 @@
     "jupyter.generateSVGPlots": true,
     "jupyter.themeMatplotlibPlots": true,
     "jupyter.sendSelectionToInteractiveWindow": true,
+    "julia.executablePath": "/home/chris/julia-1.7.2/bin/julia",
+    "julia.enableCrashReporter": false,
 
 }

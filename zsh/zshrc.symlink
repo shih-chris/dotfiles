@@ -67,6 +67,7 @@ fi
 # PATH updates
 export PATH=$PATH:/usr/local/git/bin:/usr/local/bin
 export LANG=en_US.UTF-8
+export PATH="$PATH:/home/chris/julia-1.7.2/bin"
 
 
 # ########
@@ -91,6 +92,7 @@ alias cclip='xclip -selection clipboard'
 
 alias run_docker_gpu='docker run -it --gpus all --rm -p 8888:8888 -v /home/chris/project:/home -w /home -u $(id -u):$(id -g) tensorflow bash'
 alias source_env_dbt='source /home/chris/project/dbt/dbt-env/bin/activate'
+alias run_zoom='zoom --disable-gpu-sandbox'
 
 
 # >>> conda initialize >>>
