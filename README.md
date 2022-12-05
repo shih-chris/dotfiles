@@ -1,4 +1,4 @@
-# dotfiles
+# Personal dotfiles
 Updated dotfiles / config
 
 ## Overview
