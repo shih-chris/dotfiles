@@ -68,7 +68,7 @@ fi
 export PATH=$PATH:/usr/local/git/bin:/usr/local/bin
 export LANG=en_US.UTF-8
 export PATH="$PATH:/home/chris/julia-1.7.2/bin"
-
+export PATH=/home/chris/.local/bin:$PATH
 
 # ########
 # Aliases
