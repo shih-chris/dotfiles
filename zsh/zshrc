@@ -75,9 +75,10 @@ export PATH=/home/chris/.local/bin:$PATH
 # ########
 
 # basic aliases
+export EDITOR='lvim'
 alias ls='ls -FG --color=auto'
-alias vi='nvim'
-alias vim='nvim'
+alias vi='lvim'
+alias vim='lvim'
 
 # git aliases
 alias gs='git status'
