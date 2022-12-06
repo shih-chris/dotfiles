@@ -1,26 +1,91 @@
---[[
-lvim is the global options object
+------------------------
+-- Additional Plugins --
+------------------------
 
-Linters should be
-filled in as strings with either
-a global executable or a path to
-an executable
-]]
--- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
+-- User defined plugins
+lvim.plugins = {
+    "tpope/vim-surround",
+    {
+        "norcalli/nvim-colorizer.lua",
+        config = function()
+            require("colorizer").setup({ "css", "scss", "html", "javascript" }, {
+                RGB = true, -- #RGB hex codes
+                RRGGBB = true, -- #RRGGBB hex codes
+                RRGGBBAA = true, -- #RRGGBBAA hex codes
+                rgb_fn = true, -- CSS rgb() and rgba() functions
+                hsl_fn = true, -- CSS hsl() and hsla() functions
+                css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+                css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+            })
+        end,
+    },
+}
 
--- general
+-------------
+-- General --
+-------------
+
+-- General nvim options
 lvim.log.level = "warn"
 lvim.format_on_save.enabled = false
-lvim.colorscheme = "lunar"
--- to disable icons and use a minimalist setup, uncomment the following
--- lvim.use_icons = false
+lvim.colorscheme = 'tokyonight'
+
+local nvim_options = {
+    backup = false,                          -- creates a backup file
+    clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
+    cmdheight = 2,                           -- more space in the neovim command line for displaying messages
+    completeopt = { "menuone", "noselect" }, -- mostly just for cmp
+    conceallevel = 0,                        -- so that `` is visible in markdown files
+    fileencoding = "utf-8",                  -- the encoding written to a file
+    hlsearch = true,                         -- highlight all matches on previous search pattern
+    ignorecase = true,                       -- ignore case in search patterns
+    mouse = "a",                             -- allow the mouse to be used in neovim
+    pumheight = 10,                          -- pop up menu height
+    showmode = false,                        -- we don't need to see things like -- INSERT -- anymore
+    showtabline = 2,                         -- always show tabs
+    smartcase = true,                        -- smart case
+    smartindent = true,                      -- make indenting smarter again
+    splitbelow = true,                       -- force all horizontal splits to go below current window
+    splitright = true,                       -- force all vertical splits to go to the right of current window
+    swapfile = false,                        -- creates a swapfile
+    termguicolors = true,                    -- set term gui colors (most terminals support this)
+    timeoutlen = 300,                        -- time to wait for a mapped sequence to complete (in milliseconds)
+    undofile = true,                         -- enable persistent undo
+    updatetime = 300,                        -- faster completion (4000ms default)
+    writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+    expandtab = true,                        -- convert tabs to spaces
+    shiftwidth = 4,                          -- the number of spaces inserted for each indentation
+    tabstop = 4,                             -- insert 4 spaces for a tab
+    cursorline = false,                       -- highlight the current line
+    number = true,                           -- set numbered lines
+    relativenumber = true,                  -- set relative numbered lines
+    numberwidth = 4,                         -- set number column width to 2 {default 4}
+
+    signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
+    wrap = false,                             -- display lines as one long line
+    linebreak = true,                        -- companion to wrap, don't split words
+    scrolloff = 8,                           -- minimal number of screen lines to keep above and below the cursor
+    sidescrolloff = 8,                       -- minimal number of screen columns either side of cursor if wrap is `false`
+    guifont = "Hack Nerd Font",               -- the font used in graphical neovim applications
+    whichwrap = "bs<>[]hl",                  -- which "horizontal" keys are allowed to travel to prev/next line
+}
+
+for k, v in pairs(nvim_options) do
+    vim.opt[k] = v
+end
+
+-----------------------
+-- Custom keymapping --
+-----------------------
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
--- add your own keymapping
+
+lvim.keys.insert_mode["jk"] = "<ESC>"
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
--- lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
--- lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
+lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
 -- override a default keymapping
@@ -28,21 +93,21 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
 
 -- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
--- local _, actions = pcall(require, "telescope.actions")
--- lvim.builtin.telescope.defaults.mappings = {
---   -- for input mode
---   i = {
---     ["<C-j>"] = actions.move_selection_next,
---     ["<C-k>"] = actions.move_selection_previous,
---     ["<C-n>"] = actions.cycle_history_next,
---     ["<C-p>"] = actions.cycle_history_prev,
---   },
---   -- for normal mode
---   n = {
---     ["<C-j>"] = actions.move_selection_next,
---     ["<C-k>"] = actions.move_selection_previous,
---   },
--- }
+local _, actions = pcall(require, "telescope.actions")
+lvim.builtin.telescope.defaults.mappings = {
+    -- for input mode
+    i = {
+        ["<C-j>"] = actions.move_selection_next,
+        ["<C-k>"] = actions.move_selection_previous,
+        ["<C-n>"] = actions.cycle_history_next,
+        ["<C-p>"] = actions.cycle_history_prev,
+      },
+    -- for normal mode
+    n = {
+        ["<C-j>"] = actions.move_selection_next,
+        ["<C-k>"] = actions.move_selection_previous,
+    },
+}
 
 -- Change theme settings
 -- lvim.builtin.theme.options.dim_inactive = true
@@ -70,18 +135,19 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
-  "bash",
-  "c",
-  "javascript",
-  "json",
-  "lua",
-  "python",
-  "typescript",
-  "tsx",
-  "css",
-  "rust",
-  "java",
-  "yaml",
+    "bash",
+    "c",
+    "javascript",
+    "json",
+    "lua",
+    "python",
+    "typescript",
+    "tsx",
+    "css",
+    "rust",
+    "java",
+    "yaml",
+    "sql",
 }
 
 lvim.builtin.treesitter.ignore_install = { "haskell" }
@@ -160,14 +226,6 @@ lvim.builtin.treesitter.highlight.enable = true
 --     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
 --     filetypes = { "javascript", "python" },
 --   },
--- }
-
--- Additional Plugins
--- lvim.plugins = {
---     {
---       "folke/trouble.nvim",
---       cmd = "TroubleToggle",
---     },
 -- }
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
