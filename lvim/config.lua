@@ -3,8 +3,11 @@
 -----------------------------
 
 reload "user.plugins"
+
 reload "user.keymaps"
 reload "user.options"
+reload "user.treesitter"
+reload "user.whichkey"
 
 -- generic LSP settings
 
@@ -87,10 +90,4 @@ reload "user.options"
 --   -- enable wrap mode for json files only
 --   command = "setlocal wrap",
 -- })
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = "zsh",
---   callback = function()
---     -- let treesitter use bash highlight for zsh files as well
---     require("nvim-treesitter.highlight").attach(0, "bash")
---   end,
--- })
+

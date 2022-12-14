@@ -4,9 +4,14 @@
 
 -- User defined plugins
 lvim.plugins = {
-    "tpope/vim-surround",
+    -- colorschemes
+    "EdenEast/nightfox.nvim",
+    "sainnhe/sonokai",
+
+    -- other plugins
+    "tpope/vim-surround", -- surround keystrokes
     {
-        "norcalli/nvim-colorizer.lua",
+        "norcalli/nvim-colorizer.lua", -- colorizer
         config = function()
             require("colorizer").setup({ "css", "scss", "html", "javascript" }, {
                 RGB = true, -- #RGB hex codes
