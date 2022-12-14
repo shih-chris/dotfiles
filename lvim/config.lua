@@ -81,10 +81,10 @@ end
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
 
-lvim.keys.insert_mode["jk"] = "<ESC>"
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
-lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>"
-lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
+lvim.keys.insert_mode["jk"] = "<ESC>" -- custom esacpe
+lvim.keys.insert_mode["<C-H>"] = "<C-W>" -- add back ctrl-delete functionality
+lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>" -- Shift cycle through buffers
+lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>" -- Shift cycle through buffers 
 
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
