@@ -1,3 +1,7 @@
+--------------------------------
+-- Custom treesitter settings --
+--------------------------------
+
 -- local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 -- if not status_ok then
 --     return
@@ -15,6 +19,27 @@
 --     require("nvim-treesitter.highlight").attach(0, "bash")
 --   end,
 -- })
+
+-- if you don't want all the parsers change this to a table of the ones you want
+lvim.builtin.treesitter.ensure_installed = {
+    "bash",
+    "c",
+    "javascript",
+    "json",
+    "lua",
+    "python",
+    "typescript",
+    "tsx",
+    "css",
+    "rust",
+    "java",
+    "yaml",
+    "sql",
+}
+
+lvim.builtin.treesitter.ignore_install = { "haskell" }
+lvim.builtin.treesitter.highlight.enable = true
+
 
 lvim.builtin.treesitter.ensure_installed = 'all'
 lvim.builtin.treesitter.indent = {
