@@ -6,7 +6,7 @@ plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/exports.zsh"
 plug "$HOME/.config/zsh/options.zsh"
 plug "$HOME/.config/zsh/plugins.zsh"
-plug "$HOME/.config/zsh/keybindings.zsh"
+plug "$HOME/.config/zsh/keymaps.zsh"
 
  # history
 HISTFILE=~/.zsh_history
