@@ -8,13 +8,12 @@ lvim.plugins = {
     "EdenEast/nightfox.nvim",
     "sainnhe/sonokai",
 
-    -- other plugins
-    "tpope/vim-surround", -- surround keystrokes
-    "tpope/vim-repeat", -- repeat surround keystrokes
+    -- nvim plugins
+    "p00f/nvim-ts-rainbow", -- rainbow parentheses
     {
         "norcalli/nvim-colorizer.lua", -- colorizer
         config = function()
-            require("colorizer").setup({ "css", "scss", "html", "javascript" }, {
+            require("colorizer").setup({ "css", "scss", "html", "javascript" , "lua" , "yaml" }, {
                 RGB = true, -- #RGB hex codes
                 RRGGBB = true, -- #RRGGBB hex codes
                 RRGGBBAA = true, -- #RRGGBBAA hex codes
@@ -25,5 +24,10 @@ lvim.plugins = {
             })
         end,
     },
+
+    -- old vim plugins
+    "tpope/vim-surround", -- surround keystrokes
+    "tpope/vim-repeat", -- repeat surround keystrokes
+
 }
 

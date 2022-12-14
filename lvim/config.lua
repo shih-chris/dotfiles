@@ -4,8 +4,8 @@
 
 reload "user.plugins"
 
-reload "user.keymaps"
 reload "user.options"
+reload "user.keymaps"
 reload "user.treesitter"
 reload "user.whichkey"
 

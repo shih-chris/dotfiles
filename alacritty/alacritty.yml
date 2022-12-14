@@ -250,7 +250,7 @@ schemes:
       - { index: 16, color: '0xf4a261' }
       - { index: 17, color: '0xd67ad2' }
 
-  sonokai: &sonokai
+  sonokai-default: &sonokai-default
     # Default colors
     primary:
       background:   '0x2c2e34'
@@ -276,8 +276,58 @@ schemes:
       cyan:         '0xf39660'
       white:        '0xe2e2e3'
 
+  sonokai-andromeda: &sonokai-andromeda
+    primary:
+      background:   '0x2b2d3a'
+      foreground:   '0xe1e3e4'
+
+    normal:
+      black:        '0x181a1c'
+      red:          '0xfb617e'
+      green:        '0x9ed06c'
+      yellow:       '0xedc763'
+      blue:         '0x6dcae8'
+      magenta:      '0xbb97ee'
+      cyan:         '0xf89860'
+      white:        '0xe1e3e4'
+
+    bright:
+      black:        '0x7e8294'
+      red:          '0xfb617e'
+      green:        '0x9ed06c'
+      yellow:       '0xedc763'
+      blue:         '0x6dcae8'
+      magenta:      '0xbb97ee'
+      cyan:         '0xf89860'
+      white:        '0xe1e3e4'
+
+  sonokai-maia: &sonokai-maia
+    primary:
+      background:   '0x273136'
+      foreground:   '0xe1e2e3'
+
+    normal:
+      black:        '0x1c1e1f'
+      red:          '0xf76c7c'
+      green:        '0x9cd57b'
+      yellow:       '0xe3d367'
+      blue:         '0x78cee9'
+      magenta:      '0xbaa0f8'
+      cyan:         '0xf3a96a'
+      white:        '0xe1e2e3'
+
+    bright:
+      black:        '0x82878b'
+      red:          '0xf76c7c'
+      green:        '0x9cd57b'
+      yellow:       '0xe3d367'
+      blue:         '0x78cee9'
+      magenta:      '0xbaa0f8'
+      cyan:         '0xf3a96a'
+      white:        '0xe1e2e3'     
+      
 # Color scheme selection
-colors: *sonokai
+colors: *sonokai-maia
 
 
 # Visual Bell
