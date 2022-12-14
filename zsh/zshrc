@@ -1,14 +1,11 @@
 #!/bin/sh
 
-export ZSH="/home/chris/.oh-my-zsh"
-
-ZSH_THEME="eastwood"
-HYPHEN_INSENSITIVE="true"
-DISABLE_AUTO_TITLE="true"
+# HYPHEN_INSENSITIVE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # Color completion the same as ls
-eval "$(dircolors)"
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+# eval "$(dircolors)"
+# zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # Other options
 COMPLETION_WAITING_DOTS="true"
@@ -16,13 +13,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 
 # Plugins
-plugins=(git)
-
-source $ZSH/oh-my-zsh.sh
-
-if [[ -a ~/.local.zshrc ]]; then
-	source ~/.local.zshrc
-fi
 
 # # source
 # plug "$HOME/.config/zsh/aliases.zsh"
