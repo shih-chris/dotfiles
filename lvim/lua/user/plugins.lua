@@ -10,6 +10,7 @@ lvim.plugins = {
 
     -- other plugins
     "tpope/vim-surround", -- surround keystrokes
+    "tpope/vim-repeat", -- repeat surround keystrokes
     {
         "norcalli/nvim-colorizer.lua", -- colorizer
         config = function()
