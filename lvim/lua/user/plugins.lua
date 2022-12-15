@@ -24,6 +24,7 @@ lvim.plugins = {
             })
         end,
     },
+    "ggandor/lightspeed.nvim",
 
     -- old vim plugins
     "tpope/vim-surround", -- surround keystrokes

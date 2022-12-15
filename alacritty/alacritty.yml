@@ -10,7 +10,7 @@ window:
   decorations: none
   # full: Borders and title bar
   # none: Neither borders nor title bar
-  opacity: 0.95
+  opacity: 0.97
   
   # dynamic_title: true
   # class: Alacritty

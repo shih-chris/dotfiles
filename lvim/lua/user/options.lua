@@ -15,6 +15,7 @@ vim.g.sonokai_style = 'maia'
 lvim.colorscheme = 'sonokai'
 
 -- lvim.builtin.theme.options.style = "storm"
+lvim.transparent_window = true
 
 
 --------------------------
