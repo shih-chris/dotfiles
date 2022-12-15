@@ -39,3 +39,6 @@ vim.api.nvim_set_keymap('n', 'S', '<Plug>Lightspeed_S', {})
 vim.api.nvim_set_keymap('n', 'zs', '<Plug>Lightspeed_gs', {})
 vim.api.nvim_set_keymap('n', 'zS', '<Plug>Lightspeed_gS', {})
 
+-- Toggle term mapping
+
+
