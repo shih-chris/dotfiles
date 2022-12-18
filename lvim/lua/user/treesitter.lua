@@ -24,12 +24,11 @@ lvim.builtin.treesitter.ensure_installed = 'all'
 lvim.builtin.treesitter.highlight.enable = true
 
 lvim.builtin.treesitter.indent = {
-    enable = false,
-    -- disable = {
-    --     "sql",
-    --     "yaml",
-    --     "python"
-    -- }
+    enable = true,
+    disable = {
+        "yaml",
+        "python"
+    }
 }
 
 lvim.builtin.treesitter.rainbow.enable = true

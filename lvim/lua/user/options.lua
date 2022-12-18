@@ -30,6 +30,7 @@ local nvim_options = {
     conceallevel = 0,                        -- so that `` is visible in markdown files
     fileencoding = "utf-8",                  -- the encoding written to a file
     hlsearch = true,                         -- highlight all matches on previous search pattern
+    incsearch = true,                        -- show match for partly typsed search command
     ignorecase = true,                       -- ignore case in search patterns
     mouse = "a",                             -- allow the mouse to be used in neovim
     pumheight = 10,                          -- pop up menu height
@@ -37,7 +38,7 @@ local nvim_options = {
     showtabline = 2,                         -- always show tabs
     smartcase = true,                        -- smart case
     -- autoindent = true,                       -- make indenting be based on previous line
-    smartindent = true,                     -- make indenting smarter again
+    smartindent = true,                      -- make indenting smarter again
     splitbelow = true,                       -- force all horizontal splits to go below current window
     splitright = true,                       -- force all vertical splits to go to the right of current window
     swapfile = false,                        -- creates a swapfile
@@ -75,7 +76,9 @@ end
 
 lvim.builtin.alpha.active = true
 lvim.builtin.alpha.mode = "dashboard"
+lvim.builtin.indentlines.options.use_treesitter = true
 lvim.builtin.terminal.active = true
+lvim.builtin.terminal.direction = "vertical"
 lvim.builtin.nvimtree.setup.view.side = "left"
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 

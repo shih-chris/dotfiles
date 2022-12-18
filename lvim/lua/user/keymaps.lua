@@ -9,6 +9,7 @@ lvim.keys.insert_mode["jk"] = "<ESC>" -- custom esacpe
 lvim.keys.insert_mode["<C-H>"] = "<C-W>" -- add back ctrl-delete functionality
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>" -- Shift cycle through buffers
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>" -- Shift cycle through buffers 
+lvim.keys.normal_mode["J"] = "mzJ'z" -- Keep cursor in place with "J"
 
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")
@@ -38,7 +39,4 @@ vim.api.nvim_set_keymap('n', 's', '<Plug>Lightspeed_s', {})
 vim.api.nvim_set_keymap('n', 'S', '<Plug>Lightspeed_S', {})
 vim.api.nvim_set_keymap('n', 'zs', '<Plug>Lightspeed_gs', {})
 vim.api.nvim_set_keymap('n', 'zS', '<Plug>Lightspeed_gS', {})
-
--- Toggle term mapping
-
 

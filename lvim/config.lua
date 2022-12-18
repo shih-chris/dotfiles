@@ -4,9 +4,10 @@
 
 reload "user.plugins"
 
-reload "user.options"
+reload "user.colorizer"
 reload "user.keymaps"
+reload "user.options"
+reload "user.toggleterm"
 reload "user.treesitter"
 reload "user.whichkey"
-reload "user.colorizer"
 
