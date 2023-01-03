@@ -80,5 +80,6 @@ lvim.builtin.indentlines.options.use_treesitter = true
 lvim.builtin.terminal.active = true
 lvim.builtin.terminal.direction = "vertical"
 lvim.builtin.nvimtree.setup.view.side = "left"
+lvim.builtin.nvimtree.setup.view.adaptive_size = true
 lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 
