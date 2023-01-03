@@ -12,6 +12,14 @@ lvim.plugins = {
     "p00f/nvim-ts-rainbow", -- rainbow parentheses
     "norcalli/nvim-colorizer.lua", -- colorizer
     "ggandor/lightspeed.nvim", -- nvim movement on steriods
+    {
+      "iamcco/markdown-preview.nvim",
+      run = "cd app && npm install",
+      ft = "markdown",
+      config = function()
+        vim.g.mkdp_auto_start = 1
+      end,
+    }, -- markdown-preview in browser
 
     -- old vim plugins
     "tpope/vim-surround", -- surround keystrokes
