@@ -10,4 +10,5 @@ reload "user.options"
 reload "user.toggleterm"
 reload "user.treesitter"
 reload "user.whichkey"
+reload "user.lazygit"
 

@@ -58,7 +58,7 @@ font:
 
 # Color schemes
 schemes:
-  solarized_light: &light
+  solarized_light: &solarized_light
     primary:
       background:   '0xfdf6e3' # base3
       foreground:   '0x657b83' # base00
@@ -84,7 +84,7 @@ schemes:
       cyan:         '0x93a1a1' # base1
       white:        '0xfdf6e3' # base3
 
-  solarized_dark: &dark
+  solarized_dark: &solarized_dark
     primary:
       background:   '0x002b36' # base03
       foreground:   '0x839496' # base0
@@ -110,7 +110,7 @@ schemes:
       cyan:         '0x93a1a1' # base1
       white:        '0xfdf6e3' # base3 
 
-  base16_dark: &basesixteen
+  base16_dark: &base_sixteen
     # Default colors
     primary:
       background:   '0x181818'
@@ -143,7 +143,7 @@ schemes:
       cyan:         '0x86c1b9'
       white:        '0xf8f8f8'
     
-  one_light: &onelight
+  one_light: &one_light
     # Colors (One Light - https://github.com/atom/atom/tree/master/packages/one-light-syntax)
     primary:
       background:   '#fafafa'
@@ -164,7 +164,7 @@ schemes:
       cyan:         '#0184bc'
       white:        '#a0a1a7' # mono-3
 
-  one_dark: &onedark
+  one_dark: &one_dark
     # Colors (One Dark - https://github.com/atom/atom/tree/master/packages/one-dark-syntax)
     primary:
       background:   '#282c34'
@@ -185,7 +185,7 @@ schemes:
       cyan:         '#56b6c2'
       white:        '#828997' # mono-2
     
-  one_darker: &onedarker
+  one_darker: &one_darker
     # Default colors
     primary:
       background:   '#1f2227'
@@ -325,9 +325,32 @@ schemes:
       magenta:      '0xbaa0f8'
       cyan:         '0xf3a96a'
       white:        '0xe1e2e3'     
+
+  lunarvim: &lunarvim
+    primary:
+      background:   '#1a1b26'
+      foreground:   '#c0caf5'
       
+    normal:
+      black:        '#545c7e'
+      red:          '#f7768e'
+      green:        '#9ece6a'
+      yellow:       '#e0af68'
+      blue:         '#7aa2f7'
+      magenta:      '#bb9af7'
+      cyan:         '#7dcfff'
+
+    bright:
+      black:        '#292e42'
+      red:          '#db4b4b'
+      green:        '#73daca'
+      yellow:       '#e0af68'
+      blue:         '#0db9d7'
+      magenta:      '#ff007c'
+      cyan:         '#7dcfff'
+
 # Color scheme selection
-colors: *sonokai-maia
+colors: *lunarvim
 
 
 #------------------
