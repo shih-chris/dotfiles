@@ -10,7 +10,6 @@ lvim.keys.insert_mode["<C-H>"] = "<C-W>" -- add back ctrl-delete functionality
 lvim.keys.normal_mode["<S-l>"] = ":BufferLineCycleNext<CR>" -- Shift cycle through buffers
 lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>" -- Shift cycle through buffers 
 lvim.keys.normal_mode["J"] = "mzJ'z" -- Keep cursor in place with "J"
-lvim.builtin.terminal.open_mapping = "<c-t>"
 
 -- unmap a default keymapping
 -- vim.keymap.del("n", "<C-Up>")

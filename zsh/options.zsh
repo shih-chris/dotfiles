@@ -13,6 +13,3 @@ COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
 
-# keybinds
-bindkey '^ ' autosuggest-accept
-

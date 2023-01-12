@@ -2,5 +2,6 @@
 #-- Keybindings --
 #-----------------
 
-# vim keybindings
+# default keybinds
+bindkey '^ ' autosuggest-accept
 
