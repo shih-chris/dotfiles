@@ -3,7 +3,7 @@
 --------------------------
 
 -- Toggleterm mapping
-lvim.builtin.terminal.open_mapping = "<c-t>"
+-- lvim.builtin.terminal.open_mapping = "<c-t>"
 
 -- function _G.set_terminal_keymaps()
 --   local opts = {buffer = 0}
