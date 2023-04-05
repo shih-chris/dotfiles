@@ -25,6 +25,7 @@ lvim.plugins = {
     "tpope/vim-surround", -- surround keystrokes
     "tpope/vim-repeat", -- repeat surround keystrokes
     "jesseduffield/lazygit", -- git wrapper
+    "JuliaEditorSupport/julia-vim", -- julia-vim
 
 }
 
