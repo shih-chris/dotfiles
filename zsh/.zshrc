@@ -2,6 +2,7 @@
 [ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 
 # source
+plug "$HOME/.config/zsh/scripts.zsh"
 plug "$HOME/.config/zsh/aliases.zsh"
 plug "$HOME/.config/zsh/exports.zsh"
 plug "$HOME/.config/zsh/options.zsh"
