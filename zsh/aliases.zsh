@@ -3,7 +3,6 @@
 #-------------
 
 # basic aliases
-export EDITOR='lvim'
 alias ls='ls -FG --color=auto'
 alias vi='lvim'
 alias vim='lvim'

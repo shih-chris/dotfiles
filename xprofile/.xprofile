@@ -1,5 +1,5 @@
 # Environment variables set everywhere
-export EDITOR="nvim"
+export EDITOR="lvim"
 export TERMINAL="alacritty"
 export BROWSER="brave"
 
