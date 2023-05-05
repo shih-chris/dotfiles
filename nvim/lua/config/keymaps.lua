@@ -1,8 +1,6 @@
+-- Create variables / helper functions
 local opts = { noremap = true, silent = true }
-
 local term_opts = { silent = true }
-
--- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
 --Remap space as leader key
@@ -11,12 +9,17 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 -- Modes
---   normal_mode = "n",
 --   insert_mode = "i",
+--   normal_mode = "n",
 --   visual_mode = "v",
 --   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
+
+-- Insert --
+-- Press jk fast to exit insert mode 
+keymap("i", "jk", "<ESC>", opts)
+-- keymap("i", "kj", "<ESC>", opts)
 
 -- Normal --
 -- Better window navigation
@@ -38,11 +41,6 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
-
--- Insert --
--- Press jk fast to exit insert mode 
-keymap("i", "jk", "<ESC>", opts)
--- keymap("i", "kj", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
