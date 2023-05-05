@@ -1,5 +1,6 @@
 #!/bin/sh
 [ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
+typeset -U PATH
 
 # source
 plug "$HOME/.config/zsh/scripts.zsh"
