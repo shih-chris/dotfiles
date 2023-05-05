@@ -7,6 +7,7 @@ lvim.plugins = {
     -- colorschemes
     "EdenEast/nightfox.nvim",
     "sainnhe/sonokai",
+    "catppuccin/nvim",
 
     -- nvim plugins
     "p00f/nvim-ts-rainbow", -- rainbow parentheses
