@@ -17,14 +17,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- add lazy.nvim
-require("lazy").setup({
+require("lazy").setup("plugins")
 
-    -- color scheme
-    {"catppuccin/nvim", name = "catppuccin"},
+--------------
+-- Appendix --
+--------------
 
-    -- nvim plugins
     -- "p00f/nvim-ts-rainbow", -- rainbow parentheses
-    "norcalli/nvim-colorizer.lua", -- colorizer
+    -- "norcalli/nvim-colorizer.lua", -- colorizer
     -- "ggandor/lightspeed.nvim", -- nvim movement on steriods
     -- {
     --   "iamcco/markdown-preview.nvim",
@@ -36,10 +36,4 @@ require("lazy").setup({
     -- }, -- markdown-preview in browser
 
     -- old vim plugins
-    "tpope/vim-commentary", -- comment keystrokes
-    "tpope/vim-surround", -- surround keystrokes
-    "tpope/vim-repeat", -- repeat surround keystrokes
-    "jesseduffield/lazygit", -- git wrapper
-    "JuliaEditorSupport/julia-vim", -- julia-vim
-
-})
+    -- "tpope/vim-surround",                   -- surround keystrokes

@@ -1,3 +1,9 @@
+---------------------------------
+-- Custom Colorscheme Settings --
+---------------------------------
+
+vim.cmd.colorscheme "catppuccin"
+
 --------------------------
 -- General nvim options --
 --------------------------
@@ -57,3 +63,4 @@ vim.api.nvim_create_autocmd({"FileType"}, {
     vim.opt.formatoptions:remove({ 'o' })
   end
 })
+

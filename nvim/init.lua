@@ -2,8 +2,11 @@
 -- Source individual files --
 -----------------------------
 
-require "config.plugins"
+--Remap space as leader key
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
-require "config.colorscheme"
-require "config.options"
-require "config.keymaps"
+require("config.plugins")
+
+require("config.options")
+require("config.keymaps")
