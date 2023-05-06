@@ -6,9 +6,11 @@ return {
         'nvim-neo-tree/neo-tree.nvim',
         branch = 'v2.x',
         config = function()
+            -- remove legacy commands
             vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
 
             require('neo-tree').setup({
+                close_if_last_window = true,
                 window = {
                     width = 30,
                     mappings = {
