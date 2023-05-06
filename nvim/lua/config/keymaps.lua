@@ -2,7 +2,7 @@
 -- Define Sections --
 ---------------------
 local sections = {
-    f = { desc = 'Find' },
+    s = { desc = 'Search' },
     l = { desc = 'LSP' },
     g = { desc = 'Git' },
     b = { desc = 'Buffers' },
@@ -52,6 +52,12 @@ vim.keymap.set('n', '<leader>e', '<Cmd>Neotree action=focus source=filesystem po
 
 -- Remove highlighting
 vim.keymap.set('n', '<leader>h', '<Cmd>nohl<CR>', { desc = 'Remove highlighting' })
+
+-- Telescope
+vim.keymap.set('n', '<leader>sf', require('telescope.builtin').find_files, { desc = '[S]earch [F]iles' })
+vim.keymap.set('n', '<leader>sg', require('telescope.builtin').git_files, { desc = '[S]earch [G]it Files' })
+vim.keymap.set('n', '<leader>sh', require('telescope.builtin').help_tags, { desc = '[S]earch [H]elp' })
+vim.keymap.set('n', '<leader>st', require('telescope.builtin').live_grep, { desc = '[S]earch [T]ext' })
 
 
 -----------------
