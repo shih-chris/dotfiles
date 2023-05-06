@@ -53,6 +53,7 @@ vim.keymap.set('n', '<leader>e', '<Cmd>Neotree action=focus source=filesystem po
 -- Remove highlighting
 vim.keymap.set('n', '<leader>h', '<Cmd>nohl<CR>', { desc = 'Remove highlighting' })
 
+
 -----------------
 -- Visual Mode --
 -----------------
