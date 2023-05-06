@@ -1,3 +1,13 @@
+---------------------
+-- Define Sections --
+---------------------
+local sections = {
+    f = { desc = 'Find' },
+    l = { desc = 'LSP' },
+    g = { desc = 'Git' },
+    b = { desc = 'Buffers' },
+}
+
 -----------------
 -- Insert Mode --
 -----------------
