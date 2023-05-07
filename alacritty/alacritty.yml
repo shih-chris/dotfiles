@@ -2,6 +2,10 @@
 #-- General Settings --
 #----------------------
 
+# Environment variables
+env:
+  TERM: xterm-256color
+
 # Window details
 window:
   padding:
