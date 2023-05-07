@@ -6,19 +6,20 @@ return {
 
     -- tokyonight
     {
-        "folke/tokyonight.nvim",
+        'folke/tokyonight.nvim',
         lazy = true,
-        opts = {style = "moon"},
+        opts = {style = 'moon'},
     },
 
     -- catppuccin
     {
-        "catppuccin/nvim",
+        'catppuccin/nvim',
         lazy = true,
-        name = "catppuccin",
+        name = 'catppuccin',
         opts = {
-            flavour = "mocha",
-            transparent_background = true,
+            flavour = 'mocha',
+            -- flavour = 'macchiato',
+            -- transparent_background = true,
         }
     },
 }
