@@ -27,11 +27,11 @@ vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
--- Better window navigation
-vim.keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Window Navigation - Left' })
-vim.keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Window Navigation - Down' })
-vim.keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Window Navigation - Up' })
-vim.keymap.set('n', '<C-l>', '<C-w>l', { desc = 'Window Navigation - Right' })
+-- Better window navigation (w/ Tmux Navigator)
+vim.keymap.set('n', '<C-h>', '<Cmd>TmuxNavigateLeft<CR>', { desc = 'Window Navigation - Left' })
+vim.keymap.set('n', '<C-j>', '<Cmd>TmuxNavigateDown<CR>', { desc = 'Window Navigation - Down' })
+vim.keymap.set('n', '<C-k>', '<Cmd>TmuxNavigateUp<CR>', { desc = 'Window Navigation - Up' })
+vim.keymap.set('n', '<C-l>', '<Cmd>TmuxNavigateRight<CR>', { desc = 'Window Navigation - Right' })
 
 -- Resize with arrows
 vim.keymap.set('n', '<C-Up>', ':resize -2<CR>', { desc = 'Resize Window - Up' })
