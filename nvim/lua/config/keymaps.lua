@@ -13,12 +13,16 @@ local sections = {
 -----------------
 
 -- Press jk fast to exit insert mode 
-vim.keymap.set("i", "jk", "<ESC>", { desc = 'Exit insert mode' })
+vim.keymap.set('i', 'jk', '<ESC>', { desc = 'Exit insert mode' })
+vim.keymap.set('i', '<C-H>', '<C-W>') -- add back ctrl-delete functionality
 
 
 -----------------
 -- Normal Mode --
 -----------------
+
+-- LVIM carry over
+nvim.keymap.set('n', 'J', "mzJ'z") -- Keep cursor in place with "J"
 
 -- Unbind space
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
