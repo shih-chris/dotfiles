@@ -22,7 +22,7 @@ vim.keymap.set('i', '<C-H>', '<C-W>') -- add back ctrl-delete functionality
 -----------------
 
 -- LVIM carry over
-nvim.keymap.set('n', 'J', "mzJ'z") -- Keep cursor in place with "J"
+vim.keymap.set('n', 'J', "mzJ'z") -- Keep cursor in place with "J"
 
 -- Unbind space
 vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
