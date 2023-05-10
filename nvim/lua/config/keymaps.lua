@@ -52,7 +52,7 @@ vim.keymap.set('n', '<A-j>', '<Esc>:m .+1<CR>==gi', { desc = 'Move text down - N
 vim.keymap.set('n', '<A-k>', '<Esc>:m .-2<CR>==gi', { desc = 'Move text up - Normal Mode' })
 
 -- Open Neotree
-vim.keymap.set('n', '<leader>e', '<Cmd>Neotree action=focus source=filesystem position=left toggle=true<CR>', { desc = 'Toggle File [e]xplorer' }) 
+vim.keymap.set('n', '<leader>e', '<Cmd>Neotree action=focus source=filesystem toggle=true<CR>', { desc = 'Toggle File [e]xplorer' }) 
 
 -- Remove highlighting
 vim.keymap.set('n', '<leader>h', '<Cmd>nohl<CR>', { desc = 'Remove highlighting' })
