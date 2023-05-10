@@ -4,7 +4,20 @@ return {
         tag = '0.1.1',
         dependencies = { 'nvim-lua/plenary.nvim' },
         config = function()
-            require('telescope').setup()
+            require('telescope').setup(
+		    -- -- for input mode
+		    -- i = {
+			-- ["<C-j>"] = actions.move_selection_next,
+			-- ["<C-k>"] = actions.move_selection_previous,
+			-- ["<C-n>"] = actions.cycle_history_next,
+			-- ["<C-p>"] = actions.cycle_history_prev,
+		    --   },
+		    -- -- for normal mode
+		    -- n = {
+			-- ["<C-j>"] = actions.move_selection_next,
+			-- ["<C-k>"] = actions.move_selection_previous,
+		    -- },
+	    )
         end,
     },
     {
