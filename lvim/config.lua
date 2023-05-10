@@ -2,13 +2,14 @@
 -- Source individual files --
 -----------------------------
 
-reload "user.plugins"
+--Remap space as leader key
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
-reload "user.colorizer"
-reload "user.keymaps"
-reload "user.lazygit"
+reload "user.plugins"
 reload "user.options"
-reload "user.toggleterm"
+reload "user.keymaps"
+
+-- LVIM Core plugin config options
 reload "user.treesitter"
 reload "user.whichkey"
-

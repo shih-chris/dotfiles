@@ -34,9 +34,8 @@ lvim.builtin.telescope.defaults.mappings = {
     },
 }
 
--- Lightspeed mapping
-vim.api.nvim_set_keymap('n', 's', '<Plug>Lightspeed_s', {})
-vim.api.nvim_set_keymap('n', 'S', '<Plug>Lightspeed_S', {})
-vim.api.nvim_set_keymap('n', 'zs', '<Plug>Lightspeed_gs', {})
-vim.api.nvim_set_keymap('n', 'zS', '<Plug>Lightspeed_gS', {})
-
+-- Better window navigation (w/ Tmux Navigator)
+vim.keymap.set('n', '<C-h>', '<Cmd>TmuxNavigateLeft<CR>', { desc = 'Window Navigation - Left' })
+vim.keymap.set('n', '<C-j>', '<Cmd>TmuxNavigateDown<CR>', { desc = 'Window Navigation - Down' })
+vim.keymap.set('n', '<C-k>', '<Cmd>TmuxNavigateUp<CR>', { desc = 'Window Navigation - Up' })
+vim.keymap.set('n', '<C-l>', '<Cmd>TmuxNavigateRight<CR>', { desc = 'Window Navigation - Right' })
