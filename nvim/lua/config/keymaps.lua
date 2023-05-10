@@ -83,3 +83,29 @@ vim.keymap.set('x', 'J', ":move '>+1<CR>gv-gv", { desc = 'Move text down - Visua
 vim.keymap.set('x', 'K', ":move '<-2<CR>gv-gv", { desc = 'Move text up - Visual Block mode' })
 vim.keymap.set('x', '<A-j>', ":move '>+1<CR>gv-gv", { desc = 'Move text down - Visual Block mode' })
 vim.keymap.set('x', '<A-k>', ":move '<-2<CR>gv-gv", { desc = 'Move text up - Visual Block mode' })
+
+
+----------------------
+-- Plugins: Lazygit --
+----------------------
+
+local Terminal  = require('toggleterm.terminal').Terminal
+local lazygit = Terminal:new({
+    cmd = 'lazygit',
+    hidden = true,
+    direction = 'float',
+    float_opts = {
+        border = 'curved',
+        winblend = 0,
+        highlights = {
+            border = 'Normal',
+            background = 'Normal'
+        }
+    }
+})
+
+function _lazygit_toggle()
+  lazygit:toggle()
+end
+
+vim.keymap.set("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", { desc = "To[g]gle Lazy[g]it", noremap = true, silent = true })
