@@ -14,9 +14,9 @@ return {
                 popup_border_style = 'rounded',
                 window = {
                     position = 'float',
-                    width = 100,
+                    width = '100%',
                     mappings = {
-                        ['<cr>'] = 'focus_preview',
+                        -- ['<cr>'] = 'focus_preview',
                         ['l'] = 'open',
                         ['h'] = 'close_node',
                     }

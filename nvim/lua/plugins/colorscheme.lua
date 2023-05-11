@@ -17,9 +17,9 @@ return {
         lazy = true,
         name = 'catppuccin',
         opts = {
-            flavour = 'mocha',
-            -- flavour = 'macchiato',
-            -- transparent_background = true,
+            -- flavour = 'mocha',
+            flavour = 'macchiato',
+            transparent_background = true,
         }
     },
 }
