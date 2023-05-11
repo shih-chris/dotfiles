@@ -15,8 +15,8 @@ window:
   # full: Borders and title bar
   # none: Neither borders nor title bar
   
-  opacity: 1.00
-  # opacity: 0.90
+  # opacity: 1.00
+  opacity: 0.98
   
   dynamic_title: true
 
@@ -512,7 +512,8 @@ schemes:
         - { index: 17, color: "#F5E0DC" }
           
 # Color scheme selection
-colors: *catppuccin-mocha
+colors: *catppuccin-macchiato
+# colors: *catppuccin-mocha
 
 
 #------------------
