@@ -1,3 +1,6 @@
+# profile startup: start
+# zmodload zsh/zprof
+
 #!/bin/sh
 [ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 typeset -U PATH
@@ -12,3 +15,6 @@ plug "$HOME/.config/zsh/keymaps.zsh"
 
  # history
 HISTFILE=~/.zsh_history
+
+# profile startup: end
+# zprof

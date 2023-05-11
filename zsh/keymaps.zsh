@@ -4,4 +4,3 @@
 
 # default keybinds
 bindkey '^ ' autosuggest-accept
-
