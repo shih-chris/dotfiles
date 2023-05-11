@@ -112,4 +112,11 @@ function _lazygit_toggle()
   lazygit:toggle()
 end
 
-vim.keymap.set("n", "<leader>gg", "<cmd>lua _lazygit_toggle()<CR>", { desc = "To[g]gle Lazy[g]it", noremap = true, silent = true })
+vim.keymap.set('n', '<leader>gg', '<cmd>lua _lazygit_toggle()<CR>', { desc = 'To[g]gle Lazy[g]it', noremap = true, silent = true })
+
+
+---------------------
+-- Plugins: BufDel --
+---------------------
+
+vim.keymap.set('n', '<leader>c', '<cmd>BufDel<CR>', { desc = '[c]lose buffer' })
