@@ -16,7 +16,7 @@ window:
   # none: Neither borders nor title bar
   
   # opacity: 1.00
-  opacity: 0.98
+  opacity: 0.85
   
   dynamic_title: true
 
