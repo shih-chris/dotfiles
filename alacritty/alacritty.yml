@@ -12,11 +12,11 @@ window:
     x: 10
     y: 10
   decorations: none
-  # full: Borders and title bar
-  # none: Neither borders nor title bar
+    # full: Borders and title bar
+    # none: Neither borders nor title bar
   
   # opacity: 1.00
-  opacity: 0.85
+  opacity: 0.82
   
   dynamic_title: true
 
