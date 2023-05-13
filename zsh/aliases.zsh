@@ -4,8 +4,8 @@
 
 # basic aliases
 alias ls='ls -FG --color=auto'
-alias vi='lvim'
-alias vim='lvim'
+alias vi='nvim'
+alias vim='nvim'
 
 # git aliases
 alias gs='git status'
