@@ -3,7 +3,11 @@
 -------------------------------
 
 -- Window management
-lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
+lvim.builtin.which_key.mappings['v'] = { '<cmd>vsplit<cr>', 'vsplit' }
+lvim.builtin.which_key.mappings['e'] = {
+    '<cmd>Neotree action=focus reveal=true source=filesystem toggle=true<CR>',
+    'Neotree'
+}
 
 -- Git
 -- lvim.builtin.which_key.mappings["g"] = {
@@ -12,18 +16,18 @@ lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
 
 -- Run Programs
 -- Markdown preview
-lvim.builtin.which_key.mappings["r"] = {
-    name = " Run",
+lvim.builtin.which_key.mappings['r'] = {
+    name = ' Run',
 
     -- Python REPL
     p = {
         "<cmd>TermExec cmd='python' open=0<CR><cmd>ToggleTermSendCurrentLine<CR><cmd>ToggleTerm<CR>",
-        "Python REPL",
+        'Python REPL',
     },
     -- Python REPL
     m = {
-        "<Plug>MarkdownPreviewToggle",
-        "Markdown Preview"
+        '<Plug>MarkdownPreviewToggle',
+        'Markdown Preview'
     }
 }
 
