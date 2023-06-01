@@ -2,11 +2,11 @@
 -- Source individual files --
 -----------------------------
 
---Remap space as leader key
+-- Remap space as leader key
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
-reload "user.plugins"
+reload "user.additional_plugins"
 reload "user.options"
 reload "user.keymaps"
 
