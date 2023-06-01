@@ -3,22 +3,22 @@
     // vim keybinds
     // movement
     {
-        "key":"alt+h",
+        "key":"ctrl+h",
         "command": "workbench.action.focusLeftGroup",
         "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
     },
     {
-        "key":"alt+l",
+        "key":"ctrl+l",
         "command": "workbench.action.focusRightGroup",
         "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
     },
     {
-        "key":"alt+k",
+        "key":"ctrl+k",
         "command": "workbench.action.focusAboveGroup",
         "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
     },
     {
-        "key":"alt+j",
+        "key":"ctrl+j",
         "command": "workbench.action.focusBelowGroup",
         "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
     },

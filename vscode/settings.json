@@ -100,5 +100,6 @@
     "jupyter.interactiveWindow.textEditor.executeSelection": true,
     "git.openRepositoryInParentFolders": "never",
     "window.menuBarVisibility": "toggle",
+    "glassit.alpha": 255,
 
 }
