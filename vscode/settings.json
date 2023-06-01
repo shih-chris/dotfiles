@@ -1,0 +1,104 @@
+{
+    // settings...settings
+    "workbench.settings.editor": "json",
+
+    // editor settings
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "terminal.integrated.defaultProfile.linux": "zsh",
+
+    "editor.suggestSelection": "first",
+    "editor.occurrencesHighlight": false,
+    "editor.lineNumbers": "relative",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "liveServer.settings.donotShowInfoMsg": true,
+
+    // explorer settings
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.autoReveal": "focusNoScroll",
+
+    // vim settings
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<space>"
+            ],
+            "commands": [
+                "vspacecode.space"
+            ]
+        }
+    ],
+
+    // git settings
+    "git.ignoreMissingGitWarning": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+
+    // telemetry
+    "telemetry.telemetryLevel": "off",
+
+    // other settings
+    "liveServer.settings.donotVerifyTags": true,
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+
+    ////////////////
+    // data stuff //
+    ////////////////
+
+    "files.associations": {
+        "*.sql": "sql"
+    },
+
+    // jupter settings
+    "terminal.integrated.commandsToSkipShell": [
+        "language-julia.interrupt"
+    ],
+
+    "julia.enableTelemetry": false,
+    "julia.symbolCacheDownload": true,
+
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "notebook.lineNumbers": "on",
+
+    "jupyter.askForKernelRestart": false,
+    "jupyter.alwaysScrollOnNewCell": true,
+    "jupyter.generateSVGPlots": true,
+    "jupyter.themeMatplotlibPlots": true,
+    "julia.executablePath": "/home/chris/julia-1.7.2/bin/julia",
+    "julia.enableCrashReporter": false,
+    "jupyter.interactiveWindow.creationMode": "perFile",
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    "git.openRepositoryInParentFolders": "never",
+    "window.menuBarVisibility": "toggle",
+
+}
