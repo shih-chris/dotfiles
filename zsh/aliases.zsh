@@ -8,6 +8,7 @@ alias vi='nvim'
 alias vim='nvim'
 
 # git aliases
+alias gg='lazygit'
 alias gs='git status'
 alias gl='git pull'
 alias gp='git push'
