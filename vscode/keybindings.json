@@ -1,65 +1,76 @@
 // Place your key bindings in this file to override the defaults
 [
-    // vim keybinds
-    // movement
-    {
-        "key":"ctrl+h",
-        "command": "workbench.action.focusLeftGroup",
-        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
-    },
-    {
-        "key":"ctrl+l",
-        "command": "workbench.action.focusRightGroup",
-        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
-    },
-    {
-        "key":"ctrl+k",
-        "command": "workbench.action.focusAboveGroup",
-        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
-    },
-    {
-        "key":"ctrl+j",
-        "command": "workbench.action.focusBelowGroup",
-        "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
-    },
-    
-    // file explorer
-    {
-        "key": "cmd+enter",
-        "command": "renameFile",
-        "when": "explorerViewletVisible && filesExplorerFocus"
-    },
-    {
-        "key": "enter",
-        "command": "-renameFile",
-        "when": "explorerViewletVisible && filesExplorerFocus"
-    },
-    // {
-    //     "key": "enter",
-    //     "command": "list.select",
-    //     "when": "listFocus && !inputFocus"
-    // },
+	// vim keybinds
+	// movement
+	{
+		"key": "ctrl+h",
+		"command": "workbench.action.focusLeftGroup",
+		"when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "workbench.action.focusRightGroup",
+		"when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+	},
+	{
+		"key": "ctrl+k",
+		"command": "workbench.action.focusAboveGroup",
+		"when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "workbench.action.focusBelowGroup",
+		"when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+	},
+	{
+		"key": "shift+h",
+		"command": "workbench.action.previousEditorInGroup",
+		"when": "!activeEditorGroupEmpty && editorTextFocus && vim.active && vim.mode != 'Insert'"
+	},
+	{
+		"key": "shift+l",
+		"command": "workbench.action.nextEditorInGroup",
+		"when": "!activeEditorGroupEmpty && editorTextFocus && vim.active && vim.mode != 'Insert'"
+	},
 
-    // Autosuggest Navigation
-    {
-        "key": "ctrl+j",
-        "command": "selectNextSuggestion",
-        "when": "suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "selectPrevSuggestion",
-        "when": "suggestWidgetVisible"
-    },
-    {
-        "key": "ctrl+j",
-        "command": "workbench.action.quickOpenSelectNext",
-        "when": "inQuickOpen"
-    },
-    {
-        "key": "ctrl+k",
-        "command": "workbench.action.quickOpenSelectPrevious",
-        "when": "inQuickOpen"
+	// file explorer
+	{
+		"key": "cmd+enter",
+		"command": "renameFile",
+		"when": "explorerViewletVisible && filesExplorerFocus"
+	},
+	{
+		"key": "enter",
+		"command": "-renameFile",
+		"when": "explorerViewletVisible && filesExplorerFocus"
+	},
+	
+	// {
+	//     "key": "enter",
+	//     "command": "list.select",
+	//     "when": "listFocus && !inputFocus"
+	// },
+
+	// Autosuggest Navigation
+	{
+		"key": "ctrl+j",
+		"command": "selectNextSuggestion",
+		"when": "suggestWidgetVisible"
+	},
+	{
+		"key": "ctrl+k",
+		"command": "selectPrevSuggestion",
+		"when": "suggestWidgetVisible"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "workbench.action.quickOpenSelectNext",
+		"when": "inQuickOpen"
+	},
+	{
+		"key": "ctrl+k",
+		"command": "workbench.action.quickOpenSelectPrevious",
+		"when": "inQuickOpen"
 	},
 	{
 		"key": "ctrl+j",
@@ -86,8 +97,7 @@
 		"command": "showPrevParameterHint",
 		"when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
 	},
-
-    // Trigger vspacecode in different situations
+	// Trigger vspacecode in different situations
 	{
 		"key": "space",
 		"command": "vspacecode.space",
@@ -98,73 +108,7 @@
 		"command": "vspacecode.space",
 		"when": "sideBarFocus && !inputFocus && !whichkeyActive"
 	},
-
-    // Keybindings for edamagit
-	{
-		"key": "tab",
-		"command": "extension.vim_tab",
-		"when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert' && editorLangId != 'magit'"
-	},
-	{
-		"key": "tab",
-		"command": "-extension.vim_tab",
-		"when": "editorFocus && vim.active && !inDebugRepl && vim.mode != 'Insert'"
-	},
-	{
-		"key": "x",
-		"command": "magit.discard-at-point",
-		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-	},
-	{
-		"key": "k",
-		"command": "-magit.discard-at-point"
-	},
-	{
-		"key": "-",
-		"command": "magit.reverse-at-point",
-		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-	},
-	{
-		"key": "v",
-		"command": "-magit.reverse-at-point"
-	},
-	{
-		"key": "shift+-",
-		"command": "magit.reverting",
-		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-	},
-	{
-		"key": "shift+v",
-		"command": "-magit.reverting"
-	},
-	{
-		"key": "shift+o",
-		"command": "magit.resetting",
-		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode =~ /^(?!SearchInProgressMode|CommandlineInProgress).*$/"
-	},
-	{
-		"key": "shift+x",
-		"command": "-magit.resetting"
-	},
-	{
-		"key": "x",
-		"command": "-magit.reset-mixed"
-	},
-	{
-		"key": "ctrl+u x",
-		"command": "-magit.reset-hard"
-	},
-	{
-		"key": "y",
-		"command": "-magit.show-refs"
-	},
-	{
-		"key": "y",
-		"command": "vspacecode.showMagitRefMenu",
-		"when": "editorTextFocus && editorLangId == 'magit' && vim.mode == 'Normal'"
-	},
-
-    // Add ctrl+h/l to navigate in file browser
+	// Add ctrl+h/l to navigate in file browser
 	{
 		"key": "ctrl+h",
 		"command": "file-browser.stepOut",
@@ -190,4 +134,18 @@
 		"command": "acceptSelectedCodeAction",
 		"when": "codeActionMenuVisible"
 	},
+	{
+		"key": "e",
+		"command": "whichkey.triggerKey",
+		"args": {
+			"key": "e",
+			"when": "sideBarVisible && explorerViewletVisible"
+		},
+		"when": "explorerViewletVisible && sideBarVisible && whichkeyVisible"
+	},
+	// {
+	// 	"key": "t",
+	// 	"command": "-whichkey.triggerKey",
+	// 	"when": "explorerViewletVisible && sideBarVisible && whichkeyVisible"
+	// },
 ]
