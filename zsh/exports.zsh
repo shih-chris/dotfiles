@@ -6,7 +6,7 @@
 export PATH="$PATH:/usr/local/git/bin"
 export PATH="$PATH:/usr/local/bin"
 export PATH="$PATH:/home/chris/Documents/AppImages"
-export PATH="$PATH:/home/chris/julia-1.6.7/bin"
+export PATH="$PATH:/home/chris/julia-1.9.0/bin"
 export PATH="$HOME/.local/bin":$PATH
 export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH # ~/.tmux/plugins
 export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH # ~/.config/tmux/plugins
