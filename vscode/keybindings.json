@@ -143,9 +143,9 @@
 		},
 		"when": "explorerViewletVisible && sideBarVisible && whichkeyVisible"
 	},
-	// {
-	// 	"key": "t",
-	// 	"command": "-whichkey.triggerKey",
-	// 	"when": "explorerViewletVisible && sideBarVisible && whichkeyVisible"
-	// },
+	{
+		"key": "t",
+		"command": "-whichkey.triggerKey",
+		"when": "explorerViewletVisible && sideBarVisible && whichkeyVisible"
+	},
 ]
