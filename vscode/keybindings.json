@@ -35,6 +35,22 @@
 
 	// file explorer
 	{
+		"key": "shift+ctrl+e",
+		"command": "actions.findWithSelection"
+	},
+	{
+		"key": "ctrl+e",
+		"command": "-actions.findWithSelection"
+	},
+	{
+		"key": "ctrl+e",
+		"command": "workbench.view.explorer"
+	},
+	{
+		"key": "shift+ctrl+e",
+		"command": "-workbench.view.explorer"
+	},
+	{
 		"key": "cmd+enter",
 		"command": "renameFile",
 		"when": "explorerViewletVisible && filesExplorerFocus"
@@ -44,7 +60,64 @@
 		"command": "-renameFile",
 		"when": "explorerViewletVisible && filesExplorerFocus"
 	},
-	
+	{
+		"key": "r",
+		"command": "renameFile",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "enter",
+		"command": "-renameFile",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "h",
+		"command": "list.collapse",
+		"when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+	},
+	{
+		"key": "d",
+		"command": "deleteFile",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "y",
+		"command": "filesExplorer.copy",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+	},
+	{
+		"key": "x",
+		"command": "filesExplorer.cut",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+	},
+	{
+		"key": "p",
+		"command": "filesExplorer.paste",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "v",
+		"command": "explorer.openToSide",
+		"when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+	},
+	{
+		"key": "a",
+		"command": "explorer.newFile",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+	{
+		"key": "shift+a",
+		"command": "explorer.newFolder",
+		"when": "filesExplorerFocus && !inputFocus"
+	},
+
+	// other vim keybinds
+	// {
+	// 	"key": "shift+k",
+	// 	"command": "editor.action.showHover",
+	// 	"when": "editorTextFocus && neovim.mode != 'Insert'"
+	// },
+
 	// {
 	//     "key": "enter",
 	//     "command": "list.select",

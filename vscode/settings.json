@@ -7328,5 +7328,8 @@
             ]
         }
     ],
-    "workbench.activityBar.visible": false
+    "workbench.activityBar.visible": false,
+    "[sql]": {},
+    "[jinja-sql]": {},
+    "editor.minimap.enabled": false
 }
