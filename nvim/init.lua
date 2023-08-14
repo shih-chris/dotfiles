@@ -1,12 +1,2 @@
------------------------------
--- Source individual files --
------------------------------
-
---Remap space as leader key
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
-
-require('config.plugins')
-
-require('config.keymaps')
-require('config.options')
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
