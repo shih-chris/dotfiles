@@ -14,11 +14,15 @@ return {
   -- catppuccin
   {
     "catppuccin/nvim",
-    lazy = true,
+    priority = 1000,
     name = "catppuccin",
     opts = {
       -- flavour = 'mocha',
       flavour = "macchiato",
+      background = {
+        light = "latte",
+        dark = "macchiato",
+      },
       transparent_background = true,
       integrations = {
         alpha = true,
