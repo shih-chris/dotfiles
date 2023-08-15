@@ -10,12 +10,12 @@ local options = {
   cursorline = false, -- highlight the current line
   hlsearch = true, -- highlight all matches on previous search pattern
   number = true, -- set numbered lines
-  numberwidth = 4, -- set number column width to 2 {default 4}
+  numberwidth = 2, -- set number column width to 2 {default 4}
   pumheight = 10, -- pop up menu height
   relativenumber = true, -- set relative numbered lines
   scrolloff = 8, -- minimal number of screen lines to keep above and below the cursor
   sidescrolloff = 8, -- minimal number of screen columns either side of cursor if wrap is `false`
-  showmode = true, -- we don't need to see things like -- INSERT -- anymore
+  showmode = false, -- we don't need to see things like -- INSERT -- anymore
   showtabline = 2, -- always show tabs
   splitbelow = true, -- force all horizontal splits to go below current window
   splitright = true, -- force all vertical splits to go to the right of current window
@@ -24,8 +24,8 @@ local options = {
   wrap = false, -- display lines as one long line
 
   -- format options
-  shiftwidth = 4, -- the number of spaces inserted for each indentation
-  tabstop = 4, -- insert 4 spaces for a tab
+  -- shiftwidth = 4, -- the number of spaces inserted for each indentation
+  -- tabstop = 4, -- insert 4 spaces for a tab
 
   -- backend options
   backup = false, -- creates a backup file
