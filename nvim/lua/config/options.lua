@@ -24,8 +24,8 @@ local options = {
   wrap = false, -- display lines as one long line
 
   -- format options
-  -- shiftwidth = 4, -- the number of spaces inserted for each indentation
-  -- tabstop = 4, -- insert 4 spaces for a tab
+  shiftwidth = 4, -- the number of spaces inserted for each indentation
+  tabstop = 4, -- insert 4 spaces for a tab
 
   -- backend options
   backup = false, -- creates a backup file
