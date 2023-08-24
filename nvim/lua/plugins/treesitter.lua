@@ -4,7 +4,7 @@ return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
       highlight = { enable = true },
-      indent = { enable = true },
+      indent = { enable = false },
       playground = { enable = true },
       ensure_installed = {
         "bash",
@@ -21,6 +21,7 @@ return {
         "python",
         "query",
         "regex",
+        "sql",
         -- "sql_bigquery",
         "tsx",
         "typescript",
