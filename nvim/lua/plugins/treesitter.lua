@@ -21,7 +21,7 @@ return {
         "python",
         "query",
         "regex",
-        "sql_bigquery",
+        -- "sql_bigquery",
         "tsx",
         "typescript",
         "vim",
