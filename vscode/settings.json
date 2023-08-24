@@ -100,9 +100,7 @@
     "jupyter.interactiveWindow.textEditor.executeSelection": true,
     "git.openRepositoryInParentFolders": "never",
     "glassit.alpha": 255,
-
-    // VSpaceCode Bindings
-    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "custom",
     "vspacecode.bindings": [
 
         {
@@ -7328,8 +7326,11 @@
             ]
         }
     ],
-    "workbench.activityBar.visible": false,
     "[sql]": {},
     "[jinja-sql]": {},
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "window.menuBarVisibility": "compact",
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": false,
+    "workbench.layoutControl.enabled": false
 }
