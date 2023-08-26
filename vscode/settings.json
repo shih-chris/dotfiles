@@ -4,6 +4,8 @@
 
     // editor settings
     "workbench.colorTheme": "Catppuccin Macchiato",
+    "catppuccin.workbenchMode": "flat",
+    "catppuccin.bracketMode": "neovim",
     "terminal.integrated.defaultProfile.linux": "zsh",
 
     "editor.suggestSelection": "first",
@@ -11,6 +13,17 @@
     "editor.lineNumbers": "relative",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "liveServer.settings.donotShowInfoMsg": true,
+
+    // de-clutter UI
+    "window.titleBarStyle": "custom",
+    "window.title": " ",
+    "window.menuBarVisibility": "toggle",
+    "breadcrumbs.enabled": false,
+    "workbench.activityBar.visible": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.statusBar.visible": false,
+    "editor.minimap.enabled": false,
+    "editor.bracketPairColorization.enabled": true,
 
     // explorer settings
     "explorer.confirmDragAndDrop": false,
@@ -64,7 +77,6 @@
 
     // other settings
     "liveServer.settings.donotVerifyTags": true,
-    "bracket-pair-colorizer-2.depreciation-notice": false,
 
     ////////////////
     // data stuff //
@@ -73,6 +85,8 @@
     "files.associations": {
         "*.sql": "sql"
     },
+    "[sql]": {},
+    "[jinja-sql]": {},
 
     // jupter settings
     "terminal.integrated.commandsToSkipShell": [
@@ -89,18 +103,15 @@
         "default": "right",
         "jupyter-notebook": "left"
     },
-    "notebook.lineNumbers": "on",
 
     "jupyter.askForKernelRestart": false,
     "jupyter.alwaysScrollOnNewCell": true,
     "jupyter.themeMatplotlibPlots": true,
-    "julia.executablePath": "/home/chris/julia-1.7.2/bin/julia",
+    "julia.executablePath": "/home/chris/julia-1.9.0/bin/julia",
     "julia.enableCrashReporter": false,
     "jupyter.interactiveWindow.creationMode": "perFile",
     "jupyter.interactiveWindow.textEditor.executeSelection": true,
     "git.openRepositoryInParentFolders": "never",
-    "glassit.alpha": 255,
-    "window.titleBarStyle": "custom",
     "vspacecode.bindings": [
 
         {
@@ -7325,12 +7336,5 @@
                 }
             ]
         }
-    ],
-    "[sql]": {},
-    "[jinja-sql]": {},
-    "editor.minimap.enabled": false,
-    "window.menuBarVisibility": "compact",
-    "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": false,
-    "workbench.layoutControl.enabled": false
+    ]
 }
