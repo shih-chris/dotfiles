@@ -22,16 +22,6 @@
 		"command": "workbench.action.navigateDown",
 		"when": "vim.active && vim.mode != 'Insert'"
 	},
-	{
-		"key": "shift+ctrl+h",
-		"command": "workbench.action.previousEditorInGroup",
-		"when": "!activeEditorGroupEmpty && editorTextFocus && vim.active && vim.mode != 'Insert'"
-	},
-	{
-		"key": "shift+ctrl+l",
-		"command": "workbench.action.nextEditorInGroup",
-		"when": "!activeEditorGroupEmpty && editorTextFocus && vim.active && vim.mode != 'Insert'"
-	},
 
 	// file explorer
 	{

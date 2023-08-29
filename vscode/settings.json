@@ -21,7 +21,7 @@
     "breadcrumbs.enabled": false,
     "workbench.activityBar.visible": false,
     "workbench.layoutControl.enabled": false,
-    "workbench.statusBar.visible": false,
+    "workbench.statusBar.visible": true,
     "editor.minimap.enabled": false,
     "editor.bracketPairColorization.enabled": true,
 
@@ -54,6 +54,24 @@
             "commands": [
                 "vspacecode.space"
             ]
+        },
+        
+        // use shift h/l to move buffers
+        {
+            "before": [
+                "<s-l>"
+            ],
+            "commands": [
+                "workbench.action.nextEditorInGroup"
+            ]
+        },
+        {
+            "before": [
+                "<s-h>"
+            ],
+            "commands": [
+                "workbench.action.previousEditorInGroup"
+            ]
         }
     ],
     "vim.visualModeKeyBindingsNonRecursive": [
@@ -85,8 +103,6 @@
     "files.associations": {
         "*.sql": "sql"
     },
-    "[sql]": {},
-    "[jinja-sql]": {},
 
     // jupter settings
     "terminal.integrated.commandsToSkipShell": [
