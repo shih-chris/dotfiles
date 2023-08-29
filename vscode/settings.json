@@ -233,20 +233,6 @@
             "type": "bindings",
             "bindings": [
                 {
-                    "key": "0",
-                    "name": "Last buffer in window",
-                    "icon": "arrow-both",
-                    "type": "command",
-                    "command": "workbench.action.lastEditorInGroup"
-                },
-                {
-                    "key": "1",
-                    "name": "First buffer in window",
-                    "icon": "arrow-both",
-                    "type": "command",
-                    "command": "workbench.action.firstEditorInGroup"
-                },
-                {
                     "key": "b",
                     "name": "Show all buffers",
                     "icon": "files",
@@ -289,34 +275,6 @@
                     "command": "workbench.action.moveEditorToRightGroup"
                 },
                 {
-                    "key": "n",
-                    "name": "Next buffer",
-                    "icon": "arrow-down",
-                    "type": "command",
-                    "command": "workbench.action.nextEditor"
-                },
-                {
-                    "key": "p",
-                    "name": "Previous buffer",
-                    "icon": "arrow-up",
-                    "type": "command",
-                    "command": "workbench.action.previousEditor"
-                },
-                {
-                    "key": "s",
-                    "name": "Scratch buffer",
-                    "icon": "note",
-                    "type": "command",
-                    "command": "workbench.action.files.newUntitledFile"
-                },
-                {
-                    "key": "t",
-                    "name": "Pin buffer",
-                    "icon": "pin",
-                    "type": "command",
-                    "command": "workbench.action.pinEditor"
-                },
-                {
                     "key": "u",
                     "name": "Reopen closed buffer",
                     "icon": "history",
@@ -324,80 +282,21 @@
                     "command": "workbench.action.reopenClosedEditor"
                 },
                 {
-                    "key": "B",
-                    "name": "Show all buffers in active window",
-                    "icon": "files",
-                    "type": "command",
-                    "command": "workbench.action.showEditorsInActiveGroup"
-                },
-                {
-                    "key": "H",
-                    "name": "Move buffer into left window",
-                    "icon": "triangle-left",
-                    "type": "command",
-                    "command": "workbench.action.moveEditorToLeftGroup"
-                },
-                {
-                    "key": "J",
-                    "name": "Move buffer into below window",
-                    "icon": "triangle-down",
-                    "type": "command",
-                    "command": "workbench.action.moveEditorToBelowGroup"
-                },
-                {
-                    "key": "K",
-                    "name": "Move buffer into above window",
-                    "icon": "triangle-up",
-                    "type": "command",
-                    "command": "workbench.action.moveEditorToAboveGroup"
-                },
-                {
-                    "key": "L",
-                    "name": "Move buffer into right window",
-                    "icon": "triangle-right",
-                    "type": "command",
-                    "command": "workbench.action.moveEditorToRightGroup"
-                },
-                {
-                    "key": "M",
+                    "key": "D",
                     "name": "Close other buffers",
                     "icon": "close-all",
                     "type": "command",
                     "command": "workbench.action.closeOtherEditors"
                 },
                 {
-                    "key": "P",
-                    "name": "Paste clipboard to buffer",
-                    "icon": "clippy",
-                    "type": "commands",
-                    "commands": [
-                        "editor.action.selectAll",
-                        "editor.action.clipboardPasteAction"
-                    ]
-                },
-                {
-                    "key": "R",
+                    "key": "r",
                     "name": "Revert the current buffer",
                     "icon": "discard",
                     "type": "command",
                     "command": "workbench.action.files.revert"
                 },
                 {
-                    "key": "T",
-                    "name": "Unpin buffer",
-                    "icon": "pinned",
-                    "type": "command",
-                    "command": "workbench.action.unpinEditor"
-                },
-                {
-                    "key": "Y",
-                    "name": "Copy buffer to clipboard",
-                    "icon": "clippy",
-                    "type": "command",
-                    "command": "vspacecode.copyWholeBuffer"
-                },
-                {
-                    "key": "N",
+                    "key": "n",
                     "name": "+New Buffer",
                     "icon": "file-add",
                     "type": "bindings",
