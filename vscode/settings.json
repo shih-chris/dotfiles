@@ -3,6 +3,7 @@
     "workbench.settings.editor": "json",
 
     // editor settings
+    "glassit-linux.opacity": 90,
     "workbench.colorTheme": "Catppuccin Macchiato",
     "catppuccin.workbenchMode": "flat",
     "catppuccin.bracketMode": "neovim",
@@ -21,9 +22,10 @@
     "breadcrumbs.enabled": false,
     "workbench.activityBar.visible": false,
     "workbench.layoutControl.enabled": false,
-    "workbench.statusBar.visible": true,
+    "workbench.statusBar.visible": false,
     "editor.minimap.enabled": false,
     "editor.bracketPairColorization.enabled": true,
+    "gitlens.currentLine.enabled": false,
 
     // explorer settings
     "explorer.confirmDragAndDrop": false,
@@ -7222,12 +7224,19 @@
                     "command": "workbench.action.selectIconTheme"
                 },
                 {
-                    "key": "s",
-                    "name": "Select theme",
+                    "key": "t",
+                    "name": "Select [t]heme",
                     "icon": "paintcan",
                     "type": "command",
                     "command": "workbench.action.selectTheme"
                 },
+                // {
+                //     "key": "s",
+                //     "name": "Toggle status line",
+                //     "icon": "status",
+                //     "type": "server-process",
+                //     "command": "workbench.action.toggleSta"
+                // },
                 {
                     "key": "t",
                     "name": "Toggle tool/activity bar visibility",
