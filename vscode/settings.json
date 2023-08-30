@@ -1046,6 +1046,13 @@
                     "command": "workbench.action.tasks.runTask",
                     "args": "close_lazygit"
                 },
+                {
+                    "key": "l",
+                    "name": "Toggle Git B[l]ame",
+                    "icon": "file",
+                    "type": "command",
+                    "command": "gitlens.toggleLineBlame"
+                }
             ]
         },
         {

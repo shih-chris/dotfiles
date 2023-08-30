@@ -25,20 +25,12 @@
 
 	// file explorer
 	{
-		"key": "shift+ctrl+e",
-		"command": "actions.findWithSelection"
-	},
-	{
 		"key": "ctrl+e",
 		"command": "-actions.findWithSelection"
 	},
 	{
 		"key": "ctrl+e",
 		"command": "workbench.view.explorer"
-	},
-	{
-		"key": "shift+ctrl+e",
-		"command": "-workbench.view.explorer"
 	},
 	{
 		"key": "cmd+enter",
@@ -210,5 +202,5 @@
 		"key": "t",
 		"command": "-whichkey.triggerKey",
 		"when": "explorerViewletVisible && sideBarVisible && whichkeyVisible"
-	},
+	}
 ]
