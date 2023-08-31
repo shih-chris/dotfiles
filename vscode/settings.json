@@ -1040,14 +1040,14 @@
             "icon": "git-branch",
             "type": "bindings",
             "bindings": [
-                {
-                    "key": "g",
-                    "name": "Open Lazygit",
-                    "icon": "rocket",
-                    "type": "command",
-                    "command": "workbench.action.tasks.runTask",
-                    "args": "close_lazygit"
-                },
+                // {
+                //     "key": "g",
+                //     "name": "Open Lazygit",
+                //     "icon": "rocket",
+                //     "type": "command",
+                //     "command": "workbench.action.tasks.runTask",
+                //     "args": "close_lazygit"
+                // },
                 {
                     "key": "l",
                     "name": "Toggle Git B[l]ame",
