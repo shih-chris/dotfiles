@@ -130,6 +130,8 @@
     "jupyter.interactiveWindow.creationMode": "perFile",
     "jupyter.interactiveWindow.textEditor.executeSelection": true,
     "git.openRepositoryInParentFolders": "never",
+    
+    // Whichkey bindings
     "vspacecode.bindings": [
 
         {
@@ -299,62 +301,10 @@
                 },
                 {
                     "key": "n",
-                    "name": "+New Buffer",
+                    "name": "New untitled buffer",
                     "icon": "file-add",
-                    "type": "bindings",
-                    "bindings": [
-                        {
-                            "key": "h",
-                            "name": "New untitled buffer (split left)",
-                            "icon": "arrow-small-left",
-                            "type": "commands",
-                            "commands": [
-                                "workbench.action.splitEditorLeft",
-                                "workbench.action.files.newUntitledFile",
-                                "workbench.action.closeOtherEditors"
-                            ]
-                        },
-                        {
-                            "key": "j",
-                            "name": "New untitled buffer (split down)",
-                            "icon": "arrow-small-down",
-                            "type": "commands",
-                            "commands": [
-                                "workbench.action.splitEditorDown",
-                                "workbench.action.files.newUntitledFile",
-                                "workbench.action.closeOtherEditors"
-                            ]
-                        },
-                        {
-                            "key": "k",
-                            "name": "New untitled buffer (split up)",
-                            "icon": "arrow-small-up",
-                            "type": "commands",
-                            "commands": [
-                                "workbench.action.splitEditorUp",
-                                "workbench.action.files.newUntitledFile",
-                                "workbench.action.closeOtherEditors"
-                            ]
-                        },
-                        {
-                            "key": "l",
-                            "name": "New untitled buffer (split right)",
-                            "icon": "arrow-small-right",
-                            "type": "commands",
-                            "commands": [
-                                "workbench.action.splitEditorRight",
-                                "workbench.action.files.newUntitledFile",
-                                "workbench.action.closeOtherEditors"
-                            ]
-                        },
-                        {
-                            "key": "n",
-                            "name": "New untitled buffer",
-                            "icon": "file-add",
-                            "type": "command",
-                            "command": "workbench.action.files.newUntitledFile"
-                        }
-                    ]
+                    "type": "command",
+                    "command": "workbench.action.files.newUntitledFile"
                 }
             ]
         },
