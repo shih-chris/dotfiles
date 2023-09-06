@@ -3407,7 +3407,7 @@
                     "icon": "beaker",
                     "type": "command",
                     "command": "workbench.action.tasks.test"
-                }
+                },
                 {
                     "key": "o",
                     "name": "[o]pen folder",
