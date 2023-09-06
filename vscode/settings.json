@@ -3408,6 +3408,13 @@
                     "type": "command",
                     "command": "workbench.action.tasks.test"
                 }
+                {
+                    "key": "o",
+                    "name": "[o]pen folder",
+                    "icon": "folder",
+                    "type": "command",
+                    "command": "workbench.action.files.openFolder"
+                }
             ]
         },
         {
