@@ -18,6 +18,7 @@
     // de-clutter UI
     "window.titleBarStyle": "custom",
     "window.title": " ",
+    "window.commandCenter": false,
     "window.menuBarVisibility": "toggle",
     "breadcrumbs.enabled": false,
     "workbench.layoutControl.enabled": false,
