@@ -1,3 +1,41 @@
+--------------------
+-- Remap Defaults --
+--------------------
+
+-- buffer switching
+vim.keymap.del("n", "[b")
+vim.keymap.del("n", "]b")
+vim.keymap.del("n", "<leader>bb")
+vim.keymap.del("n", "<leader>`")
+
+-- remove save file
+vim.keymap.del({ "i", "x", "n", "s" }, "<C-s>")
+
+-- remove keywordprg
+vim.keymap.del("n", "<leader>K")
+
+-- remove LazyVim Changelong
+vim.keymap.del("n", "<leader>L")
+
+-- floating terminal
+vim.keymap.del("n", "<leader>ft")
+vim.keymap.del("n", "<leader>fT")
+
+-- windows
+vim.keymap.del("n", "<leader>-")
+vim.keymap.del("n", "<leader>|")
+vim.keymap.del("n", "<leader>w|")
+vim.keymap.set("n", "<leader>w\\", "<C-W>v", { desc = "Split window right" })
+vim.keymap.del("n", "<leader>ww")
+
+-- tabs
+vim.keymap.del("n", "<leader><tab>l")
+vim.keymap.del("n", "<leader><tab>f")
+vim.keymap.del("n", "<leader><tab><tab>")
+vim.keymap.del("n", "<leader><tab>]")
+vim.keymap.del("n", "<leader><tab>d")
+vim.keymap.del("n", "<leader><tab>[")
+
 -----------------
 -- Insert Mode --
 -----------------
