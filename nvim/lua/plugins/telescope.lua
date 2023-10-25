@@ -26,7 +26,7 @@ return {
     keys = {
       -- general
       { "<leader>,", false },
-      { "<leader>bl", "<cmd>Telescope buffers show_all_buffers=true<cr>", desc = "[l]ist buffers" },
+      { "<leader>bb", "<cmd>Telescope buffers show_all_buffers=true<cr>", desc = "list [b]uffers" },
       { "<leader>/", false },
       { "<leader><space>", false },
 
