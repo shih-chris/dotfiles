@@ -36,6 +36,9 @@ vim.keymap.del("n", "<leader><tab>]")
 vim.keymap.del("n", "<leader><tab>d")
 vim.keymap.del("n", "<leader><tab>[")
 
+-- new file
+vim.keymap.del("n", "<leader>fn")
+
 -----------------
 -- Insert Mode --
 -----------------
