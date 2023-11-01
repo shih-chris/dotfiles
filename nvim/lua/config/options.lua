@@ -5,7 +5,7 @@
 local options = {
 
   -- display options
-  cmdheight = 2, -- more space in the neovim command line for displaying messages
+  cmdheight = 1, -- more space in the neovim command line for displaying messages
   conceallevel = 0, -- so that `` is visible in markdown files
   cursorline = false, -- highlight the current line
   hlsearch = true, -- highlight all matches on previous search pattern
