@@ -26,6 +26,8 @@ local options = {
   -- format options
   shiftwidth = 4, -- the number of spaces inserted for each indentation
   tabstop = 4, -- insert 4 spaces for a tab
+  autoindent = true, -- uses the indent from the previous line
+  smartindent = false, -- make indenting smarter again
 
   -- backend options
   backup = false, -- creates a backup file
@@ -35,8 +37,6 @@ local options = {
   ignorecase = true, -- ignore case in search patterns
   mouse = "a", -- allow the mouse to be used in neovim
   smartcase = true, -- smart case
-  autoindent = true, -- uses the indent from the previous line
-  smartindent = false, -- make indenting smarter again
   swapfile = false, -- creates a swapfile
   timeoutlen = 300, -- time to wait for a mapped sequence to complete (in milliseconds)
   undofile = true, -- enable persistent undo
@@ -52,6 +52,7 @@ for k, v in pairs(options) do
 end
 
 -- Fix formatting
+vim.api.nvim_command("filetype plugin indent off")
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = "*",
   callback = function()

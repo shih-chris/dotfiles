@@ -8,7 +8,6 @@ return {
       playground = { enable = true },
       ensure_installed = {
         "bash",
-        "c",
         "html",
         "javascript",
         "jsdoc",
@@ -30,7 +29,7 @@ return {
         "yaml",
       },
       incremental_selection = {
-        enable = true,
+        enable = false,
         keymaps = {
           init_selection = "<C-space>",
           node_incremental = "<C-space>",
