@@ -19,7 +19,6 @@ return {
   },
   {
     "echasnovski/mini.bufremove",
-
     keys = {
       {
         "<leader>bd",
@@ -40,7 +39,14 @@ return {
         desc = "[d]elete buffer",
       },
     -- stylua: ignore
-    { "<leader>bF", function() require("mini.bufremove").delete(0, true) end, desc = "delete buffer ([F]orce)" },
+      { "<leader>bD", "<Cmd>BufferLineCloseOthers<CR>", desc = "[D]elete all other buffers" },
+      {
+        "<leader>bF",
+        function()
+          require("mini.bufremove").delete(0, true)
+        end,
+        desc = "delete buffer ([F]orce)",
+      },
     },
   },
 }
