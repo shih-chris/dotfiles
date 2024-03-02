@@ -1,3 +1,9 @@
+# nvim
 **/packer_compiled.lua
 **/lv-settings.lua
+nivm/lazy-lock.json
+
+# zsh
 zsh/.zcompdump
+zsh/.zshrc.backup
+
