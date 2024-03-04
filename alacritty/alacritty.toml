@@ -1,0 +1,109 @@
+live_config_reload = true
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding.x = 10
+padding.y = 10
+decorations = "none"
+opacity = 0.9
+
+[font]
+normal.family = "Hack Nerd Font"
+normal.style = "Regular"
+bold.family = "Hack Nerd Font"
+bold.style = "Bold"
+italic.family = "Hack Nerd Font"
+italic.style = "Italic"
+bold_italic.family = "Hack Nerd Font"
+bold_italic.style = "Bold Italic"
+size = 12
+offset.x = 0
+offset.y = 0
+glyph_offset.x = 0
+glyph_offset.y = 0
+
+[colors]
+primary.background = "#24273A" # base
+primary.foreground = "#CAD3F5" # text
+primary.dim_foreground = "#CAD3F5" # text
+primary.bright_foreground = "#CAD3F5" # text
+
+# Cursor colors
+cursor.text = "#24273A" # base
+cursor.cursor = "#F4DBD6" # rosewater
+vi_mode_cursor.text = "#24273A" # base
+vi_mode_cursor.cursor = "#B7BDF8" # lavender
+
+# Search colors
+search.matches.foreground = "#24273A" # base
+search.matches.background = "#A5ADCB" # subtext0
+search.focused_match.foreground = "#24273A" # base
+search.focused_match.background = "#A6DA95" # green
+# search.footer_bar.foreground = "#24273A" # base
+# search.footer_bar.background = "#A5ADCB" # subtext0
+
+# Keyboard regex hints
+hints.start.foreground = "#24273A" # base
+hints.start.background = "#EED49F" # yellow
+hints.end.foreground = "#24273A" # base
+hints.end.background = "#A5ADCB" # subtext0
+
+# Selection colors
+selection.text = "#24273A" # base
+selection.background = "#F4DBD6" # rosewater
+
+# Normal colors
+normal.black = "#494D64" # surface1
+normal.red = "#ED8796" # red
+normal.green = "#A6DA95" # green
+normal.yellow = "#EED49F" # yellow
+normal.blue = "#8AADF4" # blue
+normal.magenta = "#F5BDE6" # pink
+normal.cyan = "#8BD5CA" # teal
+normal.white = "#B8C0E0" # subtext1
+
+# Bright colors
+bright.black = "#5B6078" # surface2
+bright.red = "#ED8796" # red
+bright.green = "#A6DA95" # green
+bright.yellow = "#EED49F" # yellow
+bright.blue = "#8AADF4" # blue
+bright.magenta = "#F5BDE6" # pink
+bright.cyan = "#8BD5CA" # teal
+bright.white = "#A5ADCB" # subtext0
+
+# Dim colors
+dim.black = "#494D64" # surface1
+dim.red = "#ED8796" # red
+dim.green = "#A6DA95" # green
+dim.yellow = "#EED49F" # yellow
+dim.blue = "#8AADF4" # blue
+dim.magenta = "#F5BDE6" # pink
+dim.cyan = "#8BD5CA" # teal
+dim.white = "#B8C0E0" # subtext1
+
+indexed_colors = [
+    { index = 16, color = "#F5A97F"},
+    { index = 17, color = "#F4DBD6"},
+]
+
+[bell]
+animation = "EaseOutExpo"
+
+[mouse]
+hide_when_typing = true
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+save_to_clipboard = true
+
+[keyboard]
+bindings = [
+    { key = "V", mods = "Control|Shift", action = "Paste"},
+    { key = "C", mods = "Control|Shift", action = "Copy"},
+    { key = "Key0", mods = "Control", action = "ResetFontSize"},
+    { key = "Equals", mods = "Control", action = "IncreaseFontSize"},
+    { key = "Minus", mods = "Control", action = "DecreaseFontSize"},
+]
