@@ -10,6 +10,9 @@ export PATH="$PATH:/home/chris/julia-1.9.0/bin"
 export PATH="$HOME/.local/bin":$PATH
 export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH # ~/.tmux/plugins
 export PATH=$HOME/.config/tmux/plugins/t-smart-tmux-session-manager/bin:$PATH # ~/.config/tmux/plugins
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # Other exports
 export LANG=en_US.UTF-8
