@@ -1,0 +1,20 @@
+# Product Analytics Repo
+[[session]]
+name = "Product Analytics"
+path = "~/projects/product_analytics"
+startup_command = "nvim"
+
+[[session]]
+name = "dbt"
+path = "~/projects/dbt_grafanalabs_global"
+startup_command = "nvim"
+
+[[session]]
+name = "btop"
+path = "~"
+startup_command = "btop"
+
+[[session]]
+name = "Obsidian"
+path = "~/Documents/Grafana Labs"
+startup_command = "nvim"
