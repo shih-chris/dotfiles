@@ -19,5 +19,4 @@ alias oops='git reset --soft HEAD^'
 alias python='python3'
 alias cclip='xclip -selection clipboard'
 
-alias source_env_dbt='source /home/chris/project/dbt/.venv/bin/activate'
-alias run_zoom='zoom --disable-gpu-sandbox'
+alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'

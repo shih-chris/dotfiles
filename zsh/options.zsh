@@ -3,7 +3,7 @@
 #------------------------
 
 # Color completion the same as ls
-eval "$(dircolors)"
+# eval "$(dircolors)"
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 
 # Other options
