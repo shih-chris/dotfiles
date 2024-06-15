@@ -20,6 +20,9 @@ plug "$HOME/.config/zsh/keymaps.zsh"
  # history
 HISTFILE=~/.zsh_history
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 # enable zoxide
 eval "$(zoxide init zsh)"
 
