@@ -56,31 +56,5 @@ return {
         },
       },
     },
-    keys = {
-      -- general
-      { "<leader>,", false },
-      { "<leader>bb", "<cmd>Telescope buffers show_all_buffers=true<cr>", desc = "list [b]uffers" },
-      { "<leader>/", false },
-      { "<leader><space>", false },
-
-      -- find
-      { "<leader>fb", false },
-      { "<leader>fc", false },
-      { "<leader>fr", false },
-      { "<leader>pr", "<cmd>Telescope oldfiles<cr>", desc = "[r]ecent files" },
-      { "<leader>fR", false },
-      { "<leader>ff", false },
-      { "<leader>sf", require("lazyvim.util").telescope("files"), desc = "find [f]iles (root dir)" },
-      { "<leader>fF", false },
-      { "<leader>sF", require("lazyvim.util").telescope("files", { cwd = false }), desc = "find [f]iles (cwd)" },
-
-      -- search
-      { "<leader>sa", false },
-      { "<leader>sH", false },
-      { "<leader>sg", false },
-      { "<leader>sG", false },
-      { "<leader>sw", false },
-      { "<leader>sW", false },
-    },
   },
 }

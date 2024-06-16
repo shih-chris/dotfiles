@@ -2,6 +2,30 @@
 -- Remap Defaults --
 --------------------
 
+-- general
+vim.keymap.del("n", "<leader>,")
+vim.keymap.del("n", "<leader>/")
+vim.keymap.del("n", "<leader><space>")
+
+-- find
+vim.keymap.del("n", "<leader>fb")
+vim.keymap.del("n", "<leader>fc")
+vim.keymap.del("n", "<leader>fr")
+vim.keymap.set("n", "<leader>pr", LazyVim.pick("oldfiles"), { desc = "[r]ecent files" })
+vim.keymap.del("n", "<leader>fR")
+vim.keymap.del("n", "<leader>ff")
+vim.keymap.set("n", "<leader>sf", LazyVim.pick("auto"), { desc = "find [f]iles (root dir)" })
+vim.keymap.del("n", "<leader>fF")
+vim.keymap.set("n", "<leader>sF", LazyVim.pick("auto", { root = false }), { desc = "find [F]iles (cwd)" })
+
+-- search
+vim.keymap.del("n", "<leader>sa")
+vim.keymap.del("n", "<leader>sH")
+vim.keymap.del("n", "<leader>sg")
+vim.keymap.del("n", "<leader>sG")
+vim.keymap.del("n", "<leader>sw")
+vim.keymap.del("n", "<leader>sW")
+
 -- buffer switching
 vim.keymap.del("n", "[b")
 vim.keymap.del("n", "]b")

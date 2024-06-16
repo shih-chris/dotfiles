@@ -25,14 +25,12 @@ return {
           header = vim.split(logo, "\n"),
         -- stylua: ignore
         center = {
-          { action = "Telescope find_files",                                     desc = " [s]earch files",    icon = " ", key = "s" },
+          { action = "lua LazyVim.pick()()",                                     desc = " [s]earch files",    icon = " ", key = "s" },
           { action = "ene | startinsert",                                        desc = " [n]ew file",        icon = " ", key = "n" },
-          { action = "Telescope oldfiles",                                       desc = " [r]ecent files",    icon = " ", key = "r" },
-          { action = "Telescope live_grep",                                      desc = " Find [t]ext",       icon = " ", key = "t" },
-          { action = "Telescope projects",                                       desc = " [p]rojects",        icon = " ", key = "p" },
+          { action = 'lua LazyVim.pick("oldfiles")()',                                       desc = " [r]ecent files",    icon = " ", key = "r" },
+          { action = 'lua LazyVim.pick("live_grep")()',                                      desc = " Find [t]ext",       icon = " ", key = "t" },
           { action = 'lua require("persistence").load()',                        desc = " [R]estore session", icon = " ", key = "R" },
           { action = "Lazy",                                                     desc = " [l]azy",            icon = "󰒲 ", key = "l" },
-          { action = [[lua require("lazyvim.util").telescope.config_files()()]], desc = " [c]onfig",          icon = " ", key = "c" },
         },
           footer = function()
             local stats = require("lazy").stats()
