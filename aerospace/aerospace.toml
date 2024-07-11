@@ -103,14 +103,14 @@ alt-shift-l = 'move right'
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus-monitor
 alt-ctrl-h = 'focus-monitor prev'
 alt-ctrl-l = 'focus-monitor next'
-alt-ctrl-j = 'workspace prev'
-alt-ctrl-k = 'workspace next'
+alt-ctrl-j = 'workspace next'
+alt-ctrl-k = 'workspace prev'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-monitor
-alt-ctrl-shift-h = 'move-node-to-monitor prev'
-alt-ctrl-shift-l = 'move-node-to-monitor next'
-alt-ctrl-shift-j = 'move-node-to-workspace prev'
-alt-ctrl-shift-k = 'move-node-to-workspace next'
+alt-ctrl-shift-h = ['move-node-to-monitor prev', 'focus-monitor prev']
+alt-ctrl-shift-l = ['move-node-to-monitor next', 'focus-monitor next']
+alt-ctrl-shift-j = ['move-node-to-workspace next', 'workspace next']
+alt-ctrl-shift-k = ['move-node-to-workspace prev', 'workspace prev']
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#resize
 alt-shift-minus = 'resize smart -50'
