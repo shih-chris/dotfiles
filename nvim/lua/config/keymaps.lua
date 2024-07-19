@@ -48,9 +48,9 @@ vim.keymap.del("n", "<leader>fT")
 -- windows
 vim.keymap.del("n", "<leader>-")
 vim.keymap.del("n", "<leader>|")
-vim.keymap.del("n", "<leader>w|")
+-- vim.keymap.del("n", "<leader>w|")
 vim.keymap.set("n", "<leader>w\\", "<C-W>v", { desc = "Split window right" })
-vim.keymap.del("n", "<leader>ww")
+-- vim.keymap.del("n", "<leader>ww")
 
 -- tabs
 vim.keymap.del("n", "<leader><tab>l")
