@@ -1,0 +1,84 @@
+{
+  // System Settings
+  "features": {
+    "inline_completion_provider": "none"
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": true
+  },
+  "vim_mode": true,
+  "restore_on_startup": "none",
+
+  // Theme & Font Settings
+  "ui_font_size": 16,
+  "ui_font_family": "Hack Nerd Font",
+  "buffer_font_size": 16,
+  "buffer_font_family": "Hack Nerd Font",
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Late",
+    "dark": "Catppuccin Macchiato - No Italics"
+  },
+
+  // UI Settings
+  "toolbar": {
+    "breadcrumbs": false,
+    "quick_actions": false,
+    "selections_menu": false
+  },
+  "scrollbar": {
+    "show": "never"
+  },
+  "project_panel": {
+    "button": false,
+    "default_width": 400,
+    "scrollbar": {
+      "show": "never"
+    }
+  },
+  "outline_panel": {
+    "button": false,
+    "default_width": 400
+  },
+  "collaboration_panel": {
+    "button": false,
+    "default_width": 400
+  },
+  "chat_panel": {
+    "button": false,
+    "default_width": 400
+  },
+  "notification_panel": {
+    "button": false,
+    "default_width": 400
+  },
+  "assistant": {
+    "button": false
+  },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false
+  },
+  "tabs": {
+    "git_status": true,
+    "close_position": "right",
+    "file_icons": false
+  },
+  "preview_tabs": {
+    "enabled": false
+  },
+  "terminal": {
+    "default_height": 600
+  },
+
+  // Editor Settings
+  "cursor_blink": false,
+  "gutter": {
+    "line_numbers": true,
+    "code_actions": false,
+    "runnables": false,
+    "folds": true
+  },
+  "relative_line_numbers": true
+}
