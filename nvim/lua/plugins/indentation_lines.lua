@@ -1,8 +1,8 @@
 return {
-  {
-    "echasnovski/mini.indentscope",
-    enabled = false,
-  },
+  -- {
+  --   "echasnovski/mini.indentscope",
+  --   enabled = false,
+  -- },
   -- {
   --   "lukas-reineke/indent-blankline.nvim",
   --   opts = function(_, opts)
