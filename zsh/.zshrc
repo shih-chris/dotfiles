@@ -26,5 +26,10 @@ source <(fzf --zsh)
 # enable zoxide
 eval "$(zoxide init zsh)"
 
+# enable pure
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+autoload -U promptinit; promptinit
+prompt pure
+
 # profile startup: end
 # zprof
