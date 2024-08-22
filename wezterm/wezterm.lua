@@ -24,7 +24,10 @@ config.window_decorations = "RESIZE"
 -- config.color_scheme = scheme_for_appearance(wezterm.gui.get_appearance())
 
 config.color_scheme = "Catppuccin Macchiato"
-config.window_background_opacity = 0.9
-config.macos_window_background_blur = 10
+config.window_background_opacity = 0.95
+config.macos_window_background_blur = 20
+
+-- Mouse
+config.hide_mouse_cursor_when_typing = false
 
 return config
