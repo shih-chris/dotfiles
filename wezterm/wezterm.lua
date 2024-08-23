@@ -30,4 +30,16 @@ config.macos_window_background_blur = 20
 -- Mouse
 config.hide_mouse_cursor_when_typing = false
 
+-- Window
+config.window_close_confirmation = "NeverPrompt"
+
+-- Keymap
+config.keys = {
+	{
+		key = "w",
+		mods = "CMD",
+		action = wezterm.action.CloseCurrentTab({ confirm = false }),
+	},
+}
+
 return config
