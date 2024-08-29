@@ -12,3 +12,6 @@ DISABLE_AUTO_TITLE="true"
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="yyyy-mm-dd"
+
+# Style Prompt
+# PS1='%F{blue}%~ %(?.%F{green}.%F{red})%#%f '
