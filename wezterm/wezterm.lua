@@ -4,7 +4,7 @@ local config = wezterm.config_builder()
 
 -- Fonts
 config.font = wezterm.font("Hack Nerd Font")
-config.font_size = 16
+config.font_size = 17
 config.line_height = 1.0
 
 -- UI
@@ -25,7 +25,7 @@ config.window_decorations = "RESIZE"
 
 config.color_scheme = "Catppuccin Macchiato"
 config.window_background_opacity = 0.90
-config.macos_window_background_blur = 20
+config.macos_window_background_blur = 40
 
 -- Mouse
 config.hide_mouse_cursor_when_typing = false
