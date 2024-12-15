@@ -10,6 +10,7 @@ config.line_height = 1.0
 -- UI
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
+config.max_fps = 120
 
 -- Colors
 
