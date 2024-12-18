@@ -31,11 +31,15 @@ return {
         dark = "macchiato",
       },
       transparent_background = true,
-      custom_highlights = {
-        LineNrAbove = { fg = "#494d64" },
-        LineNr = { fg = "#c6a0f6" },
-        LineNrBelow = { fg = "#494d64" },
-      },
+      custom_highlights = function(colors)
+        return {
+          LineNrAbove = { fg = colors.surface1 },
+          LineNr = { fg = colors.mauve },
+          LineNrBelow = { fg = colors.surface1 },
+          SnacksIndent = { fg = colors.surface0 },
+          SnacksIndentScope = { fg = colors.surface0 },
+        }
+      end,
     },
   },
   -- Configure LazyVim to load catppuccin
