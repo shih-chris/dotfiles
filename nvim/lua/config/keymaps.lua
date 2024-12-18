@@ -31,6 +31,11 @@ vim.keymap.del("n", "[b")
 vim.keymap.del("n", "]b")
 vim.keymap.del("n", "<leader>bb")
 vim.keymap.del("n", "<leader>`")
+vim.keymap.del("n", "<leader>bo")
+vim.keymap.del("n", "<leader>bD")
+vim.keymap.set("n", "<leader>bD", function()
+  Snacks.bufdelete.other()
+end, { desc = "Delete Other Buffers" })
 
 -- remove save file
 vim.keymap.del({ "i", "x", "n", "s" }, "<C-s>")
