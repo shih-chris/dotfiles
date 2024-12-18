@@ -18,3 +18,8 @@ startup_command = "btop"
 name = "Obsidian"
 path = "~/Documents/Grafana Labs"
 startup_command = "nvim"
+
+[[session]]
+name = "dotfiles"
+path = "~/projects/dotfiles"
+startup_command = "nvim"
