@@ -2,12 +2,12 @@
 [[session]]
 name = "Product Analytics"
 path = "~/projects/product_analytics"
-startup_command = "nvim"
+startup_command = "nvim_lazy"
 
 [[session]]
 name = "dbt"
 path = "~/projects/dbt_grafanalabs_global"
-startup_command = "nvim"
+startup_command = "nvim_lazy"
 
 [[session]]
 name = "btop"
@@ -17,9 +17,9 @@ startup_command = "btop"
 [[session]]
 name = "Obsidian"
 path = "~/Documents/Grafana Labs"
-startup_command = "nvim"
+startup_command = "nvim_lazy"
 
 [[session]]
 name = "dotfiles"
 path = "~/projects/dotfiles"
-startup_command = "nvim"
+startup_command = "nvim_lazy"
