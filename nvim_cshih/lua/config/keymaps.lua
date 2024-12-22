@@ -12,9 +12,6 @@
 -- 	Snacks.bufdelete.other()
 -- end, { desc = "Delete Other Buffers" })
 
--- remove save file
-vim.keymap.del({ "i", "x", "n", "s" }, "<C-s>")
-
 -- windows
 vim.keymap.set("n", "<leader>w\\", "<C-W>v", { desc = "Split window right" })
 
