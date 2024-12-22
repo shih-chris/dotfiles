@@ -46,9 +46,6 @@ for k, v in pairs(options) do
 	vim.opt[k] = v
 end
 
--- Set Colorscheme
-vim.cmd.colorscheme("catppuccin")
-
 -- Fix formatting
 vim.api.nvim_command("filetype plugin indent off")
 vim.api.nvim_create_autocmd({ "FileType" }, {
