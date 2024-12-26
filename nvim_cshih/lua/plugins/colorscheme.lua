@@ -26,6 +26,10 @@ return {
 					SnacksIndentScope = { fg = colors.surface0 },
 				}
 			end,
+			default_integration = false,
+			integrations = {
+				fzf = true,
+			},
 		},
 	},
 }

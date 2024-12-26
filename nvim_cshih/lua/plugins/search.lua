@@ -4,12 +4,22 @@ return {
 		-- dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			local fzf_lua = require("fzf-lua")
+
 			fzf_lua.setup({
-				fzf_colors = {
-					["gutter"] = "-1",
-				},
 				winopts = {
-					backdrop = 100,
+					preview = {
+						vertical = "up:60%",
+						horizontal = "right:60%",
+						layout = "flex",
+						winopts = { number = false },
+					},
+				},
+				keymap = {
+					fzf = {
+						false,
+						["ctrl-d"] = "half-page-down",
+						["ctrl-u"] = "half-page-up",
+					},
 				},
 			})
 			-- set keymaps
