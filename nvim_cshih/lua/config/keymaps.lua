@@ -27,11 +27,6 @@ vim.keymap.set("i", "<C-H>", "<C-W>") -- add back ctrl-delete functionality
 -- Normal Mode --
 -----------------
 
--- LazyGit
-vim.keymap.set("n", "<leader>gg", function()
-	Snacks.lazygit()
-end)
-
 -- LVIM carry over
 vim.keymap.set("n", "J", "mzJ'z") -- Keep cursor in place with "J"
 
