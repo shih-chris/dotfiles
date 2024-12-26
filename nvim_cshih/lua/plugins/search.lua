@@ -13,7 +13,7 @@ return {
 				},
 			})
 			-- set keymaps
-			vim.keymap.set("n", "<leader>sf", fzf_lua.files, { desc = "[s]earch [f]iles" })
+			vim.keymap.set("n", "<leader>sf", fzf_lua.files)
 		end,
 	},
 }
