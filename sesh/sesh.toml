@@ -1,6 +1,6 @@
 # Product Analytics Repo
 [[session]]
-name = "Product Analytics"
+name = "product analytics"
 path = "~/projects/product_analytics"
 startup_command = "nvim_lazy"
 
@@ -10,9 +10,19 @@ path = "~/projects/dbt_grafanalabs_global"
 startup_command = "nvim_lazy"
 
 [[session]]
-name = "btop"
-path = "~"
-startup_command = "btop"
+name = "prefect"
+path = "~/projects/prefect2"
+startup_command = "nvim_lazy"
+
+[[session]]
+name = "deployment_tools"
+path = "~/projects/deployment_tools"
+startup_command = "nvim_lazy"
+
+[[session]]
+name = "projects"
+path = "~/projects"
+startup_command = "nvim_lazy"
 
 [[session]]
 name = "Obsidian"
@@ -23,3 +33,7 @@ startup_command = "nvim_lazy"
 name = "dotfiles"
 path = "~/projects/dotfiles"
 startup_command = "nvim_lazy"
+
+[[session]]
+name = "default"
+path = "~"
