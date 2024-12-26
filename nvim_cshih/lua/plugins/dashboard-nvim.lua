@@ -23,6 +23,7 @@ return {
             { icon = " ", key = "r", desc = "[r]ecent files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
             { icon = " ", key = "s", desc = "restore [s]ession", section = "session" },
             { icon = "󰒲 ", key = "l", desc = "[l]azy", action = ":Lazy" },
+            { icon = " ", key = "q", desc = "[q]uit", action = ":qa" },
           },
 				},
 			},
