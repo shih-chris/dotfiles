@@ -3,6 +3,7 @@
   "fzf-lua": { "branch": "main", "commit": "76e25abc4bbaab243b52fad7f7d4262e76254fd3" },
   "lazy.nvim": { "branch": "main", "commit": "7e6c863bc7563efbdd757a310d17ebc95166cef3" },
   "mini.icons": { "branch": "main", "commit": "44c0160526f7ae17ca8e8eab9ab235d047fcf7a6" },
+  "nvim-treesitter": { "branch": "master", "commit": "17678b00fa5c2712890a0ec2e269d0a4de1207df" },
   "snacks.nvim": { "branch": "main", "commit": "98df370703b3c47a297988f3e55ce99628639590" },
   "vim-tmux-navigator": { "branch": "master", "commit": "d847ea942a5bb4d4fab6efebc9f30d787fd96e65" },
   "which-key.nvim": { "branch": "main", "commit": "8ab96b38a2530eacba5be717f52e04601eb59326" }
