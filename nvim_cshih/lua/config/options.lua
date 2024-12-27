@@ -21,6 +21,8 @@ local options = {
 	wrap = false, -- display lines as one long line
 
 	-- format options
+	shiftwidth = 4, -- the number of spaces inserted for each indentation
+	softtabstop = 4, -- the number of spaces that a <Tab> counts for
 	autoindent = true, -- uses the indent from the previous line
 	smartindent = false, -- make indenting smarter again
 
@@ -47,13 +49,13 @@ for k, v in pairs(options) do
 end
 
 -- Fix formatting
-vim.api.nvim_command("filetype plugin indent off")
-vim.api.nvim_create_autocmd({ "FileType" }, {
-	pattern = "*",
-	callback = function()
-		vim.opt.formatoptions:remove({ "o" })
-	end,
-})
+-- vim.api.nvim_command("filetype plugin indent off")
+-- vim.api.nvim_create_autocmd({ "FileType" }, {
+--   pattern = "*",
+--   callback = function()
+--     vim.opt.formatoptions:remove({ "o" })
+--   end,
+-- })
 
 -- Highlight on yank
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
