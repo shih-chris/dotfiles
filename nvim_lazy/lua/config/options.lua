@@ -24,8 +24,8 @@ local options = {
   wrap = false, -- display lines as one long line
 
   -- format options
-  -- shiftwidth = 4, -- the number of spaces inserted for each indentation
-  -- tabstop = 4, -- insert 4 spaces for a tab
+  softtabstop = 4,
+  shiftwidth = 4, -- the number of spaces inserted for each indentation
   autoindent = true, -- uses the indent from the previous line
   smartindent = false, -- make indenting smarter again
 
