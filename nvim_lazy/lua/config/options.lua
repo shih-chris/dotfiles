@@ -52,13 +52,13 @@ for k, v in pairs(options) do
 end
 
 -- Fix formatting
-vim.api.nvim_command("filetype plugin indent off")
-vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = "*",
-  callback = function()
-    vim.opt.formatoptions:remove({ "o" })
-  end,
-})
+-- vim.api.nvim_command("filetype plugin indent off")
+-- vim.api.nvim_create_autocmd({ "FileType" }, {
+--   pattern = "*",
+--   callback = function()
+--     vim.opt.formatoptions:remove({ "o" })
+--   end,
+-- })
 
 -- Highlight on yank
 local highlight_group = vim.api.nvim_create_augroup("YankHighlight", { clear = true })
