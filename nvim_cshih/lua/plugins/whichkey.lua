@@ -10,6 +10,8 @@ return {
         { "<leader>b", group = "buffer", icon = "" },
         -- code
         { "<leader>c", group = "code", icon = "" },
+        -- mini-surround
+        { "gs", group = "surround", icon = "" },
         -- git
         { "<leader>g", group = "git", icon = "" },
         { "<leader>gg", icon = "󰒲" },
