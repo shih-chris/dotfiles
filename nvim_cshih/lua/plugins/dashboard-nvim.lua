@@ -1,11 +1,11 @@
 return {
-	{
-		"folke/snacks.nvim",
-		---@type snacks.Config
-		opts = {
-			dashboard = {
-				preset = {
-					header = [[
+  {
+    "folke/snacks.nvim",
+    ---@type snacks.Config
+    opts = {
+      dashboard = {
+        preset = {
+          header = [[
 
           ██╗  ██╗███████╗██╗     ██╗      ██████╗      ██████╗██╗  ██╗██████╗ ██╗███████╗
           ██║  ██║██╔════╝██║     ██║     ██╔═══██╗    ██╔════╝██║  ██║██╔══██╗██║██╔════╝
@@ -25,8 +25,8 @@ return {
             { icon = "󰒲 ", key = "l", desc = "[l]azy", action = ":Lazy" },
             { icon = " ", key = "q", desc = "[q]uit", action = ":qa" },
           },
-				},
-			},
-		},
-	},
+        },
+      },
+    },
+  },
 }
