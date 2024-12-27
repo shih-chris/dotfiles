@@ -1,11 +1,14 @@
 return {
-	{
-		"folke/snacks.nvim",
-		---@type snacks.Config
-		opts = {
-			dashboard = {
-				preset = {
-					header = [[
+  {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    ---@type snacks.Config
+    opts = {
+      bigfile = { enabled = true },
+      dashboard = {
+        preset = {
+          header = [[
 
           ██╗  ██╗███████╗██╗     ██╗      ██████╗      ██████╗██╗  ██╗██████╗ ██╗███████╗
           ██║  ██║██╔════╝██║     ██║     ██╔═══██╗    ██╔════╝██║  ██║██╔══██╗██║██╔════╝
@@ -24,8 +27,22 @@ return {
             { icon = "󰒲 ", key = "l", desc = "[l]azy", action = ":Lazy" },
             { icon = " ", key = "q", desc = "[q]uit", action = ":qa" },
           },
-				},
-			},
-		},
-	},
+        },
+      },
+      indent = {
+        animate = {
+          enabled = false,
+        },
+      },
+      quickfile = { enabled = true },
+    },
+    keys = {
+      { "<leader>bd", function() Snacks.bufdelete() end, desc = "[d]elete buffer" },
+      { "<leader>gg", function() Snacks.lazygit() end, desc = "lazy [g]it", },
+      { "<leader>gf", function() Snacks.lazygit.log_file() end, desc = "log [f]ile", },
+      { "<leader>gb", function() Snacks.git.blame_line() end, desc = "git [b]lame", },
+      { "<leader>gB", function() Snacks.gitbrowse() end, desc = "git [B]rowse", },
+    },
+  },
 }
+

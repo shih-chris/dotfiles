@@ -1,6 +1,7 @@
 return {
   {
     "ibhagwan/fzf-lua",
+    event = "VeryLazy",
     dependencies = { "echasnovski/mini.icons" },
     config = function()
       local fzf_lua = require("fzf-lua")

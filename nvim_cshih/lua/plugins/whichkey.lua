@@ -6,6 +6,8 @@ return {
       preset = "modern",
       spec = {
         mode = { "n", "v" },
+        -- buffer
+        { "<leader>b", group = "buffer", icon = "" },
         -- code
         { "<leader>c", group = "code", icon = "" },
         -- git

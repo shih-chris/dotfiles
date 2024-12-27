@@ -46,10 +46,6 @@ vim.keymap.set("n", "<C-j>", "<Cmd>TmuxNavigateDown<CR>", { desc = "Window Navig
 vim.keymap.set("n", "<C-k>", "<Cmd>TmuxNavigateUp<CR>", { desc = "Window Navigation - Up" })
 vim.keymap.set("n", "<C-l>", "<Cmd>TmuxNavigateRight<CR>", { desc = "Window Navigation - Right" })
 
--- Navigate buffers
-vim.keymap.set("n", "<S-l>", ":bnext<CR>", { desc = "Buffer Navigation - Next" })
-vim.keymap.set("n", "<S-h>", ":bprevious<CR>", { desc = "Buffer Navigation - Previous" })
-
 -- Move text up and down
 vim.keymap.set("n", "<A-j>", "<Esc>:m .+1<CR>==gi", { desc = "Move text down - Normal Mode" })
 vim.keymap.set("n", "<A-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move text up - Normal Mode" })
