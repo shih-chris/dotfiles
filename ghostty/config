@@ -1,0 +1,14 @@
+# Colorscheme
+theme = catppuccin-macchiato
+
+# Font
+font-family = "Hack Nerd Font Mono"
+font-size = 17
+
+# Window
+background-opacity = 0.95
+background-blur-radius = 40
+macos-titlebar-style = "hidden"
+macos-window-shadow = false
+confirm-close-surface = false
+window-padding-y = 10
