@@ -13,6 +13,7 @@ local options = {
   relativenumber = true, -- set relative numbered lines
   scrolloff = 8, -- minimal number of screen lines to keep above and below the cursor
   sidescrolloff = 8, -- minimal number of screen columns either side of cursor if wrap is `false`
+  showmode = false, -- we don't need to see things like -- INSERT -- anymore
   showtabline = 2, -- always show tabs
   splitbelow = true, -- force all horizontal splits to go below current window
   splitright = true, -- force all vertical splits to go to the right of current window

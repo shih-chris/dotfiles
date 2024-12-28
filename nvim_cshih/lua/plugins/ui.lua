@@ -1,10 +1,9 @@
 return {
-  { "echasnovski/mini.icons", version = false },
   {
     "akinsho/bufferline.nvim",
     event = "VeryLazy",
     dependencies = {
-      "echasnovski/mini.icons",
+      "nvim-tree/nvim-web-devicons",
       "catppuccin/nvim",
     },
     keys = {
