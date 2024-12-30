@@ -27,7 +27,7 @@ return {
       end,
       default_integration = false,
       integrations = {
-        cmp = true,
+        blink_cmp = true,
         fzf = true,
         neotree = true,
         native_lsp = {
