@@ -34,6 +34,7 @@ return {
           enabled = false,
         },
       },
+      notifier = { enabled = true },
       quickfile = { enabled = true },
     },
     keys = {
