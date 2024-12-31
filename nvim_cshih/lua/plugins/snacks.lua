@@ -35,6 +35,7 @@ return {
         },
       },
       notifier = { enabled = true },
+      scope = { enabled = true },
       quickfile = { enabled = true },
     },
     keys = {

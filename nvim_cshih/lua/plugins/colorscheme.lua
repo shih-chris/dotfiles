@@ -18,9 +18,9 @@ return {
       transparent_background = true,
       custom_highlights = function(colors)
         return {
-          LineNrAbove = { fg = colors.surface1 },
-          LineNr = { fg = colors.mauve },
-          LineNrBelow = { fg = colors.surface1 },
+          LineNrAbove = { fg = colors.surface2 },
+          LineNr = { fg = colors.rosewater },
+          LineNrBelow = { fg = colors.surface2 },
           SnacksIndent = { fg = colors.surface0 },
           SnacksIndentScope = { fg = colors.surface0 },
         }
