@@ -52,18 +52,62 @@ return {
         },
       },
     },
-    -- specs = {
-      --   {
-        --     "akinsho/bufferline.nvim",
-        --     optional = true,
-        --     opts = function(_, opts)
-          --       if (vim.g.colors_name or ""):find("catppuccin") then
-          --         opts.highlights = require("catppuccin.groups.integrations.bufferline").get({
-            --           styles = { "bold" },
-            --         })
-            --       end
-            --     end,
-            --   },
-            -- },
-          },
-        }
+  },
+  -- kanagawa
+  -- {
+  --   "rebelot/kanagawa.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {
+  --     transparent = true,
+  --     colors = {
+  --       theme = {
+  --         all = {
+  --           ui = {
+  --             bg_gutter = "none"
+  --           }
+  --         }
+  --       }
+  --     },
+  --     overrides = function(colors)
+  --       return {
+  --         LineNrAbove = { fg = colors.palette.fujiGray },
+  --         LineNr = { fg = colors.palette.surimiOrange },
+  --         LineNrBelow = { fg = colors.palette.fujiGray },
+  --         SnacksIndent = { fg = colors.palette.sumiInk4 },
+  --         SnacksIndentScope = { fg = colors.palette.winterBlue },
+  --       }
+  --     end,
+  --   },
+  -- },
+  -- cyberdream
+  -- {
+  --   "scottmckendry/cyberdream.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {
+  --     transparent = true,
+  --     themes = {
+  --       highlights = function(colors)
+  --         return {
+  --           LineNrAbove = { fg = colors.bgHighlight },
+  --           LineNr = { fg = colors.blue },
+  --           LineNrBelow = { fg = colors.bgHighlight },
+  --           SnacksIndent = { fg = colors.bgAlt },
+  --           SnacksIndentScope = { fg = colors.bgAlt },
+  --         }
+  --       end,
+  --     },
+  --     extensions = {
+  --       blinkcmp = true,
+  --       fzflua = true,
+  --       gitsigns = true,
+  --       mini = true,
+  --       notify = true,
+  --       snacks = true,
+  --       treesitter = true,
+  --       whichkey = true,
+  --     },
+  --   },
+  -- },
+}

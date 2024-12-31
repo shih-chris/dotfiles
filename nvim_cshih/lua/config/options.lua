@@ -10,6 +10,7 @@ local options = {
   number = true, -- set numbered lines
   numberwidth = 2, -- set number column width to 2 {default 4}
   pumheight = 10, -- pop up menu height
+  cmdheight = 0, -- hides command line unless it is in use
   relativenumber = true, -- set relative numbered lines
   scrolloff = 8, -- minimal number of screen lines to keep above and below the cursor
   sidescrolloff = 8, -- minimal number of screen columns either side of cursor if wrap is `false`
