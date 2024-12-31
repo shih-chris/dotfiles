@@ -19,7 +19,7 @@ return {
       custom_highlights = function(colors)
         return {
           LineNrAbove = { fg = colors.surface2 },
-          LineNr = { fg = colors.rosewater },
+          LineNr = { fg = colors.mauve },
           LineNrBelow = { fg = colors.surface2 },
           SnacksIndent = { fg = colors.surface0 },
           SnacksIndentScope = { fg = colors.surface0 },

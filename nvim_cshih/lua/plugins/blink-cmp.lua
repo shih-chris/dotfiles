@@ -13,8 +13,8 @@ return {
       keymap = {
         preset = 'none',
         ["<C-Space>"] = { 'accept', 'fallback' },
-        ["<S-e>"] = { 'show', 'show_documentation', 'hide_documentation' },
-        ["<C-e>"] = { 'hide', 'fallback' },
+        ["<C-e>"] = { 'show', 'show_documentation', 'hide_documentation' },
+        -- ["<C-e>"] = { 'hide', 'fallback' },
         ["<C-k>"] = { 'select_prev', 'fallback' },
         ["<C-j>"] = { 'select_next', 'fallback' },
         ["<C-u>"] = { 'scroll_documentation_up', 'fallback' },
