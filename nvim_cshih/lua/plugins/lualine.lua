@@ -7,6 +7,7 @@ return {
         theme = "catppuccin",
         -- theme = "auto",
         globalstatus = true,
+        section_separators = { left = '', right = '' },
         component_separators = "",
         disabled_filetypes = { statusline = { "dashboard", "alpha", "ministarter", "snacks_dashboard" } },
       },
