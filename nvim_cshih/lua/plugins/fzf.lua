@@ -6,6 +6,9 @@ return {
     config = function()
       local fzf_lua = require("fzf-lua")
       fzf_lua.setup({
+        defaults = {
+          no_header = true,
+        },
         winopts = {
           preview = {
             vertical = "up:60%",
@@ -13,6 +16,9 @@ return {
             layout = "flex",
             winopts = { number = false },
           },
+        },
+        fzf_opts = {
+          ["--layout"] = false,
         },
         keymap = {
           fzf = {
