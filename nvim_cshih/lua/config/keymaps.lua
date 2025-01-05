@@ -54,8 +54,8 @@ vim.keymap.set("n", "<A-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move text up - Nor
 vim.keymap.set("n", "<leader>h", "<Cmd>nohl<CR>", { desc = "Remove highlighting" })
 
 -- Navigate buffers
-vim.keymap.set("n", "<S-l>", ":bnext<CR>", { desc = "Buffer Navigation - Next" })
-vim.keymap.set("n", "<S-h>", ":bprevious<CR>", { desc = "Buffer Navigation - Previous" })
+-- vim.keymap.set("n", "<S-l>", ":bnext<CR>", { desc = "Buffer Navigation - Next" })
+-- vim.keymap.set("n", "<S-h>", ":bprevious<CR>", { desc = "Buffer Navigation - Previous" })
 
 -----------------
 -- Visual Mode --
