@@ -31,19 +31,22 @@ return {
         },
         lualine_x = {
           {
-            "buffers",
-            show_filename_only = true,
-            hide_filename_extension = true,
-            show_modified_status = true,
-            mode = 0,
-            symbols = {
-              modified = " ●",
-              alternate_file = "",
-              directory =  "",
-            },
+            "searchcount"
           },
+          -- {
+          --   "buffers",
+          --   show_filename_only = true,
+          --   hide_filename_extension = true,
+          --   show_modified_status = true,
+          --   mode = 0,
+          --   symbols = {
+          --     modified = " ●",
+          --     alternate_file = "",
+          --     directory =  "",
+          --   },
+          -- },
         },
-        lualine_y = {"progress", 'searchcount'},
+        lualine_y = {"progress"},
         lualine_z = {
           {
             "filetype",
