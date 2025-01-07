@@ -40,6 +40,7 @@ return {
     },
     keys = {
       { "<leader>bd", function() Snacks.bufdelete() end, desc = "[d]elete buffer" },
+      { "<leader>bD", function() Snacks.bufdelete.other() end, desc = "[D]elete other buffers" },
       { "<leader>gg", function() Snacks.lazygit() end, desc = "lazy [g]it", },
       { "<leader>gf", function() Snacks.lazygit.log_file() end, desc = "log [f]ile", },
       { "<leader>gb", function() Snacks.git.blame_line() end, desc = "git [b]lame", },
