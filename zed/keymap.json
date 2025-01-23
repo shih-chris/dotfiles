@@ -1,8 +1,52 @@
 [
   {
+    "context": "Workspace",
+    "use_key_equivalents": true,
+    "bindings": {}
+  },
+  {
     "context": "vim_mode == insert",
     "bindings": {
       "j k": "vim::NormalBefore" // remap jk in insert mode to escape.
+    }
+  },
+  {
+    "context": "vim_mode == normal",
+    "bindings": {
+      // Navigation
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+
+      // Leader Key Functions
+      // Buffer Management
+      "space b d": "pane::CloseActiveItem",
+      "space b D": "workspace::CloseInactiveTabsAndPanes",
+
+      // File Tree
+      "space e": "workspace::ToggleLeftDock",
+
+      // Search
+      "space s f": "file_finder::Toggle",
+      "space s p": "projects::OpenRecent",
+
+      // Terminal
+      "space \\": "workspace::ToggleBottomDock"
+
+      // Project Management
+
+      // Menu selection
+      // "ctrl-j": "menu::SelectNext",
+      // "ctrl-k": "menu::SelectPrev"
+    }
+  },
+  {
+    "context": "FileFinder",
+    "use_key_equivalents": true,
+    "bindings": {
+      "ctrl-j": "menu::SelectNext",
+      "ctrl-k": "menu::SelectPrev"
     }
   },
   {
@@ -11,7 +55,11 @@
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      // File Tree
+      "space e": "workspace::ToggleLeftDock",
+      // Terminal
+      "space \\": "workspace::ToggleBottomDock"
     }
   }
 ]

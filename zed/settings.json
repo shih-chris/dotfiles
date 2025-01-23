@@ -8,6 +8,7 @@
     "metrics": true
   },
   "vim_mode": true,
+  // "base_keymap": "None",
   "restore_on_startup": "none",
 
   // Theme & Font Settings
