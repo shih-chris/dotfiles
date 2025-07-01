@@ -35,3 +35,10 @@ setopt prompt_subst
 PROMPT='%F{blue}%1~%f %B%F{magenta}${vcs_info_msg_0_}%f%b'
 # profile startup: end
 # zprof
+
+# Pyenv initialization
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
+PATH=$(pyenv root)/shims:$PATH
