@@ -7,6 +7,7 @@ require("config.keymaps")
 require("config.options")
 require("config.autocmds")
 require("core.lazy-plugins")
+require("core.lsp")
 
 -- set colorscheme
 vim.cmd.colorscheme("catppuccin")
