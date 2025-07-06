@@ -46,6 +46,10 @@ return {
       },
       sources = {
         default = { 'lsp', 'path', 'snippets', 'buffer' },
+        per_filetype = {
+          sql = { 'path', 'buffer' },
+          lua = { inherit_defaults = true, 'lazydev' },
+        },
         providers = {
           lazydev = {
             name = "LazyDev",
