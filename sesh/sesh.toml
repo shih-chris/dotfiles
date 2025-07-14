@@ -1,5 +1,10 @@
 # Product Analytics Repo
 [[session]]
+name = "notetaking"
+path = "~/Documents/Grafana Labs"
+startup_command = "nvim_cshih"
+
+[[session]]
 name = "product analytics"
 path = "~/projects/product_analytics"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
@@ -23,11 +28,6 @@ startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
 name = "projects"
 path = "~/projects"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
-
-[[session]]
-name = "Obsidian"
-path = "~/Documents/Grafana Labs"
-startup_command = "nvim_cshih"
 
 [[session]]
 name = "dotfiles"
