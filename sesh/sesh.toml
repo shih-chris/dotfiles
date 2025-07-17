@@ -2,7 +2,7 @@
 [[session]]
 name = "notetaking"
 path = "~/Documents/Grafana Labs"
-startup_command = "nvim_cshih"
+startup_command = "tmux new-window -d && nvim_cshih"
 
 [[session]]
 name = "product analytics"
