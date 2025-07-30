@@ -5,6 +5,11 @@ path = "~/Documents/Grafana Labs"
 startup_command = "tmux new-window -d && nvim_cshih"
 
 [[session]]
+name = "grafana analytics"
+path = "~/projects/grafana_analytics"
+startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
+
+[[session]]
 name = "product analytics"
 path = "~/projects/product_analytics"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
