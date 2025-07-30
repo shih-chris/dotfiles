@@ -2,5 +2,123 @@
     {
         "key": "cmd+i",
         "command": "composerMode.agent"
-    }
+    },
+
+    // vim keybinds
+    // movement
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.navigateLeft",
+        "when": "vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.navigateRight",
+        "when": "vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.navigateUp",
+        "when": "vim.active && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.navigateDown",
+        "when": "vim.active && vim.mode != 'Insert'"
+    },
+
+    // file explorer
+    {
+        "key": "ctrl+e",
+        "command": "-actions.findWithSelection"
+    },
+    {
+        "key": "ctrl+e",
+        "command": "workbench.view.explorer"
+    },
+    {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+        "key": "r",
+        "command": "renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-renameFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "h",
+        "command": "list.collapse",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "d",
+        "command": "deleteFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "y",
+        "command": "filesExplorer.copy",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+    },
+    {
+        "key": "x",
+        "command": "filesExplorer.cut",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !inputFocus"
+    },
+    {
+        "key": "p",
+        "command": "filesExplorer.paste",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "v",
+        "command": "explorer.openToSide",
+        "when": "explorerViewletFocus && explorerViewletVisible && !inputFocus"
+    },
+    {
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "shift+a",
+        "command": "explorer.newFolder",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    // Add ctrl+h/l to navigate in file browser
+    {
+        "key": "ctrl+h",
+        "command": "file-browser.stepOut",
+        "when": "inFileBrowser"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "file-browser.stepIn",
+        "when": "inFileBrowser"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "selectNextCodeAction",
+        "when": "codeActionMenuVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevCodeAction",
+        "when": "codeActionMenuVisible"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "acceptSelectedCodeAction",
+        "when": "codeActionMenuVisible"
+    },
+    {
+        "key": "cmd+e",
+        "command": "composerMode.background"
+    },
 ]

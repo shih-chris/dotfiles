@@ -1,6 +1,92 @@
 {
-    "window.commandCenter": 1,
-    "workbench.colorTheme": "Catppuccin Macchiato",
-    "extensions.ignoreRecommendations": true
-}
+    // legacy settings
+    "extensions.ignoreRecommendations": true,
 
+    // settings...settings
+    // "workbench.settings.editor": "json",
+
+    // color settings
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "catppuccin.workbenchMode": "minimal",
+
+    // editor settings
+    "editor.fontSize": 16,
+    "editor.lineNumbers": "relative",
+    "editor.semanticHighlighting.enabled": true,
+    "terminal.integrated.minimumContrastRatio": 1,
+
+    // de-clutter UI
+    "window.titleBarStyle": "custom",
+    "window.title": " ",
+    "window.commandCenter": false,
+    "window.menuBarVisibility": "toggle",
+    "breadcrumbs.enabled": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.activityBar.visible": false,
+    "workbench.activityBar.orientation": "vertical",
+    "workbench.activityBar.location": "bottom",
+    "editor.minimap.enabled": false,
+    "gitlens.currentLine.enabled": false,
+
+    // explorer settings
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.autoReveal": "focusNoScroll",
+
+    // telemetry
+    "telemetry.telemetryLevel": "off",
+
+    // cursor settings
+    "cursor.composer.textSizeScale": 1.2,
+
+    // vim settings
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<Esc>"]
+        }
+    ],
+
+    "vim.easymotion": true,
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+
+    "vim.normalModeKeyBindingsNonRecursive": [
+        
+        // use shift h/l to move buffers
+        {
+            "before": [
+                "<s-l>"
+            ],
+            "commands": [
+                "workbench.action.nextEditorInGroup"
+            ]
+        },
+        {
+            "before": [
+                "<s-h>"
+            ],
+            "commands": [
+                "workbench.action.previousEditorInGroup"
+            ]
+        },
+        
+        // tree
+        {
+            "before": ["<leader>", "e"],
+            "commands": ["workbench.view.explorer"]
+        },
+
+        // search
+        {
+            "before": ["<leader>", "s", "f"]
+            "commands": []
+        }
+    ],
+}
