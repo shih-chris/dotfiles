@@ -5,3 +5,7 @@
 # zsh
 zsh/.zcompdump
 zsh/.zshrc.backup
+
+# cursor
+.specstory/*
+.cursorindexingignore
