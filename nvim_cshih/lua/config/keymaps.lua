@@ -8,6 +8,9 @@
 -- vim.keymap.set("n", "<leader>sF", LazyVim.pick("auto", { root = false }), { desc = "find [F]iles (cwd)" })
 
 -- buffer switching
+vim.keymap.set("n", "<S-h>", ":bprev<CR>", { desc = "Prev Buffer" })
+vim.keymap.set("n", "<S-l>", ":bnext<CR>", { desc = "Next Buffer" })
+
 -- vim.keymap.set("n", "<leader>bD", function()
 -- 	Snacks.bufdelete.other()
 -- end, { desc = "Delete Other Buffers" })
