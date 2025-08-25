@@ -30,12 +30,15 @@ return {
         },
       },
       indent = {
-        animate = {
-          enabled = false,
-        },
+        enabled = false,
+        animate = { enabled = false },
+        chunk = { enabled = false },
       },
       notifier = { enabled = true },
-      scope = { enabled = true },
+      scope = { 
+        enabled = false,
+        animate = { enabled = false },
+      },
       quickfile = { enabled = true },
     },
     keys = {
