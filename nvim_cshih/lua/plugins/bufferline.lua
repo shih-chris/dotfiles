@@ -5,10 +5,6 @@ return {
     dependencies = {
       "nvim-tree/nvim-web-devicons"
     },
-    keys = {
-      { "<S-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
-      { "<S-l>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
-    },
     opts = function(_, opts)
       local bufferline = require("bufferline")
       opts.options = {
@@ -34,23 +30,23 @@ return {
           },
         },
       }
-      local macchiato = require("catppuccin.palettes").get_palette "macchiato"
-      opts.highlights = require("catppuccin.groups.integrations.bufferline").get({
-        styles = { "bold" },
-        custom = {
-          all = {
-            buffer_visible = {
-              fg = macchiato.peach
-            },
-            buffer_selected = {
-              fg = macchiato.peach
-            },
-            separator_visible = {
-              fg = macchiato.peach
-            },
-          },
-        },
-      })
+      -- local macchiato = require("catppuccin.palettes").get_palette "macchiato"
+      -- opts.highlights = require("catppuccin.groups.integrations.bufferline").get({
+      --   styles = { "bold" },
+      --   custom = {
+      --     all = {
+      --       buffer_visible = {
+      --         fg = macchiato.peach
+      --       },
+      --       buffer_selected = {
+      --         fg = macchiato.peach
+      --       },
+      --       separator_visible = {
+      --         fg = macchiato.peach
+      --       },
+      --     },
+      --   },
+      -- })
     end
   },
 }

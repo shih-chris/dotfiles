@@ -23,11 +23,18 @@ return {
           LineNrBelow = { fg = colors.surface2 },
           SnacksIndent = { fg = colors.surface0 },
           SnacksIndentScope = { fg = colors.surface0 },
+          -- IblIndent = { fg = colors.surface0 },
+          -- IblScope = { fg = colors.mauve },
         }
       end,
       default_integration = false,
       integrations = {
         blink_cmp = true,
+        indent_blankline = {
+          enabled = true,
+          scope_color = "mauve",
+          colored_indent_levels = false,
+        },
         fzf = true,
         neotree = true,
         native_lsp = {
