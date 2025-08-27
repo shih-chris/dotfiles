@@ -10,6 +10,11 @@ path = "~/projects/grafana_analytics"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
+name = "analytics_agent"
+path = "~/projects/analytics_agent"
+startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
+
+[[session]]
 name = "product analytics"
 path = "~/projects/product_analytics"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
@@ -21,6 +26,11 @@ startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
 name = "prefect"
+path = "~/projects/prefect"
+startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
+
+[[session]]
+name = "prefect2"
 path = "~/projects/prefect2"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
 
