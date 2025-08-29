@@ -4,8 +4,8 @@
 
 # basic aliases
 # alias ls='ls -FG --color=auto'
-alias vi='NVIM_APPNAME="nvim_lazy" nvim'
-alias vim='NVIM_APPNAME="nvim_lazy" nvim'
+alias vi='NVIM_APPNAME="nvim_cshih" nvim'
+alias vim='NVIM_APPNAME="nvim_cshih" nvim'
 alias nvim_cshih='NVIM_APPNAME="nvim_cshih" nvim'
 alias nvim_lazy='NVIM_APPNAME="nvim_lazy" nvim'
 

@@ -5,7 +5,6 @@
 # PATH exports
 export PATH="$PATH:/usr/local/git/bin"
 export PATH="$PATH:/usr/local/bin"
-export PATH="$PATH:/home/chris/Documents/AppImages"
 export PATH="$PATH:$(go env GOPATH)/bin" # installed go binaries
 export PATH="$HOME/.local/bin":$PATH
 export PATH=$HOME/.tmux/plugins/t-smart-tmux-session-manager/bin:$PATH # ~/.tmux/plugins

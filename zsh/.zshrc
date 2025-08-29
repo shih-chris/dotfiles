@@ -22,6 +22,9 @@ HISTFILE=~/.zsh_history
 # enable zoxide
 eval "$(zoxide init zsh)"
 
+# enable brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # enable pure
 # fpath+=("$(brew --prefix)/share/zsh/site-functions")
 # autoload -U promptinit; promptinit
