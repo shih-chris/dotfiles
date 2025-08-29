@@ -5,6 +5,7 @@
 # zsh
 zsh/.zcompdump
 zsh/.zshrc.backup
+zsh/private_exports
 
 # cursor
 .specstory/*
