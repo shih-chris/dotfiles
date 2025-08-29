@@ -1,4 +1,3 @@
-# Product Analytics Repo
 [[session]]
 name = "notetaking"
 path = "~/Documents/Grafana Labs"
@@ -10,8 +9,8 @@ path = "~/projects/grafana_analytics"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
-name = "analytics_agent"
-path = "~/projects/analytics_agent"
+name = "grafana-analytics-agent"
+path = "~/projects/grafana-analytics-agent"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
