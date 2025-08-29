@@ -11,6 +11,7 @@ typeset -U PATH
 source "$HOME/.config/zsh/scripts.zsh"
 source "$HOME/.config/zsh/aliases.zsh"
 source "$HOME/.config/zsh/exports.zsh"
+source "$HOME/.config/zsh/private_exports.zsh"
 source "$HOME/.config/zsh/options.zsh"
 source "$HOME/.config/zsh/keymaps.zsh"
 source "$HOME/.config/zsh/plugins.zsh"
