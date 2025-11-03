@@ -1,3 +1,5 @@
+strict_mode = true
+
 [[session]]
 name = "notetaking"
 path = "~/Documents/Grafana Labs"
@@ -9,7 +11,12 @@ path = "~/projects/grafana_analytics"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
-name = "grafana-analytics-agent"
+name = "oss-data-stack"
+path = "~/projects/oss-data-stack"
+startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
+
+[[session]]
+name = "analytics agent"
 path = "~/projects/grafana-analytics-agent"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
 
