@@ -116,9 +116,5 @@
         "key": "ctrl+l",
         "command": "acceptSelectedCodeAction",
         "when": "codeActionMenuVisible"
-    },
-    {
-        "key": "cmd+e",
-        "command": "composerMode.background"
-    },
+    }
 ]
