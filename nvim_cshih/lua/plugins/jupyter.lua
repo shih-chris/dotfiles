@@ -17,8 +17,8 @@ return {
     keys = {
       { "]h", function() require("notebook-navigator").move_cell("d") end, desc = "Move to next cell" },
       { "[h", function() require("notebook-navigator").move_cell("u") end, desc = "Move to previous cell" },
-      { "<leader>X", "<cmd>lua require('notebook-navigator').run_cell()<cr>", desc = "Run current cell" },
-      { "<leader>x", "<cmd>lua require('notebook-navigator').run_and_move()<cr>", desc = "Run cell and move to next" },
+      { "<leader>cJ", "<cmd>lua require('notebook-navigator').run_cell()<cr>", desc = "Run current cell" },
+      { "<leader>cj", "<cmd>lua require('notebook-navigator').run_and_move()<cr>", desc = "Run cell and move to next" },
     },
     dependencies = {
       "echasnovski/mini.comment",
