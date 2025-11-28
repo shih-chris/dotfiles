@@ -49,11 +49,15 @@ return {
         },
       })
 
-      -- Make terminal backgrounds transparent
+      -- Make iron.nvim REPL terminal backgrounds transparent
       vim.api.nvim_create_autocmd("TermOpen", {
         pattern = "*",
         callback = function()
-          vim.opt_local.winhighlight = "Normal:Normal,NormalNC:Normal"
+          -- Only apply to iron.nvim REPLs by checking buffer name
+          local bufname = vim.api.nvim_buf_get_name(0)
+          if bufname:match("iron://") then
+            vim.opt_local.winhighlight = "Normal:Normal,NormalNC:Normal"
+          end
         end,
       })
     end,
