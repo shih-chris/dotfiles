@@ -22,17 +22,15 @@ return {
     },
     dependencies = {
       "echasnovski/mini.comment",
-      "anuvyklack/hydra.nvim",
       "Vigemus/iron.nvim",
     },
     event = "VeryLazy",
     config = function()
       local nn = require("notebook-navigator")
       nn.setup({
-        activate_hydra_keys = "<leader>h",
+        activate_hydra_keys = nil,  -- Disable hydra due to conflict with snacks.nvim
         repl_provider = "iron",
         syntax_highlight = false,
-        show_hydra_hint = true,
       })
     end,
   },
