@@ -2,7 +2,19 @@ return {
   {
     "Vigemus/iron.nvim",
     keys = {
-      { "<leader>rs", "<cmd>IronRepl<cr>", desc = "Start REPL" },
+      {
+        "<leader>rs",
+        function()
+          local file_dir = vim.fn.expand("%:p:h")
+          vim.cmd("IronRepl")
+          if file_dir ~= "" then
+            vim.defer_fn(function()
+              require("iron.core").send(nil, string.format("import os; os.chdir('%s')", file_dir))
+            end, 200)
+          end
+        end,
+        desc = "Start REPL",
+      },
       { "<leader>rr", "<cmd>IronRestart<cr>", desc = "Restart REPL" },
       { "<leader>rf", "<cmd>IronFocus<cr>", desc = "Focus REPL" },
       { "<leader>rh", "<cmd>IronHide<cr>", desc = "Hide REPL" },
@@ -15,13 +27,7 @@ return {
           scratch_repl = true,
           repl_definition = {
             python = {
-              command = function()
-                local file_dir = vim.fn.expand("%:p:h")
-                if file_dir == "" then
-                  file_dir = vim.fn.getcwd()
-                end
-                return { "sh", "-c", string.format("cd '%s' && python3", file_dir) }
-              end,
+              command = { "python3" },
               format = require("iron.fts.common").bracketed_paste_python,
             },
           },
