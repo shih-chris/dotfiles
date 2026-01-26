@@ -15,7 +15,7 @@ vim.api.nvim_create_autocmd("FileType", {
 -- set tabspace to 2
 vim.api.nvim_create_autocmd("FileType", {
   group = augroup("tabspace_2"),
-  pattern = { "lua", "json" },
+  pattern = { "lua", "json", "jsonc" },
   callback = function()
     vim.opt_local.shiftwidth = 2
     vim.opt_local.softtabstop = 2
