@@ -10,3 +10,6 @@ zsh/private_exports.zsh
 # cursor
 .specstory/*
 .cursorindexingignore
+
+# zed
+zed/prompts/prompts-library-db.0.mdb/lock.mdb
