@@ -11,8 +11,8 @@ path = "~/projects/grafana_analytics"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
-name = "oss-data-stack"
-path = "~/projects/oss-data-stack"
+name = "statistical rethinking"
+path = "~/projects/statistical_rethinking_2026"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
