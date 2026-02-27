@@ -1,0 +1,19 @@
+model = "gpt-5.3-codex"
+model_reasoning_effort = "xhigh"
+[projects."/Users/chris/projects/dotfiles"]
+trust_level = "trusted"
+
+[projects."/Users/chris/projects/product_analytics"]
+trust_level = "trusted"
+
+[projects."/Users/chris/projects/grafana_analytics"]
+trust_level = "trusted"
+
+[projects."/Users/chris/projects/dae_example_data_agent"]
+trust_level = "trusted"
+
+[projects."/Users/chris/projects/dbt_grafanalabs_global"]
+trust_level = "trusted"
+
+[projects."/Users/chris/projects/GrafanaCON2026-business-data-stack"]
+trust_level = "trusted"
