@@ -1,5 +1,20 @@
 model = "gpt-5.3-codex"
 model_reasoning_effort = "xhigh"
+
+web_search = "live"
+
+personality = "pragmatic"
+plan_mode_reasoning_effort = "xhigh"
+
+[features]
+skills = true
+
+multi_agent = true
+collaboration_modes = true
+steer = true
+prevent_idle_sleep = true
+default_mode_request_user_input = true
+
 [projects."/Users/chris/projects/dotfiles"]
 trust_level = "trusted"
 
