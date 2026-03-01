@@ -1,6 +1,7 @@
 # Working with Github
 - always prefix github branches with `cshih/`
 - if there is a github issue that we are working on, add the issue number in the branch (i.e. for issue 1000, the branch should be prefixed with `cshih/1000-`)
+- always remember to use safe quoting to deal with backticks
 - never attempt to describe a testing methodology when a PR is only making updates to markdown files (`.md` or `.mdc`)
 
 # Communication
