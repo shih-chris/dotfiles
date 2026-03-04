@@ -85,8 +85,12 @@
 
         // search
         {
-            "before": ["<leader>", "s", "f"]
-            "commands": []
+            "before": ["<leader>", "s", "f"],
+            "commands": ["workbench.action.quickOpen"]
+        },
+        {
+            "before": ["<leader>", "s", "t"],
+            "commands": ["workbench.action.findInFiles"]
         }
-    ],
+    ]
 }
