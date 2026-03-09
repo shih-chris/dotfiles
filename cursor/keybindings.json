@@ -4,6 +4,23 @@
         "command": "composerMode.agent"
     },
 
+    // notebook command mode tab navigation
+    {
+        "key": "shift+h",
+        "command": "workbench.action.previousEditorInGroup",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+        "key": "shift+l",
+        "command": "workbench.action.nextEditorInGroup",
+        "when": "notebookEditorFocused && !inputFocus"
+    },
+    {
+        "key": "u",
+        "command": "undo",
+        "when": "notebookEditorFocused && !inputFocus && !notebookOutputFocused"
+    },
+
     // vim keybinds
     // movement
     {
