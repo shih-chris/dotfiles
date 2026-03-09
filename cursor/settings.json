@@ -22,9 +22,8 @@
     "window.menuBarVisibility": "toggle",
     "breadcrumbs.enabled": false,
     "workbench.layoutControl.enabled": false,
-    "workbench.activityBar.visible": false,
     "workbench.activityBar.orientation": "vertical",
-    "workbench.activityBar.location": "bottom",
+    "workbench.activityBar.location": "hidden",
     "editor.minimap.enabled": false,
     "gitlens.currentLine.enabled": false,
 
@@ -92,5 +91,6 @@
             "before": ["<leader>", "s", "t"],
             "commands": ["workbench.action.findInFiles"]
         }
-    ]
+    ],
+    "notebook.lineNumbers": "on"
 }
