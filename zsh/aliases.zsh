@@ -21,6 +21,11 @@ alias oops='git reset --soft HEAD^'
 alias python='python3'
 alias cclip='xclip -selection clipboard'
 
+# llm aliases
+alias cc='claude code'
+alias cx='codex'
+alias oc='opencode'
+
 # other aliases
 # alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
 alias t='sesh connect'
