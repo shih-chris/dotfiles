@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/tui.json",
+  "theme": "catppuccin-macchiato-transparent",
+  // "alternate_screen": false,
+  "scroll_speed": 3,
+  "keybinds": {
+    "leader": "ctrl+o",
+    "messages_page_up": "ctrl+u",
+    "messages_page_down": "ctrl+d",
+    "input_delete_to_line_end": "none"
+  },
+  "scroll_acceleration": {
+    "enabled": true
+  }
+}
