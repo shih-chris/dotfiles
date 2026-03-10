@@ -1,0 +1,61 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "share": "disabled",
+  "theme": "catppuccin-macchiato-transparent",
+  "tui": {
+    "scroll_acceleration": {
+      "enabled": true
+    }
+  },
+  "keybinds": {
+      "leader": "ctrl+o",
+      "messages_page_up": "<leader>k",
+      "messages_page_down": "<leader>j",
+      "input_delete_to_line_end": "none",
+      // "input_submit": "return",
+      // "input_newline": "ctrl+return"
+    },
+  "provider": {
+    "modal-qwen": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Qwen 2.5 Coder 7B (Modal)",
+      "options": {
+        "baseURL": "https://shih-chris--opencode-qwen-vllm-serve-vllm.modal.run/v1"
+      },
+      "models": {
+        "Qwen/Qwen2.5-Coder-7B-Instruct": {
+          "name": "Qwen 2.5 Coder 7B",
+          "limit": {
+            "context": 32768,
+            "output": 8192
+          }
+        }
+      }
+    }
+  },
+  "mcp": {
+    "bigquery": {
+      "type": "local",
+      "command": [
+        "/Users/chris/Documents/mcp_servers/mcp-toolbox/toolbox",
+        "--prebuilt",
+        "bigquery",
+        "--stdio"
+      ],
+      "enabled": true,
+      "environment": {
+        "BIGQUERY_PROJECT": "grafanalabs-global"
+      }
+    },
+    "data-agent": {
+      "type": "local",
+      "command": [
+        "/Users/chris/projects/dae_example_data_agent/data-agent-mcp/.venv/bin/python",
+        "-m",
+        "data_agent_mcp.server"
+      ],
+      "enabled": true,
+      "timeout": 30000
+    }
+  }
+}
