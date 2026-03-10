@@ -61,6 +61,11 @@ path = "~/projects/revops"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
+name = "ai-kit"
+path = "~/projects/ai-kit"
+startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
+
+[[session]]
 name = "projects"
 path = "~/projects"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
