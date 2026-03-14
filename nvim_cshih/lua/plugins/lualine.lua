@@ -1,10 +1,12 @@
 return {
   {
     "nvim-lualine/lualine.nvim",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    dependencies = { "catppuccin/nvim", "nvim-tree/nvim-web-devicons" },
     opts = {
       options = {
-        theme = "catppuccin",
+        theme = function()
+          return require("catppuccin.utils.lualine")()
+        end,
         -- theme = "auto",
         globalstatus = true,
         section_separators = { left = '', right = '' },
