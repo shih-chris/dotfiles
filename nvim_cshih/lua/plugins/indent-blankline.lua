@@ -4,7 +4,7 @@ return {
     main = "ibl",
     ---@module "ibl"
     ---@type ibl.config
-    dependencies = { "catppuccin/nvim", "nvim-treesitter/nvim-treesitter" },
+    dependencies = { "catppuccin/nvim" },
     opts = {
       indent = {
         char = "│",

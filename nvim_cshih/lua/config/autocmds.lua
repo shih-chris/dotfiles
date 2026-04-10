@@ -2,19 +2,31 @@ local function augroup(name)
   return vim.api.nvim_create_augroup("cshih_" .. name, { clear = true })
 end
 
--- set tabspace to 4
+-- sql
 vim.api.nvim_create_autocmd("FileType", {
-  group = augroup("tabspace_4"),
-  pattern = { "sql", "py" },
-  callback = function()
+  group = augroup("ft_sql"),
+  pattern = { "sql" },
+  callback = function(ev)
     vim.opt_local.shiftwidth = 4
     vim.opt_local.softtabstop = 4
+    vim.treesitter.start(ev.buf, "sql")
   end,
 })
 
--- set tabspace to 2
+-- python
 vim.api.nvim_create_autocmd("FileType", {
-  group = augroup("tabspace_2"),
+  group = augroup("ft_python"),
+  pattern = { "python" },
+  callback = function(ev)
+    vim.opt_local.shiftwidth = 4
+    vim.opt_local.softtabstop = 4
+    vim.treesitter.start(ev.buf, "python")
+  end,
+})
+
+-- lua, json
+vim.api.nvim_create_autocmd("FileType", {
+  group = augroup("ft_lua_json"),
   pattern = { "lua", "json", "jsonc" },
   callback = function()
     vim.opt_local.shiftwidth = 2
@@ -22,9 +34,9 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- set word wrap true
+-- markdown
 vim.api.nvim_create_autocmd("FileType", {
-  group = augroup("word_wrap_true"),
+  group = augroup("ft_markdown"),
   pattern = { "markdown" },
   callback = function()
     vim.opt_local.wrap = true
@@ -32,27 +44,11 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- add # commentstrings
+-- zsh
 vim.api.nvim_create_autocmd("FileType", {
-  group = augroup("terraform_commentstring"),
+  group = augroup("ft_zsh"),
+  pattern = { "zsh" },
   callback = function(ev)
     vim.bo[ev.buf].commentstring = "# %s"
   end,
-  pattern = { "zsh" },
 })
-
--- -- lsp progress notification
--- vim.api.nvim_create_autocmd("LspProgress", {
---   ---@param ev {data: {client_id: integer, params: lsp.ProgressParams}}
---   callback = function(ev)
---     local spinner = { "⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏" }
---     vim.notify(vim.lsp.status(), "info", {
---       id = "lsp_progress",
---       title = "LSP Progress",
---       opts = function(notif)
---         notif.icon = ev.data.params.value.kind == "end" and " "
---           or spinner[math.floor(vim.uv.hrtime() / (1e6 * 80)) % #spinner + 1]
---       end,
---     })
---   end,
--- })

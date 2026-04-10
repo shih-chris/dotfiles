@@ -1,8 +1,0 @@
--- return {
---   cmd = { "bqls" },
---   filetypes = { "sql" },
---   settings = {
---     project_id = "chris-analytics-testing",
---     location = "US"
---   }
--- }
