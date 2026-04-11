@@ -24,6 +24,15 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- yml
+vim.api.nvim_create_autocmd("FileType", {
+  group = augroup("ft_yaml"),
+  pattern = { "yaml" },
+  callback = function(ev)
+    vim.treesitter.start(ev.buf, "yaml")
+  end,
+})
+
 -- lua, json
 vim.api.nvim_create_autocmd("FileType", {
   group = augroup("ft_lua_json"),
