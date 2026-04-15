@@ -9,7 +9,8 @@
     },
     "plan": {
       "mode": "primary",
-      "model": "anthropic/claude-opus-4-6"
+      "model": "anthropic/claude-opus-4-6",
+      "variant": "max"
     }
   },
   "mcp": {
@@ -21,10 +22,15 @@
         "bigquery",
         "--stdio"
       ],
-      "enabled": true,
+      "enabled": false,
       "environment": {
         "BIGQUERY_PROJECT": "grafanalabs-global"
       }
+    },
+    "airbud": {
+      "type": "remote",
+      "url": "https://airbud-mcp-prod-1000862261726.us-central1.run.app/mcp",
+      "enabled": true
     }
   }
 }
