@@ -6,16 +6,6 @@ path = "~/Documents/Grafana Labs"
 startup_command = "tmux new-window -d && nvim_cshih"
 
 [[session]]
-name = "play-grafana"
-path = "~/projects/grafana-play"
-startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
-
-[[session]]
-name = "grafanacon2026"
-path = "~/projects/GrafanaCON2026-business-data-stack"
-startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
-
-[[session]]
 name = "grafana analytics"
 path = "~/projects/grafana_analytics"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
@@ -53,11 +43,6 @@ startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
 [[session]]
 name = "deployment_tools"
 path = "~/projects/deployment_tools"
-startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
-
-[[session]]
-name = "kb-qtc"
-path = "~/projects/kb-qtc"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
