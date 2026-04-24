@@ -9,8 +9,18 @@
     },
     "plan": {
       "mode": "primary",
-      "model": "anthropic/claude-opus-4-7",
+      "model": "anthropic/claude-opus-4-6",
       "variant": "max"
+    },
+    "deep_think": {
+      "mode": "subagent",
+      "model": "anthropic/claude-opus-4-7",
+      "variant": "max",
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": false
+      }
     }
   },
   "mcp": {
