@@ -71,5 +71,10 @@ path = "~/Documents/shih-os"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
+name = "grafana"
+path = "~/projects/grafana"
+startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
+
+[[session]]
 name = "default"
 path = "~"
