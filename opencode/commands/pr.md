@@ -1,7 +1,7 @@
 ---
 description: Create a github PR
 agent: build
-model: anthropic/claude-sonnet-4-5
+model: anthropic/claude-sonnet-4-6
 ---
 
 # Goal
