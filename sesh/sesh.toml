@@ -6,6 +6,11 @@ path = "~/Documents/Grafana Labs"
 startup_command = "tmux new-window -d && nvim_cshih"
 
 [[session]]
+name = "bizo11y"
+path = "~/projects/bizo11y"
+startup_command = "tmux new-window -d && tmux new-window -d && tmux new-window -d && nvim_cshih"
+
+[[session]]
 name = "oss-data-stack"
 path = "~/projects/oss-data-stack"
 startup_command = "tmux new-window -d && tmux new-window -d && tmux new-window -d && nvim_cshih"
