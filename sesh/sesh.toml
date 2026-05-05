@@ -6,13 +6,13 @@ path = "~/Documents/Grafana Labs"
 startup_command = "tmux new-window -d && nvim_cshih"
 
 [[session]]
-name = "bizo11y"
-path = "~/projects/bizo11y"
+name = "2h-team"
+path = "~/projects/2h-team"
 startup_command = "tmux new-window -d && tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
-name = "bizops"
-path = "~/projects/bizops"
+name = "2h-ops"
+path = "~/projects/2h-ops"
 startup_command = "tmux new-window -d && tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
