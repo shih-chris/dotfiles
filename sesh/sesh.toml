@@ -1,9 +1,9 @@
 strict_mode = true
 
 [[session]]
-name = "notetaking"
-path = "~/Documents/Grafana Labs"
-startup_command = "tmux new-window -d && nvim_cshih"
+name = "2h-dagster"
+path = "~/projects/2h-dagster"
+startup_command = "tmux new-window -d && tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
 name = "2h-team"
@@ -84,6 +84,11 @@ startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
 name = "shih-os"
 path = "~/Documents/shih-os"
 startup_command = "tmux new-window -d && tmux new-window -d && nvim_cshih"
+
+[[session]]
+name = "notetaking"
+path = "~/Documents/Grafana Labs"
+startup_command = "tmux new-window -d && nvim_cshih"
 
 [[session]]
 name = "grafana"
