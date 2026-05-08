@@ -13,3 +13,7 @@ zsh/private_exports.zsh
 
 # zed
 zed/prompts/prompts-library-db.0.mdb/lock.mdb
+
+# pi
+pi/auth.json
+pi/sessions/*

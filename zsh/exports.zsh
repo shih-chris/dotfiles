@@ -31,6 +31,10 @@ export FZF_DEFAULT_OPTS=" \
 export LANG=en_US.UTF-8
 export EDITOR="nvim"
 
+# Pi coding agent
+export PI_CODING_AGENT_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/pi"
+export PI_CODING_AGENT_SESSION_DIR="$PI_CODING_AGENT_DIR/sessions"
+
 # export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
