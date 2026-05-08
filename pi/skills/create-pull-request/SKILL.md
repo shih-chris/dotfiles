@@ -18,7 +18,10 @@ The first thing to do is understand the changes that have been made. Unless othe
 ## Step 2: Understand the intent of the branch
 The next thing is to understand the intent of the branch. This typically comes from a combination of the changes made, reading the commit messages (you can use the gh cli to do so), the name of the branch, and additional context from previous agent discussion (i.e. when creating a branch via an agent, the intent is typically discussed)
 
-## Step 3: Push the branch and create a PR
+## Step 3: Check that the branch is ready to be pushed
+Run git status --short, verify current branch is not default branch, verify commits exist ahead of base/upstream, and ask before continuing if anything is dirty.
+
+## Step 4: Push the branch and create a PR
 Lastly, once the changes have been committed, we need to push the branch and create a PR. When creating the PR we should aim to be concise but thorough to provide the reviewer with an overview of:
 
 1. the problem we intend to solve
