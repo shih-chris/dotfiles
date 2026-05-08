@@ -2,25 +2,15 @@
   "$schema": "https://opencode.ai/tui.json",
   "theme": "catppuccin-macchiato-transparent",
   "scroll_speed": 3,
-  "keymap": {
+  // OpenCode 1.14.41 rejects keymap blocks at startup, despite the published schema.
+  "keybinds": {
     "leader": "ctrl+o",
-    "sections": {
-      "global": {
-        "app.exit": "ctrl+c,<leader>q"
-      },
-      "session": {
-        "session.half.page.up": "ctrl+u,ctrl+alt+u",
-        "session.half.page.down": "ctrl+d,ctrl+alt+d"
-      },
-      "input": {
-        "input.delete": "delete,shift+delete",
-        "input.delete.to.line.end": "none",
-        "input.delete.to.line.start": "none"
-      },
-      "question": {
-        "question.reject": "ctrl+c,<leader>q"
-      }
-    }
+    "app_exit": "ctrl+c,<leader>q",
+    "messages_half_page_up": "ctrl+u,ctrl+alt+u",
+    "messages_half_page_down": "ctrl+d,ctrl+alt+d",
+    "input_delete": "delete,shift+delete",
+    "input_delete_to_line_end": "none",
+    "input_delete_to_line_start": "none"
   },
   "scroll_acceleration": {
     "enabled": true
