@@ -44,7 +44,7 @@
 
     "selectedBg": "surface0",
     "userMessageBg": "surface0",
-    "userMessageText": "rosewater",
+    "userMessageText": "yellow",
     "customMessageBg": "surface0",
     "customMessageText": "text",
     "customMessageLabel": "mauve",
@@ -79,14 +79,14 @@
     "syntaxOperator": "sky",
     "syntaxPunctuation": "overlay2",
 
-    "thinkingOff": "blue",
-    "thinkingMinimal": "blue",
-    "thinkingLow": "blue",
-    "thinkingMedium": "blue",
-    "thinkingHigh": "blue",
-    "thinkingXhigh": "blue",
+    "thinkingOff": "surface0",
+    "thinkingMinimal": "surface0",
+    "thinkingLow": "surface0",
+    "thinkingMedium": "surface0",
+    "thinkingHigh": "surface0",
+    "thinkingXhigh": "surface0",
 
-    "bashMode": "peach"
+    "bashMode": "surface0"
   },
   "export": {
     "pageBg": "crust",
