@@ -2,7 +2,7 @@ strict_mode = true
 
 [[session]]
 name = "2h-dagster"
-path = "~/projects/2h-dagster"
+path = "~/projects/twoh_dagster"
 startup_command = "tmux new-window -d && tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
