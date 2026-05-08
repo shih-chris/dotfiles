@@ -1,25 +1,22 @@
 ---
 name: create-pull-request
-description: Create a github pull request
+description: Draft a pull request (PR) summary
 ---
 
 # Intent
-Create a github pull request, using the github cli (gh), that describes the changes made on the current git branch, unless a specific branch is specified.
+Draft a summary message for a github pull request that describes the changes made on the current git branch. DO NOT actually create the pull request. I will manually create the PR.
 
 # Step-by-Step Instructions
-The following will be a step-by-step set of things to check. Each step is important to follow and will typically be needed for a successful PR to be created.
+The following will be a step-by-step set of things to check. Each step is important to follow and will typically be needed for a successful PR summary.
 
 ## Step 1: Understand the changes
 The first thing to do is understand the changes that have been made. Unless otherwise specified in the initial prompt, you can assume that the current branch checked out is the one that contains the work that has been done.
 
 ## Step 2: Understand the intent of the branch
-The next thing is to understand the intent of the branch. This typically comes from a combination of the changes made, the name of the branch, and additional context from previous agent discussion (i.e. when creating a branch via an agent, the intent is typically discussed)
+The next thing is to understand the intent of the branch. This typically comes from a combination of the changes made, the commit messages made (you can use gh cli to read the commit messages), the name of the branch, and additional context from previous agent discussion (i.e. when creating a branch via an agent, the intent is typically discussed)
 
-## Step 3: Commit the changes that are related to the branch's intent
-Once the intent and changes have been understood, we then want to commit the changes in logical chunks in order to make it easier for a reviewer to understand what work has been done. You can use the github cli (gh) to make these commits.
-
-## Step 4: Push the branch and create a PR
-Lastly, once the changes have been committed, we need to push the branch and create a PR. When creating the PR we should aim to be concise but thorough to provide the reviewer with an overview of:
+## Step 3: Create the summary
+Lastly, once all the changes have been committed, we need to create the draft PR summary. When creating the draft PR summary we should aim to be concise but thorough to provide the reviewer with an overview of:
 
 1. the problem we intend to solve
 2. any relevant context/research done to understand the root of the problem
