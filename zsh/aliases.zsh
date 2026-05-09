@@ -25,6 +25,7 @@ alias cclip='xclip -selection clipboard'
 alias cc='claude code'
 alias cx='codex'
 alias oc='opencode'
+alias pi='pi --model anthropic/claude-opus-4-6:xhigh'
 
 # other aliases
 # alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'

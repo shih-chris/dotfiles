@@ -1,7 +1,12 @@
 {
   "lastChangelogVersion": "0.74.0",
-  "defaultProvider": "anthropic",
-  "defaultModel": "claude-opus-4-6",
-  "defaultThinkingLevel": "medium",
-  "theme": "catppuccin-macchiato"
+  "theme": "catppuccin-macchiato",
+  "defaultProvider": "openai",
+  "defaultModel": "gpt-5.5",
+  "defaultThinkingLevel": "xhigh",
+  "enabledModels": [
+    "claude-opus-4-6",
+    "gpt-5.5",
+    "claude-opus-4-7"
+  ]
 }
