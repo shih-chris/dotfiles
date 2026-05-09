@@ -47,6 +47,21 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- format python on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = augroup("fmt_python"),
+  pattern = { "*.py" },
+  callback = function(ev)
+    vim.lsp.buf.format({
+      bufnr = ev.buf,
+      timeout_ms = 3000,
+      filter = function(client)
+        return client.name == "ruff"
+      end,
+    })
+  end,
+})
+
 -- go
 vim.api.nvim_create_autocmd("FileType", {
   group = augroup("ft_go"),
