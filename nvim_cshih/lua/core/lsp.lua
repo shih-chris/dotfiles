@@ -1,5 +1,7 @@
 vim.lsp.enable({
   "lua_ls",
   "gopls",
-  "bqls"
+  "bqls",
+  "basedpyright",
+  "ruff",
 })
