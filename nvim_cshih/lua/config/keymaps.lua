@@ -56,6 +56,9 @@ vim.keymap.set("n", "<A-k>", "<Esc>:m .-2<CR>==gi", { desc = "Move text up - Nor
 -- Remove highlighting
 vim.keymap.set("n", "<leader>h", "<Cmd>nohl<CR>", { desc = "Remove highlighting" })
 
+-- Diagnostics
+vim.keymap.set("n", "<leader>cd", vim.diagnostic.open_float, { desc = "[c]ode [d]iagnostics" })
+
 -- Navigate buffers
 -- vim.keymap.set("n", "<S-l>", ":bnext<CR>", { desc = "Buffer Navigation - Next" })
 -- vim.keymap.set("n", "<S-h>", ":bprevious<CR>", { desc = "Buffer Navigation - Previous" })

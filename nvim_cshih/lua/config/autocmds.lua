@@ -44,7 +44,21 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function(ev)
     vim.opt_local.shiftwidth = 4
     vim.opt_local.softtabstop = 4
-    vim.treesitter.start(ev.buf, "python")
+  end,
+})
+
+-- format python on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = augroup("fmt_python"),
+  pattern = { "*.py" },
+  callback = function(ev)
+    vim.lsp.buf.format({
+      bufnr = ev.buf,
+      timeout_ms = 3000,
+      filter = function(client)
+        return client.name == "ruff"
+      end,
+    })
   end,
 })
 
