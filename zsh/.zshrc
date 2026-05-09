@@ -47,6 +47,10 @@ eval "$(pyenv init -)"
 alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
 PATH=$(pyenv root)/shims:$PATH
 
+# Prevent Ctrl-D from closing the shell or triggering completion
+setopt IGNORE_EOF
+bindkey -r '^D'
+
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
