@@ -31,6 +31,9 @@ export FZF_DEFAULT_OPTS=" \
 export LANG=en_US.UTF-8
 export EDITOR="nvim"
 
+# k9s
+export K9S_CONFIG_DIR="$HOME/.config/k9s"
+
 # Pi coding agent
 export PI_CODING_AGENT_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/pi"
 export PI_CODING_AGENT_SESSION_DIR="$PI_CODING_AGENT_DIR/sessions"
