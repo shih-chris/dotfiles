@@ -1,12 +1,13 @@
 k9s:
   cluster: dev-us-east-0-api.grafana-dev.ts.net
   namespace:
-    active: default
+    active: 2h-dev-001
     lockFavorites: false
     favorites:
+      - 2h-dev-001
       - default
   view:
-    active: v1/pods default
+    active: v1/pods
   featureGates:
     nodeShell: false
   proxy: null
