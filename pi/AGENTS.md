@@ -1,5 +1,6 @@
 # Agents
 - When creating a GitHub branch or PR, always use the associated agent skill (create-git-branch, create-pull-request) instead of the GitHub CLI directly.
+- NEVER commit for me. I will manually commit everything
 
 # Tools available
 ## CLIs
