@@ -7,7 +7,7 @@ k9s:
       - 2h-dev-001
       - default
   view:
-    active: v1/pods
+    active: v1/pods 2h-dev-001
   featureGates:
     nodeShell: false
   proxy: null
