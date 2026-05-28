@@ -30,3 +30,4 @@ alias pi='pi --model anthropic/claude-opus-4-6:xhigh'
 # other aliases
 # alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
 alias t='sesh connect'
+alias draw='docker run --rm -dit --name excalidraw -p 5050:80 excalidraw/excalidraw:latest'
