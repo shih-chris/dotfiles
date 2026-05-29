@@ -16,6 +16,11 @@ path = "~/projects/2h-ops"
 startup_command = "tmux new-window -d && tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
+name = "daas"
+path = "~/projects/daas"
+startup_command = "tmux new-window -d && tmux new-window -d && tmux new-window -d && nvim_cshih"
+
+[[session]]
 name = "2h-competitive"
 path = "~/projects/2h-competitive"
 startup_command = "tmux new-window -d && tmux new-window -d && tmux new-window -d && nvim_cshih"
