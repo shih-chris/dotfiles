@@ -11,6 +11,11 @@ path = "~/projects/twoh_dagster"
 startup_command = "tmux new-window -d && tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
+name = "2h-semantic-layer-test"
+path = "~/projects/2h-semantic-layer-test"
+startup_command = "tmux new-window -d && tmux new-window -d && tmux new-window -d && nvim_cshih"
+
+[[session]]
 name = "2h-team"
 path = "~/projects/2h-team"
 startup_command = "tmux new-window -d && tmux new-window -d && tmux new-window -d && nvim_cshih"
