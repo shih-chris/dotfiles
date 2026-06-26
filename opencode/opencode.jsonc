@@ -10,12 +10,12 @@
     },
     "plan": {
       "mode": "primary",
-      "model": "anthropic/claude-fable-5",
+      "model": "anthropic/claude-opus-4-8",
       "variant": "max"
     },
     "deep_think": {
       "mode": "subagent",
-      "model": "anthropic/claude-fable-5",
+      "model": "anthropic/claude-opus-4-8",
       "variant": "max",
       "tools": {
         "write": false,
