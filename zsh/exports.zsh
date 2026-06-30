@@ -47,3 +47,6 @@ if [ -f '/Users/chris/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/chris/goo
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/chris/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/chris/google-cloud-sdk/completion.zsh.inc'; fi
+
+# orbstack
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
