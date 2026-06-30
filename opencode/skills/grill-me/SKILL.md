@@ -1,5 +1,5 @@
 ---
-name: grill-me
+name: grilling
 description: Relentless interview to sharpen a plan or design before building. Use when the user says "grill me", asks to stress-test a plan, wants to be interviewed about a design, or asks to align on requirements before implementation. Walks the decision tree one question at a time.
 ---
 
