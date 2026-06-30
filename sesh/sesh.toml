@@ -6,6 +6,11 @@ path = "~/projects"
 startup_command = "tmux new-window -d && tmux new-window -d && tmux new-window -d && tmux new-window -d && nvim_cshih"
 
 [[session]]
+name = "grafana-assistant"
+path = "~/projects/grafana-assistant-app"
+startup_command = "tmux new-window -d && tmux new-window -d && tmux new-window -d && nvim_cshih"
+
+[[session]]
 name = "2h-dagster"
 path = "~/projects/twoh_dagster"
 startup_command = "tmux new-window -d && tmux new-window -d && tmux new-window -d && nvim_cshih"
