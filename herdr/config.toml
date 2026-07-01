@@ -1,3 +1,4 @@
+onboarding = false
 # herdr configuration
 
 [theme]
@@ -38,12 +39,12 @@ split_vertical = "prefix+\\"
 split_horizontal = "prefix+minus"
 toggle_sidebar = "prefix+e"
 next_workspace = "prefix+j"
-previous_agent = "prefix+k"
+previous_workspace = "prefix+k"
 focus_agent = "prefix+alt+1..9"        # optional indexed binding, e.g. "prefix+alt+1..9"
-focus_pane_left = "ctrl+h"
-focus_pane_down = "ctrl+j"
-focus_pane_up = "ctrl+k"
-focus_pane_right = "ctrl+l"
+focus_pane_left = ""
+focus_pane_down = ""
+focus_pane_up = ""
+focus_pane_right = ""
 goto = "prefix+/"
 zoom = "prefix+m"
 
@@ -54,8 +55,8 @@ zoom = "prefix+m"
 # remove_worktree = ""  # optional, unset by default; opens confirmation
 # rename_workspace = "prefix+shift+w"
 # close_workspace = "prefix+shift+d"
-# previous_workspace = "" # optional, unset by default
 # next_agent = ""         # optional, unset by default
+# previous_agent = ""         # optional, unset by default
 # remote_image_paste = "ctrl+v" # only active in herdr --remote; empty disables raw-key image paste
 # new_tab = "prefix+c"
 # rename_tab = "prefix+shift+t"
@@ -80,6 +81,30 @@ zoom = "prefix+m"
 # navigate_pane_down = "j"
 # navigate_pane_up = "k"
 # navigate_pane_right = "l"     # right arrow always focuses the pane to the right
+
+[[keys.command]]
+key = "ctrl+h"
+type = "shell"
+command = "~/.config/herdr/herdr-nav.sh left"
+description = "navigate left"
+
+[[keys.command]]
+key = "ctrl+j"
+type = "shell"
+command = "~/.config/herdr/herdr-nav.sh down"
+description = "navigate down"
+
+[[keys.command]]
+key = "ctrl+k"
+type = "shell"
+command = "~/.config/herdr/herdr-nav.sh up"
+description = "navigate up"
+
+[[keys.command]]
+key = "ctrl+l"
+type = "shell"
+command = "~/.config/herdr/herdr-nav.sh right"
+description = "navigate right"
 
 [[keys.command]]
 key = "prefix+ctrl+k"

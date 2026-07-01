@@ -6,13 +6,12 @@
       "custom_name": null,
       "identity_cwd": "/Users/chris/projects/dotfiles",
       "public_pane_numbers": {
-        "4": 18,
-        "2": 4,
-        "1": 1,
         "3": 6,
-        "83": 78
+        "4": 18,
+        "1": 1,
+        "2": 4
       },
-      "next_public_pane_number": 79,
+      "next_public_pane_number": 87,
       "public_tab_numbers": [
         1,
         4,
@@ -38,27 +37,15 @@
         {
           "custom_name": null,
           "layout": {
-            "Split": {
-              "direction": "Horizontal",
-              "ratio": 0.5,
-              "first": {
-                "Pane": 2
-              },
-              "second": {
-                "Pane": 83
-              }
-            }
+            "Pane": 2
           },
           "panes": {
-            "83": {
-              "cwd": "/Users/chris/projects/dotfiles"
-            },
             "2": {
               "cwd": "/Users/chris/projects/dotfiles"
             }
           },
-          "zoomed": true,
-          "focused": 83,
+          "zoomed": false,
+          "focused": 2,
           "root_pane": 2
         },
         {
@@ -70,10 +57,10 @@
             "3": {
               "cwd": "/Users/chris/projects/dotfiles",
               "agent_session": {
-                "source": "herdr:pi",
-                "agent": "pi",
-                "kind": "path",
-                "value": "/Users/chris/.config/pi/sessions/2026-07-01T02-32-25-718Z_019f1b85-4176-785a-974c-d51c195af441.jsonl"
+                "source": "herdr:opencode",
+                "agent": "opencode",
+                "kind": "id",
+                "value": "ses_0e280cc95ffeFNjy12lg6q3T1T"
               }
             }
           },
@@ -96,18 +83,18 @@
           "root_pane": 4
         }
       ],
-      "active_tab": 1
+      "active_tab": 2
     },
     {
       "id": "w6",
       "custom_name": "projects",
       "identity_cwd": "/Users/chris/projects",
       "public_pane_numbers": {
-        "76": 5,
-        "74": 3,
-        "75": 4,
-        "72": 1,
-        "73": 2
+        "9": 5,
+        "5": 1,
+        "6": 2,
+        "8": 4,
+        "7": 3
       },
       "next_public_pane_number": 7,
       "public_tab_numbers": [
@@ -122,72 +109,176 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 72
+            "Pane": 5
           },
           "panes": {
-            "72": {
+            "5": {
               "cwd": "/Users/chris/projects"
             }
           },
           "zoomed": false,
-          "focused": 72,
-          "root_pane": 72
+          "focused": 5,
+          "root_pane": 5
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 73
+            "Pane": 6
           },
           "panes": {
-            "73": {
+            "6": {
               "cwd": "/Users/chris/projects"
             }
           },
           "zoomed": false,
-          "focused": 73,
-          "root_pane": 73
+          "focused": 6,
+          "root_pane": 6
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 74
+            "Pane": 7
           },
           "panes": {
-            "74": {
+            "7": {
               "cwd": "/Users/chris/projects"
             }
           },
           "zoomed": false,
-          "focused": 74,
-          "root_pane": 74
+          "focused": 7,
+          "root_pane": 7
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 75
+            "Pane": 8
           },
           "panes": {
-            "75": {
+            "8": {
               "cwd": "/Users/chris/projects"
             }
           },
           "zoomed": false,
-          "focused": 75,
-          "root_pane": 75
+          "focused": 8,
+          "root_pane": 8
         },
         {
           "custom_name": null,
           "layout": {
-            "Pane": 76
+            "Pane": 9
           },
           "panes": {
-            "76": {
+            "9": {
               "cwd": "/Users/chris/projects"
             }
           },
           "zoomed": false,
-          "focused": 76,
-          "root_pane": 76
+          "focused": 9,
+          "root_pane": 9
+        }
+      ],
+      "active_tab": 2
+    },
+    {
+      "id": "w7",
+      "custom_name": "2h-semantic-layer-test",
+      "identity_cwd": "/Users/chris/projects/2h-semantic-layer-test",
+      "public_pane_numbers": {
+        "13": 2,
+        "18": 7,
+        "19": 8,
+        "12": 1,
+        "14": 3,
+        "15": 4
+      },
+      "next_public_pane_number": 9,
+      "public_tab_numbers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "next_public_tab_number": 5,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 12
+          },
+          "panes": {
+            "12": {
+              "cwd": "/Users/chris/projects/2h-semantic-layer-test"
+            }
+          },
+          "zoomed": false,
+          "focused": 12,
+          "root_pane": 12
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 13
+          },
+          "panes": {
+            "13": {
+              "cwd": "/Users/chris/projects/2h-semantic-layer-test"
+            }
+          },
+          "zoomed": false,
+          "focused": 13,
+          "root_pane": 13
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 14
+              },
+              "second": {
+                "Split": {
+                  "direction": "Horizontal",
+                  "ratio": 0.5,
+                  "first": {
+                    "Pane": 18
+                  },
+                  "second": {
+                    "Pane": 19
+                  }
+                }
+              }
+            }
+          },
+          "panes": {
+            "14": {
+              "cwd": "/Users/chris/projects/2h-semantic-layer-test"
+            },
+            "19": {
+              "cwd": "/Users/chris/projects/2h-semantic-layer-test"
+            },
+            "18": {
+              "cwd": "/Users/chris/projects/2h-semantic-layer-test"
+            }
+          },
+          "zoomed": true,
+          "focused": 14,
+          "root_pane": 14
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 15
+          },
+          "panes": {
+            "15": {
+              "cwd": "/Users/chris/projects/2h-semantic-layer-test"
+            }
+          },
+          "zoomed": false,
+          "focused": 15,
+          "root_pane": 15
         }
       ],
       "active_tab": 2

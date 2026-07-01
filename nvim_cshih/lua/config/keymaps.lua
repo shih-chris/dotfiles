@@ -43,11 +43,24 @@ vim.keymap.set("n", "<C-Down>", ":resize +2<CR>", { desc = "Resize Window - Down
 vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", { desc = "Resize Window - Left" })
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", { desc = "Resize Window - Right" })
 
--- Better window navigation (w/ Tmux Navigator)
-vim.keymap.set("n", "<C-h>", "<Cmd>TmuxNavigateLeft<CR>", { desc = "Window Navigation - Left" })
-vim.keymap.set("n", "<C-j>", "<Cmd>TmuxNavigateDown<CR>", { desc = "Window Navigation - Down" })
-vim.keymap.set("n", "<C-k>", "<Cmd>TmuxNavigateUp<CR>", { desc = "Window Navigation - Up" })
-vim.keymap.set("n", "<C-l>", "<Cmd>TmuxNavigateRight<CR>", { desc = "Window Navigation - Right" })
+-- Better window navigation (w/ Tmux Navigator or Herdr)
+if vim.env.HERDR_ENV == "1" then
+  local function herdr_focus(direction)
+    vim.fn.jobstart({ "herdr", "pane", "focus", "--direction", direction, "--current" }, { detach = true })
+  end
+
+  vim.keymap.set("n", "<C-j>", function()
+    herdr_focus("down")
+  end, { silent = true, desc = "Window Navigation - Down" })
+  vim.keymap.set("n", "<C-k>", function()
+    herdr_focus("up")
+  end, { silent = true, desc = "Window Navigation - Up" })
+else
+  vim.keymap.set("n", "<C-h>", "<Cmd>TmuxNavigateLeft<CR>", { desc = "Window Navigation - Left" })
+  vim.keymap.set("n", "<C-j>", "<Cmd>TmuxNavigateDown<CR>", { desc = "Window Navigation - Down" })
+  vim.keymap.set("n", "<C-k>", "<Cmd>TmuxNavigateUp<CR>", { desc = "Window Navigation - Up" })
+  vim.keymap.set("n", "<C-l>", "<Cmd>TmuxNavigateRight<CR>", { desc = "Window Navigation - Right" })
+end
 
 -- Move text up and down
 vim.keymap.set("n", "<A-j>", "<Esc>:m .+1<CR>==gi", { desc = "Move text down - Normal Mode" })
