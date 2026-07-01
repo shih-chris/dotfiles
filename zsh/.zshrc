@@ -22,9 +22,6 @@ HISTFILE=~/.zsh_history
 # enable zoxide
 eval "$(zoxide init zsh)"
 
-# enable brew
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
 # enable pure
 # fpath+=("$(brew --prefix)/share/zsh/site-functions")
 # autoload -U promptinit; promptinit
@@ -37,21 +34,21 @@ zstyle ':vcs_info:git:*' formats '(%b) '
 
 setopt prompt_subst
 PROMPT='%F{blue}%1~%f %B%F{magenta}${vcs_info_msg_0_}%f%b'
-# profile startup: end
-# zprof
-
-# Pyenv initialization
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
-PATH=$(pyenv root)/shims:$PATH
 
 # Prevent Ctrl-D from closing the shell or triggering completion
 setopt IGNORE_EOF
 bindkey -r '^D'
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
-[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+# NVM (lazy-loaded)
+# Stub functions — first call loads real nvm, then re-runs the command
+_load_nvm() {
+  unfunction nvm node npm npx 2>/dev/null
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+}
+for cmd in nvm node npm npx; do
+  eval "${cmd}() { _load_nvm; ${cmd} \"\$@\" }"
+done
+#
+# profile startup: end
+# zprof
