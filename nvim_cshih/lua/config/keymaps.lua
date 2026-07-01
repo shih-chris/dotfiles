@@ -49,12 +49,26 @@ if vim.env.HERDR_ENV == "1" then
     vim.fn.jobstart({ "herdr", "pane", "focus", "--direction", direction, "--current" }, { detach = true })
   end
 
+  local function herdr_nav(key, direction)
+    local before = vim.fn.winnr()
+    vim.cmd("wincmd " .. key)
+    if vim.fn.winnr() == before then
+      herdr_focus(direction)
+    end
+  end
+
+  vim.keymap.set("n", "<C-h>", function()
+    herdr_nav("h", "left")
+  end, { silent = true, desc = "Window Navigation - Left" })
   vim.keymap.set("n", "<C-j>", function()
     herdr_focus("down")
   end, { silent = true, desc = "Window Navigation - Down" })
   vim.keymap.set("n", "<C-k>", function()
     herdr_focus("up")
   end, { silent = true, desc = "Window Navigation - Up" })
+  vim.keymap.set("n", "<C-l>", function()
+    herdr_nav("l", "right")
+  end, { silent = true, desc = "Window Navigation - Right" })
 else
   vim.keymap.set("n", "<C-h>", "<Cmd>TmuxNavigateLeft<CR>", { desc = "Window Navigation - Left" })
   vim.keymap.set("n", "<C-j>", "<Cmd>TmuxNavigateDown<CR>", { desc = "Window Navigation - Down" })

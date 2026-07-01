@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Context-aware herdr pane navigation.
-# h/l always move herdr panes. j/k are forwarded into nvim/fzf/pi so those apps
-# can handle menus; nvim normal-mode mappings hand j/k back to herdr.
+# nvim gets all directions so it can move between editor windows first; fzf/pi
+# get j/k for menu/list navigation. Everything else moves herdr panes directly.
 set -euo pipefail
 
 export PATH="/opt/homebrew/bin:$PATH"
@@ -27,7 +27,9 @@ pane_id=$(jq -r '.result.process_info.pane_id' <<<"$info")
 procs=$(jq -r '.result.process_info.foreground_processes[]? | .argv0, .name' <<<"$info")
 
 send=false
-if [[ "$dir" == "up" || "$dir" == "down" ]] && rg -qiw '(n?vim|fzf|pi)' <<<"$procs"; then
+if rg -qiw 'n?vim' <<<"$procs"; then
+  send=true
+elif [[ "$dir" == "up" || "$dir" == "down" ]] && rg -qiw '(fzf|pi)' <<<"$procs"; then
   send=true
 fi
 
