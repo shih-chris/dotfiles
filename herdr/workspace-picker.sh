@@ -37,17 +37,43 @@ WORKSPACES=(
 # ── Gather existing workspaces ──────────────────────────────────────
 existing_json=$(herdr workspace list 2>/dev/null || echo '{}')
 
+# ── Helpers ─────────────────────────────────────────────────────────
+agent_label() {
+  local status="$1"
+  case "$status" in
+    working) echo "⚡ working" ;;
+    blocked) echo "⏸  blocked" ;;
+    idle)    echo "●  idle" ;;
+    *)       echo "·  $status" ;;
+  esac
+}
+
 # ── Build fzf candidate list ────────────────────────────────────────
+# Use a hidden delimiter (tab char) to separate display name from fzf-searchable name
 candidates=""
+max_name_len=0
+for entry in "${WORKSPACES[@]}"; do
+  IFS='|' read -r name _ _ <<< "$entry"
+  len=${#name}
+  if [ "$len" -gt "$max_name_len" ]; then max_name_len=$len; fi
+done
+
 for entry in "${WORKSPACES[@]}"; do
   IFS='|' read -r name path tabs <<< "$entry"
+  total_tabs=$((tabs + 1))  # +1 for the first tab created with workspace
+
   # Check if workspace already exists
-  if echo "$existing_json" | jq -e --arg n "$name" \
-    '.result.workspaces[]? | select(.label == $n)' >/dev/null 2>&1; then
-    candidates="${candidates}● ${name} (${path})"$'\n'
+  ws_info=$(echo "$existing_json" | jq -r --arg n "$name" \
+    '.result.workspaces[]? | select(.label == $n) | "\(.tab_count)|\(.agent_status)"' 2>/dev/null || true)
+
+  if [ -n "$ws_info" ]; then
+    agent_status=$(echo "$ws_info" | cut -d'|' -f2)
+    line=$(printf "● %-${max_name_len}s   %s" "$name" "$(agent_label "$agent_status")")
   else
-    candidates="${candidates}  ${name} (${path})"$'\n'
+    line=$(printf "  %-${max_name_len}s" "$name")
   fi
+
+  candidates="${candidates}${line}"$'\n'
 done
 
 # ── fzf selection ────────────────────────────────────────────────────
@@ -58,8 +84,8 @@ selected=$(printf '%s' "$candidates" | sed '/^$/d' | fzf \
   --no-info \
   --reverse) || exit 0
 
-# Extract workspace name (strip marker and trailing path)
-ws_name=$(echo "$selected" | sed -E 's/^[●[:space:]]*//' | sed -E 's/ \(.*\)$//')
+# Extract workspace name: strip leading marker, then anything after 2+ trailing spaces
+ws_name=$(echo "$selected" | sed -E 's/^[●[:space:]]*//' | sed -E 's/[[:space:]]{2,}.*$//' )
 
 # ── If workspace exists → focus it ──────────────────────────────────
 ws_id=$(echo "$existing_json" | jq -r --arg n "$ws_name" \
@@ -97,7 +123,7 @@ first_pane=$(echo "$ws_output" | jq -r '.result.root_pane.pane_id')
 third_pane=""
 for ((i = 0; i < ws_tabs; i++)); do
   tab_output=$(herdr tab create --workspace "$ws_id" --cwd "$ws_path" --no-focus 2>&1) || true
-  # Capture the 3rd tab's pane (tab index 2, i.e. i==1 since first extra tab is tab 2)
+  # Capture the 3rd tab's pane (i==1 → second extra tab → tab 3 overall)
   if [ "$i" -eq 1 ]; then
     third_pane=$(echo "$tab_output" | jq -r '.result.root_pane.pane_id' 2>/dev/null || true)
   fi
