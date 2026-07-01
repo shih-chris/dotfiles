@@ -91,6 +91,11 @@ key = "prefix+g"
 type = "pane"
 command = "lazygit"
 
+[[keys.command]]
+key = "prefix+ctrl+l"
+type = "shell"
+command = "herdr pane send-keys $(herdr pane current 2>/dev/null | jq -r '.result.pane.pane_id') ctrl+l"
+
 # [worktrees]
 # directory = "~/.herdr/worktrees"
 

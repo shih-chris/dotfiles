@@ -7,11 +7,12 @@
       "identity_cwd": "/Users/chris/projects/dotfiles",
       "public_pane_numbers": {
         "4": 18,
+        "2": 4,
         "1": 1,
         "3": 6,
-        "2": 4
+        "83": 78
       },
-      "next_public_pane_number": 77,
+      "next_public_pane_number": 79,
       "public_tab_numbers": [
         1,
         4,
@@ -37,15 +38,27 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 2
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 2
+              },
+              "second": {
+                "Pane": 83
+              }
+            }
           },
           "panes": {
+            "83": {
+              "cwd": "/Users/chris/projects/dotfiles"
+            },
             "2": {
               "cwd": "/Users/chris/projects/dotfiles"
             }
           },
-          "zoomed": false,
-          "focused": 2,
+          "zoomed": true,
+          "focused": 83,
           "root_pane": 2
         },
         {
@@ -60,7 +73,7 @@
                 "source": "herdr:pi",
                 "agent": "pi",
                 "kind": "path",
-                "value": "/Users/chris/.config/pi/sessions/2026-07-01T01-16-07-723Z_019f1b3f-66ab-7688-982a-538085782eb9.jsonl"
+                "value": "/Users/chris/.config/pi/sessions/2026-07-01T02-32-25-718Z_019f1b85-4176-785a-974c-d51c195af441.jsonl"
               }
             }
           },
@@ -83,18 +96,18 @@
           "root_pane": 4
         }
       ],
-      "active_tab": 0
+      "active_tab": 1
     },
     {
       "id": "w6",
       "custom_name": "projects",
       "identity_cwd": "/Users/chris/projects",
       "public_pane_numbers": {
-        "75": 4,
+        "76": 5,
         "74": 3,
-        "73": 2,
+        "75": 4,
         "72": 1,
-        "76": 5
+        "73": 2
       },
       "next_public_pane_number": 7,
       "public_tab_numbers": [
