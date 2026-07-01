@@ -1,3 +1,4 @@
+onboarding = false
 # herdr configuration
 
 [theme]
@@ -91,7 +92,7 @@ toggle_sidebar = "prefix+e"
 # command = "lazygit"
 
 [[keys.command]]
-key = "prefix+k"
+key = "prefix+ctrl+k"
 type = "pane"
 command = "~/.config/herdr/workspace-picker.sh"
 

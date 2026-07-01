@@ -6,12 +6,12 @@
       "custom_name": null,
       "identity_cwd": "/Users/chris/projects/dotfiles",
       "public_pane_numbers": {
-        "6": 6,
-        "4": 4,
-        "18": 18,
+        "2": 4,
+        "3": 6,
+        "4": 18,
         "1": 1
       },
-      "next_public_pane_number": 33,
+      "next_public_pane_number": 38,
       "public_tab_numbers": [
         1,
         4,
@@ -37,17 +37,75 @@
         {
           "custom_name": null,
           "layout": {
+            "Pane": 2
+          },
+          "panes": {
+            "2": {
+              "cwd": "/Users/chris/projects/dotfiles"
+            }
+          },
+          "zoomed": false,
+          "focused": 2,
+          "root_pane": 2
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 3
+          },
+          "panes": {
+            "3": {
+              "cwd": "/Users/chris/projects/dotfiles",
+              "agent_session": {
+                "source": "herdr:pi",
+                "agent": "pi",
+                "kind": "path",
+                "value": "/Users/chris/.config/pi/sessions/2026-07-01T01-16-07-723Z_019f1b3f-66ab-7688-982a-538085782eb9.jsonl"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 3,
+          "root_pane": 3
+        },
+        {
+          "custom_name": null,
+          "layout": {
             "Pane": 4
           },
           "panes": {
             "4": {
-              "cwd": "/Users/chris/projects/dotfiles/pi"
+              "cwd": "/Users/chris/projects/dotfiles"
             }
           },
           "zoomed": false,
           "focused": 4,
           "root_pane": 4
-        },
+        }
+      ],
+      "active_tab": 1
+    },
+    {
+      "id": "w2",
+      "custom_name": "projects",
+      "identity_cwd": "/Users/chris/projects",
+      "public_pane_numbers": {
+        "7": 2,
+        "8": 3,
+        "9": 4,
+        "10": 5,
+        "6": 1
+      },
+      "next_public_pane_number": 11,
+      "public_tab_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "next_public_tab_number": 6,
+      "tabs": [
         {
           "custom_name": null,
           "layout": {
@@ -55,7 +113,7 @@
           },
           "panes": {
             "6": {
-              "cwd": "/Users/chris/projects/dotfiles"
+              "cwd": "/Users/chris/projects"
             }
           },
           "zoomed": false,
@@ -65,19 +123,139 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 18
+            "Pane": 7
           },
           "panes": {
-            "18": {
-              "cwd": "/Users/chris/projects/dotfiles"
+            "7": {
+              "cwd": "/Users/chris/projects"
             }
           },
           "zoomed": false,
-          "focused": 18,
-          "root_pane": 18
+          "focused": 7,
+          "root_pane": 7
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 8
+          },
+          "panes": {
+            "8": {
+              "cwd": "/Users/chris/projects"
+            }
+          },
+          "zoomed": false,
+          "focused": 8,
+          "root_pane": 8
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 9
+          },
+          "panes": {
+            "9": {
+              "cwd": "/Users/chris/projects"
+            }
+          },
+          "zoomed": false,
+          "focused": 9,
+          "root_pane": 9
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 10
+          },
+          "panes": {
+            "10": {
+              "cwd": "/Users/chris/projects"
+            }
+          },
+          "zoomed": false,
+          "focused": 10,
+          "root_pane": 10
         }
       ],
-      "active_tab": 1
+      "active_tab": 0
+    },
+    {
+      "id": "w3",
+      "custom_name": "grafana-assistant",
+      "identity_cwd": "/Users/chris/projects/grafana-assistant-app",
+      "public_pane_numbers": {
+        "15": 2,
+        "17": 4,
+        "14": 1,
+        "16": 3
+      },
+      "next_public_pane_number": 9,
+      "public_tab_numbers": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "next_public_tab_number": 5,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 14
+          },
+          "panes": {
+            "14": {
+              "cwd": "/Users/chris/projects/grafana-assistant-app"
+            }
+          },
+          "zoomed": false,
+          "focused": 14,
+          "root_pane": 14
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 15
+          },
+          "panes": {
+            "15": {
+              "cwd": "/Users/chris/projects/grafana-assistant-app"
+            }
+          },
+          "zoomed": false,
+          "focused": 15,
+          "root_pane": 15
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 16
+          },
+          "panes": {
+            "16": {
+              "cwd": "/Users/chris/projects/grafana-assistant-app"
+            }
+          },
+          "zoomed": false,
+          "focused": 16,
+          "root_pane": 16
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 17
+          },
+          "panes": {
+            "17": {
+              "cwd": "/Users/chris/projects/grafana-assistant-app"
+            }
+          },
+          "zoomed": false,
+          "focused": 17,
+          "root_pane": 17
+        }
+      ],
+      "active_tab": 2
     }
   ],
   "active": 0,

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # herdr workspace picker — sesh-like fuzzy workspace switcher
-# Bound to prefix+k in herdr config.toml
+# Bound to prefix+ctrl+k in herdr config.toml
 set -euo pipefail
 
 die() { echo "ERROR: $*" >&2; read -rp "Press enter to close..."; exit 1; }
@@ -34,17 +34,20 @@ WORKSPACES=(
   "default|~|0"
 )
 
-# ── Gather existing workspaces (name|id pairs) ─────────────────────
-existing_lines=""
-if raw=$(herdr workspace list 2>/dev/null); then
-  existing_lines="$raw"
-fi
+# ── Gather existing workspaces ──────────────────────────────────────
+existing_json=$(herdr workspace list 2>/dev/null || echo '{}')
 
 # ── Build fzf candidate list ────────────────────────────────────────
 candidates=""
 for entry in "${WORKSPACES[@]}"; do
   IFS='|' read -r name path tabs <<< "$entry"
-  candidates="${candidates}${name} (${path})"$'\n'
+  # Check if workspace already exists
+  if echo "$existing_json" | jq -e --arg n "$name" \
+    '.result.workspaces[]? | select(.label == $n)' >/dev/null 2>&1; then
+    candidates="${candidates}● ${name} (${path})"$'\n'
+  else
+    candidates="${candidates}  ${name} (${path})"$'\n'
+  fi
 done
 
 # ── fzf selection ────────────────────────────────────────────────────
@@ -55,8 +58,17 @@ selected=$(printf '%s' "$candidates" | sed '/^$/d' | fzf \
   --no-info \
   --reverse) || exit 0
 
-# Extract workspace name (strip trailing path in parens)
-ws_name=$(echo "$selected" | sed -E 's/ \(.*\)$//')
+# Extract workspace name (strip marker and trailing path)
+ws_name=$(echo "$selected" | sed -E 's/^[●[:space:]]*//' | sed -E 's/ \(.*\)$//')
+
+# ── If workspace exists → focus it ──────────────────────────────────
+ws_id=$(echo "$existing_json" | jq -r --arg n "$ws_name" \
+  '.result.workspaces[]? | select(.label == $n) | .workspace_id' 2>/dev/null || true)
+
+if [ -n "$ws_id" ]; then
+  herdr workspace focus "$ws_id" >/dev/null 2>&1
+  exit 0
+fi
 
 # ── Look up definition ──────────────────────────────────────────────
 ws_path=""
@@ -71,28 +83,33 @@ for entry in "${WORKSPACES[@]}"; do
 done
 [ -z "$ws_path" ] && die "Unknown workspace: $ws_name"
 
-# ── Check if already open → focus it ────────────────────────────────
-if [ -n "$existing_lines" ]; then
-  while IFS= read -r line; do
-    # Match workspace by label/name in the line
-    if echo "$line" | grep -qF "$ws_name"; then
-      ws_id=$(echo "$line" | awk '{print $1}')
-      if [ -n "$ws_id" ]; then
-        herdr workspace focus "$ws_id"
-        exit 0
-      fi
-    fi
-  done <<< "$existing_lines"
-fi
-
-# ── Create workspace ────────────────────────────────────────────────
+# ── Create workspace (first tab + pane created automatically) ───────
 ws_output=$(herdr workspace create --cwd "$ws_path" --label "$ws_name" --focus 2>&1) \
   || die "workspace create failed: $ws_output"
 
-ws_id=$(echo "$ws_output" | grep -oE 'w[0-9]+' | head -1)
-[ -z "$ws_id" ] && die "Could not parse workspace ID from: $ws_output"
+ws_id=$(echo "$ws_output" | jq -r '.result.workspace.workspace_id' 2>/dev/null)
+[ -z "$ws_id" ] || [ "$ws_id" = "null" ] && die "Could not parse workspace ID from: $ws_output"
 
-# Create additional tabs
+# Get the first tab's pane ID — this is where vim will run
+first_pane=$(echo "$ws_output" | jq -r '.result.root_pane.pane_id')
+
+# ── Create additional tabs ──────────────────────────────────────────
+third_pane=""
 for ((i = 0; i < ws_tabs; i++)); do
-  herdr tab create --workspace "$ws_id" --cwd "$ws_path" --no-focus 2>/dev/null || true
+  tab_output=$(herdr tab create --workspace "$ws_id" --cwd "$ws_path" --no-focus 2>&1) || true
+  # Capture the 3rd tab's pane (tab index 2, i.e. i==1 since first extra tab is tab 2)
+  if [ "$i" -eq 1 ]; then
+    third_pane=$(echo "$tab_output" | jq -r '.result.root_pane.pane_id' 2>/dev/null || true)
+  fi
 done
+
+# ── Launch apps ─────────────────────────────────────────────────────
+# Tab 1: vim
+if [ -n "$first_pane" ] && [ "$first_pane" != "null" ]; then
+  herdr pane send-text "$first_pane" "nvim_cshih"$'\n' 2>/dev/null || true
+fi
+
+# Tab 3: opencode
+if [ -n "$third_pane" ] && [ "$third_pane" != "null" ]; then
+  herdr pane send-text "$third_pane" "opencode"$'\n' 2>/dev/null || true
+fi
