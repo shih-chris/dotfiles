@@ -11,7 +11,7 @@ WORKSPACES=(
   "projects|~/projects|4"
   "grafana-assistant|~/projects/grafana-assistant-app|3"
   "2h-dagster|~/projects/twoh_dagster|3"
-  "2h-semantic-layer-test|~/projects/2h-semantic-layer-test|3"
+  "2h-meridian-test-data|~/projects/2h-meridian-test-data|5"
   "2h-team|~/projects/2h-team|3"
   "2h-ops|~/projects/2h-ops|3"
   "daas|~/projects/daas|3"
@@ -58,6 +58,8 @@ for entry in "${WORKSPACES[@]}"; do
   if [ "$len" -gt "$max_name_len" ]; then max_name_len=$len; fi
 done
 
+active_candidates=""
+inactive_candidates=""
 for entry in "${WORKSPACES[@]}"; do
   IFS='|' read -r name path tabs <<< "$entry"
   total_tabs=$((tabs + 1))  # +1 for the first tab created with workspace
@@ -69,12 +71,13 @@ for entry in "${WORKSPACES[@]}"; do
   if [ -n "$ws_info" ]; then
     agent_status=$(echo "$ws_info" | cut -d'|' -f2)
     line=$(printf "● %-${max_name_len}s   %s" "$name" "$(agent_label "$agent_status")")
+    active_candidates="${active_candidates}${line}"$'\n'
   else
     line=$(printf "  %-${max_name_len}s" "$name")
+    inactive_candidates="${inactive_candidates}${line}"$'\n'
   fi
-
-  candidates="${candidates}${line}"$'\n'
 done
+candidates="${active_candidates}${inactive_candidates}"
 
 # ── fzf selection ────────────────────────────────────────────────────
 selected=$(printf '%s' "$candidates" | sed '/^$/d' | fzf \
@@ -85,7 +88,7 @@ selected=$(printf '%s' "$candidates" | sed '/^$/d' | fzf \
   --reverse) || exit 0
 
 # Extract workspace name: strip leading marker, then anything after 2+ trailing spaces
-ws_name=$(echo "$selected" | sed -E 's/^[●[:space:]]*//' | sed -E 's/[[:space:]]{2,}.*$//' )
+ws_name=$(echo "$selected" | sed -E 's/^[●[:space:]]*//' | sed -E 's/[[:space:]]{2,}.*$//' | sed -E 's/[[:space:]]+$//')
 
 # ── If workspace exists → focus it ──────────────────────────────────
 ws_id=$(echo "$existing_json" | jq -r --arg n "$ws_name" \

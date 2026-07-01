@@ -6,14 +6,14 @@
       "custom_name": null,
       "identity_cwd": "/Users/chris/projects/dotfiles",
       "public_pane_numbers": {
-        "46": 89,
-        "2": 4,
-        "1": 1,
         "65": 96,
-        "71": 98,
-        "4": 18
+        "2": 4,
+        "74": 101,
+        "4": 18,
+        "1": 1,
+        "46": 89
       },
-      "next_public_pane_number": 99,
+      "next_public_pane_number": 106,
       "public_tab_numbers": [
         1,
         4,
@@ -26,15 +26,33 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 1
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 1
+              },
+              "second": {
+                "Pane": 74
+              }
+            }
           },
           "panes": {
             "1": {
               "cwd": "/Users/chris/projects/dotfiles"
+            },
+            "74": {
+              "cwd": "/Users/chris/projects/dotfiles",
+              "agent_session": {
+                "source": "herdr:pi",
+                "agent": "pi",
+                "kind": "path",
+                "value": "/Users/chris/.config/pi/sessions/2026-07-01T19-52-30-010Z_019f1f3d-783a-70dc-aa71-d030b7d483a4.jsonl"
+              }
             }
           },
           "zoomed": false,
-          "focused": 1,
+          "focused": 74,
           "root_pane": 1
         },
         {
@@ -54,27 +72,15 @@
         {
           "custom_name": null,
           "layout": {
-            "Split": {
-              "direction": "Horizontal",
-              "ratio": 0.5,
-              "first": {
-                "Pane": 4
-              },
-              "second": {
-                "Pane": 71
-              }
-            }
+            "Pane": 4
           },
           "panes": {
-            "71": {
-              "cwd": "/Users/chris/projects/dotfiles"
-            },
             "4": {
               "cwd": "/Users/chris/projects/dotfiles"
             }
           },
-          "zoomed": true,
-          "focused": 71,
+          "zoomed": false,
+          "focused": 4,
           "root_pane": 4
         },
         {
@@ -106,18 +112,18 @@
           "root_pane": 65
         }
       ],
-      "active_tab": 2
+      "active_tab": 0
     },
     {
       "id": "w6",
       "custom_name": "projects",
       "identity_cwd": "/Users/chris/projects",
       "public_pane_numbers": {
-        "8": 4,
-        "6": 2,
         "5": 1,
         "9": 5,
-        "7": 3
+        "7": 3,
+        "6": 2,
+        "8": 4
       },
       "next_public_pane_number": 8,
       "public_tab_numbers": [
@@ -203,99 +209,15 @@
       "active_tab": 2
     },
     {
-      "id": "w7",
-      "custom_name": "2h-semantic-layer-test",
-      "identity_cwd": "/Users/chris/projects/2h-semantic-layer-test",
-      "public_pane_numbers": {
-        "13": 2,
-        "12": 1,
-        "32": 13,
-        "15": 4
-      },
-      "next_public_pane_number": 27,
-      "public_tab_numbers": [
-        1,
-        2,
-        4,
-        5
-      ],
-      "next_public_tab_number": 6,
-      "tabs": [
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 12
-          },
-          "panes": {
-            "12": {
-              "cwd": "/Users/chris/projects/2h-semantic-layer-test"
-            }
-          },
-          "zoomed": false,
-          "focused": 12,
-          "root_pane": 12
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 13
-          },
-          "panes": {
-            "13": {
-              "cwd": "/Users/chris/projects"
-            }
-          },
-          "zoomed": false,
-          "focused": 13,
-          "root_pane": 13
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 15
-          },
-          "panes": {
-            "15": {
-              "cwd": "/Users/chris/projects/2h-semantic-layer-test",
-              "agent_session": {
-                "source": "herdr:opencode",
-                "agent": "opencode",
-                "kind": "id",
-                "value": "ses_0e2310cc2ffefOuhfvqwbrCJ1J"
-              }
-            }
-          },
-          "zoomed": false,
-          "focused": 15,
-          "root_pane": 15
-        },
-        {
-          "custom_name": null,
-          "layout": {
-            "Pane": 32
-          },
-          "panes": {
-            "32": {
-              "cwd": "/Users/chris/projects/2h-semantic-layer-test"
-            }
-          },
-          "zoomed": false,
-          "focused": 32,
-          "root_pane": 32
-        }
-      ],
-      "active_tab": 1
-    },
-    {
       "id": "w9",
       "custom_name": "daas",
       "identity_cwd": "/Users/chris/projects/daas",
       "public_pane_numbers": {
-        "53": 6,
-        "50": 3,
         "48": 1,
-        "49": 2,
-        "51": 4
+        "53": 6,
+        "51": 4,
+        "50": 3,
+        "49": 2
       },
       "next_public_pane_number": 12,
       "public_tab_numbers": [
@@ -379,10 +301,133 @@
         }
       ],
       "active_tab": 0
+    },
+    {
+      "id": "wA",
+      "custom_name": "2h-meridian-test-data",
+      "identity_cwd": "/Users/chris/projects/2h-meridian-test-data",
+      "public_pane_numbers": {
+        "82": 4,
+        "85": 7,
+        "84": 6,
+        "81": 3,
+        "80": 2,
+        "79": 1,
+        "83": 5
+      },
+      "next_public_pane_number": 8,
+      "public_tab_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "next_public_tab_number": 7,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 79
+              },
+              "second": {
+                "Pane": 85
+              }
+            }
+          },
+          "panes": {
+            "85": {
+              "cwd": "/Users/chris/projects/2h-meridian-test-data"
+            },
+            "79": {
+              "cwd": "/Users/chris/projects/2h-meridian-test-data"
+            }
+          },
+          "zoomed": true,
+          "focused": 85,
+          "root_pane": 79
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 80
+          },
+          "panes": {
+            "80": {
+              "cwd": "/Users/chris/projects/2h-meridian-test-data"
+            }
+          },
+          "zoomed": false,
+          "focused": 80,
+          "root_pane": 80
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 81
+          },
+          "panes": {
+            "81": {
+              "cwd": "/Users/chris/projects/2h-meridian-test-data"
+            }
+          },
+          "zoomed": false,
+          "focused": 81,
+          "root_pane": 81
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 82
+          },
+          "panes": {
+            "82": {
+              "cwd": "/Users/chris/projects/2h-meridian-test-data"
+            }
+          },
+          "zoomed": false,
+          "focused": 82,
+          "root_pane": 82
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 83
+          },
+          "panes": {
+            "83": {
+              "cwd": "/Users/chris/projects/2h-meridian-test-data"
+            }
+          },
+          "zoomed": false,
+          "focused": 83,
+          "root_pane": 83
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 84
+          },
+          "panes": {
+            "84": {
+              "cwd": "/Users/chris/projects/2h-meridian-test-data"
+            }
+          },
+          "zoomed": false,
+          "focused": 84,
+          "root_pane": 84
+        }
+      ],
+      "active_tab": 0
     }
   ],
-  "active": 0,
-  "selected": 0,
+  "active": 3,
+  "selected": 3,
   "sidebar_width": 26,
   "sidebar_section_split": 0.5,
   "collapsed_space_keys": []
